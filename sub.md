@@ -1,5 +1,7 @@
 # Introducing Bolt
 
+![](/assets/152.png)
+
 ## What is Bolt
 
 Bolt is a runtime environment for web apps. Bolt seeks to provide a rich environment containing all the features you need to run a web app. If it can run on a browser then there is a very good chance it can run on Bolt.  Bolt is built on top of Node.js, so if it can run on Node then there is a very good chance it can run on Bolt too. Currently JavaScript apps are heavily supported \(via Node\) but there are plans to support apps that require other servers, like PHP apps.
