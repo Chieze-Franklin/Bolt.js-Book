@@ -26,7 +26,3 @@
 
 -doesnt care about ur development methodologies
 
-## Setting Up Bolt
-
-
-
