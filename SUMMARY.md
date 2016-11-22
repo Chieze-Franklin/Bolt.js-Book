@@ -1,5 +1,5 @@
 # Summary
 
 * [Getting Started](README.md)
-* [First Chapter](chapter1.md)
+* [Introducing Bolt](chapter1.md)
 

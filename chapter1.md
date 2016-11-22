@@ -1,1 +1,4 @@
-# First Chapter
+# Introducing Bolt
+
+## What is Bolt
+
