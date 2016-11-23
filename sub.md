@@ -22,7 +22,7 @@ Bolt is a runtime environment for web apps. Bolt seeks to provide a rich environ
 
 * Bolt serves as a scaffold for your app, handling tasks that are necessary for secondary to your business requirements, like user authentication, access control, local-remote synchronization...
 * Bolt allows you to develop apps with losely-coupled components. This makes unit testing a lot easier, and generally means failure in one part of your app does not bring other parts down.
-* Bolt makes it possible for you deploy your app in batches. You don't need a complete app before deployment, and the update process \(the process via which your users install missing components or replace existing components\) is very smooth. This process is largely dependent on the very popular and trusted Node Package Manager \(npm\).
+* Bolt makes it possible for you deploy your app in batches. You don't need a complete app before deployment, and the update process \(the process via which your users install missing components or replace existing components\) is very smooth. This process is largely dependent on the very popular and trusted Node Package Manager \(npm\) and does **not** require Bolt to be restarted.
 
 * Bolt is highly customizable. You can built any kind of app on Bolt, from school management systems to runtime environments that look like operating systems. Certain core functionalities in Bolt can be handled by third-party components, which means you can override various default behaviours in Bolt.
 
