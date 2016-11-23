@@ -14,5 +14,5 @@
 * [Appendix](appendix.md)
     * [Bolt Server Endpoints](bolt-server-endpoints.md)
         * [UI Endpoints](ui-endpoints.md)
-        * [Views](views.md)
+    * [Views](views.md)
 
