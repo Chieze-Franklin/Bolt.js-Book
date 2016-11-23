@@ -20,15 +20,14 @@ Bolt is a runtime environment for web apps. Bolt seeks to provide a rich environ
 
 ## Advantages of using Bolt
 
--serves as a scaffold for ur app, handling common but secondary tasks like authentication, access control,...synchronization, backup \(in d future\)
+* Bolt serves as a scaffold for your app, handling tasks that are necessary for secondary to your business requirements, like user authentication, access control, local-remote synchronization...
+* Bolt allows you to develop apps with losely-coupled components. This makes unit testing a lot easier, and generally means failure in one part of your app does not bring other parts down.
+* Bolt makes it possible for you deploy your app in batches. You don't need a complete app before deployment, and the update process \(the process via which your users install missing components or replace existing components\) is very smooth. This process is largely dependent on the very popular and trusted Node Package Manager \(npm\).
 
--develop apps with losely-coupled components
+* Bolt is highly customizable. You can built any kind of app on Bolt, from school management systems to runtime environments that look like operating systems. Certain core functionalities in Bolt can be handled by third-party components, which means you can override various default behaviours in Bolt.
 
--allows u to deliver ur app in batches \(very smooth update process\)
+* When you build plugins for a Bolt app you have the advantage of those plugins being reusable in other Bolt apps with little or no modification.
 
--highly customizable
+* Bolt does not care much about your development methodologies. It does not enforce the use of any design pattern, nor are you limited to any JavaScript framework \(although use of Express is encouraged\). So, built your app in any manner, from Express to Angular to ionic to React; if it can run on a browser then it can run on Bolt.
 
--reusable plugins \(plugins\/apps developed for one Bolt app can be used in anoda\)
-
--doesnt care about ur development methodologies
 
