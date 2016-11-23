@@ -12,7 +12,7 @@ The login view shows up when a request is sent to \/login.
 
 This view serves to help a user get logged in.
 
-As logging a user in is a sensitive operation, Bolt does not allow apps to extend this view. Also, unrecognized requests to this endpoint will be rejected.
+As logging a user in is a sensitive operation, Bolt does not allow apps to extend this view. Also, requests from non-system apps to this endpoint will be rejected.
 
 \#\#\# logout
 
