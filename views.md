@@ -2,11 +2,11 @@
 
 A view is simply a UI page that responds to a request of format `/:view`. Bolt comes packaged with certain views \(called _native views_\) but allows apps to add new views as well as provide new UI for existing views via plugins.
 
-\# Native Views
+## Native Views
 
-Native views allow Bolt to handle some common\/expected endpoints \(like \`\/home\`\) without having a full-feature app installed for that. Of the few native views that come with Bolt, some can be overriden while others can't. Some of the views that &lt;b&gt;cannot&lt;\/b&gt; be overriden are:
+Native views allow Bolt to handle some common\/expected endpoints \(like `/home`\) without having a full-feature app installed for that. Of the few native views that come with Bolt, some can be overriden while others can't. Some of the views that **can not** be overriden are:
 
-\#\#\# login
+### login
 
 The login view shows up when a request is sent to \['\/login'\]\(api-ui\#get-login\).
 
