@@ -8,7 +8,7 @@ Native views allow Bolt to handle some common\/expected endpoints \(like `/home`
 
 ### login
 
-The login view shows up when a request is sent to \['\/login'\]\(api-ui\#get-login\).
+The login view shows up when a request is sent to \/login.
 
 This view serves to help a user get logged in.
 
