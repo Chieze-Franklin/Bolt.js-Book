@@ -11,5 +11,7 @@
 * [Integrating With Bolt](integrating-with-bolt.md)
     * The Setup View
     * The Settings App
-* Appendix
+* [Appendix](appendix.md)
+    * [Bolt Server Endpoints](bolt-server-endpoints.md)
+        * [UI Endpoints](ui-endpoints.md)
 
