@@ -1,4 +1,4 @@
-\# Introduction
+# Views
 
 A view is simply a UI page that responds to a request of format \`\/:view\`. Bolt comes packaged with certain views \(called \*native views\*\) but allows apps to add new views as well as provide new UI for existing views via \[plugins\]\(package.json\#plugins\).
 
