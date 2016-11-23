@@ -1,5 +1,7 @@
 # Setting Up Bolt
 
+## Get Bolt
+
 To get Bolt you need to download the compressed files, pull or clone it from its [GitHub repository](https://github.com/Chieze-Franklin/Bolt.js).
 
 After that, navigate to the root folder \(the folder containing _bolt.js_\) and run `npm install` to install dependencies.
@@ -15,4 +17,8 @@ Run `node bolt`.
 On your browser, navigate to `{{config-host}}:{{config-port}}` to start working in the Bolt environment. Using the default config values, that should be `localhost:400`.
 
 And that's all there is to it.
+
+## Setup View
+
+The very first time you run Bolt you will be shown the setup view.
 
