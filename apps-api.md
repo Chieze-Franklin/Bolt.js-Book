@@ -29,10 +29,25 @@ If there is no error during the processing of the request, the `body` field of t
 
 ---
 
-
 ## GET: \/api\/apps\/@live
+Gets an array of context objects for all running contexts.
+
+### response
+
+If there is no error during the processing of the request, the `body` field of the response should hold an array of context objects.
+
+---
+
 
 ## GET:\/api\/apps\/{{app-name}}
+
+Gets the app object of the app with the specified name.
+
+### response
+
+If the app is found, the `body` field of the response should hold an app object.
+
+---
 
 ## POST: \/api\/apps
 
