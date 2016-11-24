@@ -101,9 +101,7 @@ A standard [Bolt request](bolt-request.md).
 
 ###response
 
-If the app is started successfully, the `body` field of the response should hold an app object.
-
-
+If the app is started successfully, the `body` field of the response should hold a context object.
 
 ###security
 
