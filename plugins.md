@@ -6,11 +6,13 @@ Plugins allow Bolt to expose interfaces \(endpoints\) without providing their im
 
 An example to make things clearer.
 
-The notes app exposes the endpoint:` GET: /notes` while Bolt exposes the endpoint` GET: /home`. So, you could have your `plugins` look like this:
+The notes app exposes the endpoint:`GET: /notes` while Bolt exposes the endpoint`GET: /home`. So, you could have your `plugins` look like this:
 
 "plugins": {
 
-    "\/home": "\/notes"
+```
+"/home": "/notes"
+```
 
 }
 
