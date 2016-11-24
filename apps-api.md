@@ -83,7 +83,21 @@ Any app can send a request to this endpoint provided:
 
 * The user has administrative privileges.
 
+---
+
 ## POST: \/api\/apps\/start
+
+Starts the server of the app with the specified name.
+
+###request
+
+A standard [Bolt request](bolt-request.md).
+
+`{` 
+
+`"app" : String //the nameh of the app to start`
+
+`}`
 
 ## POST: \/api\/apps\/stop
 
