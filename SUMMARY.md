@@ -17,7 +17,7 @@
     * [Bolt Server Endpoints](bolt-server-endpoints.md)
         * [API Endpoints](api-endpoints.md)
             * [Others \(API\)](others.md)
-            * [Files](files.md)
+            * [Files \(API\)](files-api.md)
         * [UI Endpoints](ui-endpoints.md)
             * [Files](files.md)
     * [Bolt Response Codes](bolt-response-codes.md)
