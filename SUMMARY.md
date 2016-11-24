@@ -5,6 +5,7 @@
     * [Setting Up Bolt](setting-up-bolt.md)
 * [Your First Bolt App](your-first-bolt-app.md)
     * [The package.json File](packagejson.md)
+        * [main](main.md)
     * The Bolt Server
     * Apps Without Servers
     * Non-Node Servers
