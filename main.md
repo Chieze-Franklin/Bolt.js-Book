@@ -18,3 +18,23 @@ And replace them with:
 
 `module.exports = app;`
 
+Now, set the `main` field of the `bolt` object to `"bolt-server.js"`.
+
+Your package.json should look something like this:
+
+`{`
+
+`    "name": "Notes",`
+
+`    ....`
+
+`    "bolt": {`
+
+`        "main": "bolt-server.js"`
+
+`    }`
+
+`}`
+
+Note that the file extension can be omitted: `"main": "bolt-server"`.
+
