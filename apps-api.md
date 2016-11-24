@@ -104,7 +104,7 @@ A standard [Bolt request](bolt-request.md).
 If the app is started successfully, the `body` field of the response should hold a context object.
 * To know if a server was started for the app, check if their is a defined `port` field for the context object.
 
-* To know if a server was started on another process, check if their is a defined `pid` field for the context object.
+* To know if a server was started on another process, check if there is a defined `pid` field for the context object.
 
 
 ###security
