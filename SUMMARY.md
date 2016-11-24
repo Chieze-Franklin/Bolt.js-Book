@@ -16,10 +16,10 @@
 * [Appendix](appendix.md)
     * [Bolt Server Endpoints](bolt-server-endpoints.md)
         * [API Endpoints](api-endpoints.md)
-            * [Others](others.md)
-            * Files
+            * [Others \(API\)](others.md)
+            * [Files](files.md)
         * [UI Endpoints](ui-endpoints.md)
-            * Files
+            * [Files](files.md)
     * [Bolt Response Codes](bolt-response-codes.md)
     * [Views](views.md)
 
