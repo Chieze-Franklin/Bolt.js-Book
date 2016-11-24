@@ -65,12 +65,11 @@ Installs an app from an local repository \(current only the node\_modules folder
 
 A standard [Bolt request](bolt-request.md).
 
+`{`
 
-{
+`"path" : String //the path of the folder contain the _package.json_, relative to the node_modules folder`
 
-"path" : String \/\/the path of the folder contain the _package.json_, relative to the _node\_modules_ folder
-
-}
+`}`
 
 ## POST: \/api\/apps\/start
 
