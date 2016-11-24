@@ -16,6 +16,7 @@
 * [Appendix](appendix.md)
     * [Bolt Server Endpoints](bolt-server-endpoints.md)
         * [API Endpoints](api-endpoints.md)
+            * [Apps \(API\)](apps-api.md)
             * [Files \(API\)](files-api.md)
             * [Others \(API\)](others-api.md)
         * [UI Endpoints](ui-endpoints.md)
