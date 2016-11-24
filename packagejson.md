@@ -20,7 +20,10 @@ Every Bolt-specific field must be contained in an object called `bolt`. So add t
 
 `"bolt": {}`
 
--its a regular npm package.json, but has a few extra stuff added to it
+The following are fields expected inside `bolt`:
 
--set it to serve \/home
+### main
 
+This field is optional.
+
+This is the most important field as without it your app's server would not be started. For apps that have no servers, do not supply this field.
