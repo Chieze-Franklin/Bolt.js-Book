@@ -6,17 +6,19 @@ Assuming you set your `index` as shown below:
 
 `{`
 
-`    "name": "Notes",`
+`"name": "Notes",`
 
-`    ....`
+`....`
 
-`    "bolt": {`
+`"bolt": {`
 
-`        "main": "bolt-server.js",`
+`"main": "bolt-server.js",`
 
-`        "index": "/notes"`
-
-`    }`
+`"index": "/notes"`
 
 `}`
+
+`}`
+
+Then, whenever the user navigates to a UI endpoint like localhost:400\/apps\/Notes, your app will be automat
 
