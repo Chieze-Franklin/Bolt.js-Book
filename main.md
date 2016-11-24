@@ -10,7 +10,7 @@ Create a file called `bolt-server.js` \(you can call it anything else\). Copy al
 
 `app.listen(3000, function () {`
 
-`console.log('Server started. Open http://localhost:3000 in your browser.');`
+`   console.log('Server started. Open http://localhost:3000 in your browser.');`
 
 `});`
 
@@ -24,17 +24,35 @@ Your package.json should look something like this:
 
 `{`
 
-`    "name": "Notes",`
+`"name": "Notes",`
 
-`    ....`
+`....`
 
-`    "bolt": {`
+`"bolt": {`
 
-`        "main": "bolt-server.js"`
+`"main": "bolt-server.js"`
 
-`    }`
+`}`
 
 `}`
 
 Note that the file extension can be omitted: `"main": "bolt-server"`.
+
+And we are done with `main`.
+
+### A Little Tip for You
+
+Instead of repeating codes in _server.js_ and _bolt-server.js_, you can instead create and export the app in _bolt-server.js_ \(as you have already done\) and import \(require\) it in _server.js_. In fact, behind-the-scene, this is exactly how Bolt gets the server for your app.
+
+So, your entire _server.js_ becomes:
+
+`var app = require('./bolt-server');`
+
+`app.listen(3000, function () {`
+
+`    console.log('Server started. Open http://localhost:3000 in your browser.');`
+
+`});`
+
+This way, your can run the app on Bolt via bolt-server.js and still run it with Node via server.js.
 
