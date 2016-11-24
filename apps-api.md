@@ -51,7 +51,15 @@ If the app is found, the `body` field of the response should hold an app object.
 
 ## POST: \/api\/apps
 
+Installs an app from an online repository \(current only npm is supported\).
+
+This endpoint is still experimental.
+
+---
+
 ## POST: \/api\/apps\/reg
+
+Installs an app from an local repository \(current only the node\_modules folder is supported\).
 
 ## POST: \/api\/apps\/start
 
