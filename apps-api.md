@@ -5,6 +5,7 @@ This is a description of the API exposed by the Bolt server for interacting with
 The following endpoints are described here:
 
 * [GET: \/api\/apps](#get-apiapps)
+* [GET: \/api\/apps\/@live](#get-apiappslive)
 
 \* \[POST: \/api\/app\/get\]\(\#post-apiappget\)
 
@@ -31,6 +32,18 @@ To get all apps that have `settings` as one of their tags:
 ### response
 
 If there is no error during the processing of the request, the `body` field of the response should hold an array of app objects.
+
+---
+
+## GET: \/api\/apps\/@live
+
+Gets an array of context objects for all running contexts.
+
+### response
+
+If there is no error during the processing of the request, the `body` field of the response should hold an array of context objects.
+
+---
 
 \#\# POST: \/api\/app\/get
 
