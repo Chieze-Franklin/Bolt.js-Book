@@ -22,9 +22,5 @@ Every Bolt-specific field must be contained in an object called `bolt`. So add t
 
 The following are fields expected inside `bolt`:
 
-* main
-
-### main
-
-
+* [main](/main.md)
 
