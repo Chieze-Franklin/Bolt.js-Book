@@ -63,7 +63,7 @@ Installs an app from an local repository \(current only the node\_modules folder
 
 \#\#\#request
 
-A standard [Bolt request](bolt-request).
+A standard [Bolt request](bolt-request.md).
 
 
 {
