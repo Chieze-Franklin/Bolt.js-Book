@@ -16,6 +16,10 @@ As far as Bolt is concerned, the most important npm-specific fields are:
 
 Let us now begin to add Bolt-specific fields.
 
+Every Bolt-specific field must be contained in an object called `bolt`. So add the following:
+
+`"bolt": {}`
+
 -its a regular npm package.json, but has a few extra stuff added to it
 
 -set it to serve \/home
