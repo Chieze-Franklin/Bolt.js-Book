@@ -28,8 +28,9 @@ After that you are directed to `localhost:400/settings`. Since there may current
 
 After installing the official settings app you will then be able to perform various administrative tasks like:
 
-*  Add new roles \(in addition to the admin role that was auto-created\).
+* Add new roles \(in addition to the admin role that was auto-created\).
 * Add new users, and assign them roles. A user can be assigned more than one role.
 
-* Install new apps. You canuse this opportunity to install apps that serve common endpoints like `localhost:400/home`.
+* Install new apps. You can use this opportunity to install apps that serve common endpoints like `localhost:400/home`.
+
 
