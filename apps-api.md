@@ -25,7 +25,7 @@ To get all apps that have `settings` as one of their tags:
 
 ### response
 
-If there is no error during the processing of the request, the `body` field of the response should hold an array of app objects.
+If there is no error during the processing of the request, the `body` field of the response should hold an array of app [objects](objects.md).
 
 ---
 
@@ -75,13 +75,13 @@ A standard [Bolt request](bolt-request.md).
 
 If the app installed successfully, the `body` field of the response should hold an app object.
 
-\#\#\#security
+###security
 
 Any app can send a request to this endpoint provided:
 
-\* The user has granted the app \[permission to perform an installation\]\(user-permissions\#action.install\).
+* The user has granted the app [permission](user-permissions.md) to perform an installation.
 
-\* The user has administrative privileges.
+* The user has administrative privileges.
 
 ## POST: \/api\/apps\/start
 
