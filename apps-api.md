@@ -99,5 +99,26 @@ A standard [Bolt request](bolt-request.md).
 
 `}`
 
+###response
+
+If the app is started successfully, the `body` field of the response should hold an app object.
+
+
+
+###security
+
+
+
+Any app can send a request to this endpoint provided:
+
+
+
+* The user has granted the app [permission](user-permissions.md) to perform an installation.
+
+
+
+* The user has administrative privileges.
+
+
 ## POST: \/api\/apps\/stop
 
