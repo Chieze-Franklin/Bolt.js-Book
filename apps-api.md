@@ -61,7 +61,7 @@ This endpoint is still experimental.
 
 Installs an app from an local repository \(current only the node\_modules folder is supported\).
 
-\#\#\#request
+###request
 
 A standard [Bolt request](bolt-request.md).
 
