@@ -6,6 +6,7 @@ The following endpoints are described here:
 
 * [GET: \/api\/apps](#get-apiapps)
 * [GET: \/api\/apps\/@live](#get-apiappslive)
+* [GET: \/api\/apps\/{{app-name}}](#get-apiappsapp-name)
 
 \* \[POST: \/api\/app\/get\]\(\#post-apiappget\)
 
@@ -14,8 +15,6 @@ The following endpoints are described here:
 \* \[POST: \/api\/app\/start\]\(\#post-apiappstart\)
 
 \* \[POST: \/api\/app\/stop\]\(\#post-apiappstop\)
-
-\* \[GET: \/api\/app-info\/:app\]\(\#get-apiapp-infoapp\)
 
 ## GET: \/api\/apps
 
@@ -42,6 +41,16 @@ Gets an array of context objects for all running contexts.
 ### response
 
 If there is no error during the processing of the request, the `body` field of the response should hold an array of context objects.
+
+---
+
+## GET: \/api\/apps\/{{app-name}}
+
+Gets the app object of the app with the specified name.
+
+### response
+
+If the app is found, the `body` field of the response should hold an app object.
 
 ---
 
@@ -152,14 +161,4 @@ This is the same check made when starting an app. The rationale is that you shou
 \#\#\#note
 
 Although this may change, currently, trying to stop an app that is not running may return a \[Bolt response\]\(bolt-response\) with \[response code\]\(bolt-response-codes\) &lt;code&gt;420&lt;\/code&gt;. Code &lt;code&gt;420&lt;\/code&gt; means the port on which an app should be running cannot be found. The rationale is that you can only stop apps running on ports, so trying to stop an app that is not running \(for which no port can be found\) will result in an error with code &lt;code&gt;420&lt;\/code&gt;.
-
-\#\# GET: \/api\/app-info\/:app
-
-Gets the app info of the app with the specified name.
-
-\#\#\#response
-
-\* If the app is found, the &lt;code&gt;code&lt;\/code&gt; field of the response should be &lt;code&gt;0&lt;\/code&gt; and the &lt;code&gt;body&lt;\/code&gt; field of the response should hold an \[app object\]\(objects\#app\).
-
-\* If the app is not found, the &lt;code&gt;code&lt;\/code&gt; field of the response should not be &lt;code&gt;0&lt;\/code&gt; and the &lt;code&gt;error&lt;\/code&gt; field of the response should hold an \[error object\]\(objects\#error\).
 
