@@ -8,6 +8,7 @@
     * The Bolt Server
     * Apps Without Servers
     * Non-Node Servers
+    * Installing the App
 * [Integrating With Bolt](integrating-with-bolt.md)
     * The Setup View
     * The Settings App
