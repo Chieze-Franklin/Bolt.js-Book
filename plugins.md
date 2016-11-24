@@ -6,7 +6,15 @@ Plugins allow Bolt to expose interfaces \(endpoints\) without providing their im
 
 An example to make things clearer.
 
+The notes app exposes the endpoint:` GET: /notes` while Bolt exposes the endpoint` GET: /home`. So, you could have your `plugins` look like this:
 
+"plugins": {
+
+    "\/home": "\/notes"
+
+}
+
+After this app is installed, if the user navigates to `localhost:400/home`, your app will automatically be started \(let's say on port 500\), and the user will automatically be redirected to `localhost:500/notes`. If you think about it, plugins are a really cool feature of Bolt.
 
 ### A Little Tip for You
 
