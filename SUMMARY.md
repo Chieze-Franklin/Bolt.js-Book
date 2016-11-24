@@ -17,5 +17,6 @@
     * [Bolt Server Endpoints](bolt-server-endpoints.md)
         * [API Endpoints](api-endpoints.md)
         * [UI Endpoints](ui-endpoints.md)
+    * [Bolt Response Codes](bolt-response-codes.md)
     * [Views](views.md)
 
