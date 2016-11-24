@@ -8,7 +8,7 @@
         * [main](main.md)
         * [index](index.md)
         * [plugins](plugins.md)
-    * The Bolt Server
+    * [The Bolt Server](the-bolt-server.md)
     * Apps Without Servers
     * Non-Node Servers
     * Installing the App
