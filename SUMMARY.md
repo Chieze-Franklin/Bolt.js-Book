@@ -16,6 +16,7 @@
     * The Setup View
     * The Settings App
     * [Bolt Response](bolt-response.md)
+    * Bolt Request
 * [Appendix](appendix.md)
     * [Bolt Server Endpoints](bolt-server-endpoints.md)
         * [API Endpoints](api-endpoints.md)
