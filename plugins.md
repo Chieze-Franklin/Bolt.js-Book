@@ -24,11 +24,11 @@ More than one app can specify the same Bolt endpoint in their `plugins`. For ins
 
 `"plugins": {`
 
-`    "/home": "/my/own/end/point?source=bolt",`
+`"/home": "/my/own/end/point?source=bolt",`
 
 `}`
 
-Bolt allows end users to specify the default plugin for a Bolt endpoint.
+Bolt allows end users to specify the default plugin for a Bolt endpoint. Likewise, with the user's permission, you can set your plugin as the default. More on this later.
 
 ### A Little Tip for You
 
