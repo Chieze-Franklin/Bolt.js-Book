@@ -4,6 +4,8 @@ This is a description of the API exposed by the Bolt server for interacting with
 
 The following endpoints are described here:
 
+* [GET: \/api\/apps](#get-apiapps)
+
 \* \[POST: \/api\/app\/get\]\(\#post-apiappget\)
 
 \* \[POST: \/api\/app\/reg\]\(\#post-apiappreg\)
@@ -13,6 +15,15 @@ The following endpoints are described here:
 \* \[POST: \/api\/app\/stop\]\(\#post-apiappstop\)
 
 \* \[GET: \/api\/app-info\/:app\]\(\#get-apiapp-infoapp\)
+
+## GET: \/api\/apps
+
+Gets an array of app objects for all installed apps matching the specified criteria.
+
+### response
+
+If there is no error during the processing of the request, the `body` field of the response should hold an array of app objects.
+
 
 \#\# POST: \/api\/app\/get
 
@@ -32,7 +43,7 @@ A standard \[Bolt request\]\(bolt-request\).
 
 {
 
- "path" : String \/\/the path of the folder contain the \*package.json\*, relative to the \*node\_modules\* folder
+"path" : String \/\/the path of the folder contain the \*package.json\*, relative to the \*node\_modules\* folder
 
 }
 
@@ -64,7 +75,7 @@ A standard \[Bolt request\]\(bolt-request\).
 
 {
 
- "app" : String \/\/the name of the app to start
+"app" : String \/\/the name of the app to start
 
 }
 
@@ -74,9 +85,9 @@ A standard \[Bolt request\]\(bolt-request\).
 
 \* If the app is found, the &lt;code&gt;code&lt;\/code&gt; field of the response should be &lt;code&gt;0&lt;\/code&gt; and the &lt;code&gt;body&lt;\/code&gt; field of the response should hold a \[context object\]\(objects\#context\).
 
- \* To know if a server was started for the app, check if their is a defined &lt;code&gt;port&lt;\/code&gt; field for the context object.
+\* To know if a server was started for the app, check if their is a defined &lt;code&gt;port&lt;\/code&gt; field for the context object.
 
- \* To know if a server was started on another process, check if their is a defined &lt;code&gt;pid&lt;\/code&gt; field for the context object.
+\* To know if a server was started on another process, check if their is a defined &lt;code&gt;pid&lt;\/code&gt; field for the context object.
 
 \* If the app is not found, the &lt;code&gt;code&lt;\/code&gt; field of the response should not be &lt;code&gt;0&lt;\/code&gt; and the &lt;code&gt;error&lt;\/code&gt; field of the response should hold an \[error object\]\(objects\#error\).
 
@@ -100,7 +111,7 @@ A standard \[Bolt request\]\(bolt-request\).
 
 {
 
- "app" : String \/\/the name of the app to stop
+"app" : String \/\/the name of the app to stop
 
 }
 
