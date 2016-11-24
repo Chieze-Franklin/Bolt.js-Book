@@ -2,6 +2,8 @@
 
 This is the first UI endpoint that will be navigated to when your a UI for your app needs to be displayed.
 
+This endpoint must be implemented as a `GET`.
+
 Assuming you set your `index` as shown below:
 
 `{`
