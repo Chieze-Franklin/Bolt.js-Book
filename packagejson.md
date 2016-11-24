@@ -1,5 +1,7 @@
 # The package.json File
 
+This document describes what a typical _package.json_ file should look like, and the relevance of the fields in the file.
+
 As far as integrating your app with Bolt is concerned, this is the starting point. The _package.json_ file can be thought of as the manifest for your application. This is what Bolt will consult during the installation of an app.
 
 This _package.json_ is expected to be in the root folder of your app. It is no different from the _package.json_ for npm modules, except that a few more fields have been added to it.
@@ -23,4 +25,5 @@ Every Bolt-specific field must be contained in an object called `bolt`. So add t
 The following are fields expected inside `bolt`:
 
 * [main](/main.md)
+* plugins
 
