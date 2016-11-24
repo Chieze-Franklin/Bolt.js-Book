@@ -61,6 +61,17 @@ This endpoint is still experimental.
 
 Installs an app from an local repository \(current only the node\_modules folder is supported\).
 
+\#\#\#request
+
+A standard [Bolt request](bolt-request).
+
+
+{
+
+"path" : String \/\/the path of the folder contain the _package.json_, relative to the _node\_modules_ folder
+
+}
+
 ## POST: \/api\/apps\/start
 
 ## POST: \/api\/apps\/stop
