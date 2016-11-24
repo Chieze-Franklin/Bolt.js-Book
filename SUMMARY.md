@@ -19,7 +19,7 @@
             * [Others \(API\)](others.md)
             * [Files \(API\)](files-api.md)
         * [UI Endpoints](ui-endpoints.md)
-            * [Files](files.md)
+            * [Files \(UI\)](files-ui.md)
     * [Bolt Response Codes](bolt-response-codes.md)
     * [Views](views.md)
 
