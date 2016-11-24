@@ -10,7 +10,7 @@ Create a file called `bolt-server.js` \(you can call it anything else\). Copy al
 
 `app.listen(3000, function () {`
 
-`   console.log('Server started. Open http://localhost:3000 in your browser.');`
+`    console.log('Server started. Open http://localhost:3000 in your browser.');`
 
 `});`
 
@@ -50,7 +50,7 @@ So, your entire _server.js_ becomes:
 
 `app.listen(3000, function () {`
 
-`    console.log('Server started. Open http://localhost:3000 in your browser.');`
+`console.log('Server started. Open http://localhost:3000 in your browser.');`
 
 `});`
 
