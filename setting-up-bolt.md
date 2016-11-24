@@ -2,6 +2,8 @@
 
 ## Get Bolt
 
+Bolt is built on Node.js, so ensure you have Node \(and npm\) installed.
+
 To get Bolt you need to download the compressed files, pull or clone it from its [GitHub repository](https://github.com/Chieze-Franklin/Bolt.js).
 
 After that, navigate to the root folder \(the folder containing _bolt.js_\) and run `npm install` to install dependencies.
