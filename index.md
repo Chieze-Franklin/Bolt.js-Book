@@ -26,7 +26,7 @@ Then, whenever the user navigates to a UI endpoint like `localhost:400/apps/Note
 
 Also note that necessary information will be sent in the query portion of the URL:
 
-
+* `protocol`:  protocol via which Bolt can be accessed
 
 ### A Little Tip for You
 
