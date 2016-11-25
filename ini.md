@@ -46,3 +46,5 @@ You are now free to use those data to interact with Bolt.
 
 A Note on "X-Bolt-Req-Id" header
 
+A Little Tip for You
+
