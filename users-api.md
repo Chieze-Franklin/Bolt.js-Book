@@ -7,8 +7,8 @@ The following endpoints are described here:
 * [GET: \/api\/users](#get-apiusers)
 * [GET: \/api\/users\/@current](#get-apiuserscurrent)
 * [GET: \/api\/users\/@live](#get-apiuserslive)
-* [POST: \/api\/apps\/start](#post-apiappsstart)
-* [POST: \/api\/apps\/stop](#post-apiappsstop)
+* GET: \/api\/users\/username
+* [POST: \/api\/users](#post-apiusers)
 
 ## GET: \/api\/users
 
@@ -54,7 +54,7 @@ This may not work well in scenarios where Bolt is **not** expected to be _always
 
 ---
 
-## POST: \/api\/apps
+## GET: \/api\/users\/username
 
 Installs an app from an online repository \(current only npm is supported\).
 
@@ -62,9 +62,9 @@ This endpoint is still experimental.
 
 ---
 
-## POST: \/api\/apps\/reg
+## POST: \/api\/users
 
-Installs an app from an local repository \(current only the node\_modules folder is supported\).
+Adds a user to the database.
 
 ### request
 
@@ -72,22 +72,19 @@ A standard [Bolt request](bolt-request.md).
 
 `{`
 
-`"path" : String //the path of the folder contain the _package.json_, relative to the node_modules folder`
+`"username" : String,`
+
+`"password" : String`
 
 `}`
 
 ### response
 
-If the app installed successfully, the `body` field of the response should hold an app object.
+If the user was added successfully, the `body` field of the response should hold a user object.
 
 ### security
 
-Any app can send a request to this endpoint provided:
-
-* The user has granted the app [permission](user-permissions.md) to perform an installation.
-
-* The user has administrative privileges.
-
+Only system apps \(and native views\) can send requests to this endpoint.
 
 ---
 
