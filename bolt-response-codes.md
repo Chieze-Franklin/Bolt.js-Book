@@ -48,20 +48,13 @@ Access-Control Error.
 |  |  |
 | 310 | Username and\/or role name missing |
 | 311 | A user-role with the same user and role already exists. |
-
-
-
-\| 312 \| Could not save user-role to the database \|
-
-\| 313 \| Could not retrieve user-role from the database \|
-
-\| 320 \| App name and\/or role name missing \|
-
-\| 321 \| An app-role with the same app and role already exists \|
-
-\| 322 \| Could not save app-role to the database \|
-
-\| 323 \| Could not retrieve app-role from the database \|
+| 312 | Could not save user-role to the database |
+| 313 | Could not retrieve user-role from the database |
+|  |  |
+| 320 | App name and\/or role name missing |
+| 321 | An app-role with the same app and role already exists |
+| 322 | Could not save app-role to database |
+| 323 | Could not retrieve app-role from the database |
 
 ## Codes 400-499
 
