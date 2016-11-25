@@ -26,23 +26,14 @@ Bolt found something wrong with the request.
 
 User Error.
 
-| Code | Meaning |
+| **Code** | **Meaning** |
 | --- | --- |
 | 200 | Username and\/or password missing |
+| 201 | A user with the same username already exists |
+| 202 | Could not save user to the database |
+| 203 | Could not retrieve user from the database |
 
 
-
-\| Code \| Meaning \|
-
-\|:--- \|:---\|
-
-\| 200 \| Username and\/or password missing   \|
-
-\| 201 \| A user with the same username already exists \|
-
-\| 202 \| Could not save user to the database \|
-
-\| 203 \| Could not retrieve user from the database \|
 
 ## Codes 300-399
 
