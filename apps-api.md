@@ -112,7 +112,53 @@ A check is made to see if the current user has the right to start an app. For st
 ###note
 Calling this endpoint multiple times for a particular app does not start multiple servers for it; if an app's server is already running a new one will **not** be started.
 
+---
+
 ## POST: \/api\/apps\/stop
 Starts the server of the app with the specified name.
+
+###request
+
+
+
+A standard [Bolt request](bolt-request.md).
+
+
+
+`{`
+
+
+
+`"app" : String //the nameh of the app to start`
+
+
+
+`}`
+
+
+
+###response
+
+
+
+If the app is started successfully, the `body` field of the response should hold a context object.
+
+* To know if a server was started for the app, check if their is a defined `port` field for the context object.
+
+
+
+* To know if a server was started on another process, check if there is a defined `pid` field for the context object.
+
+
+
+###security
+
+A check is made to see if the current user has the right to start an app. For startup apps, no such check may be made.
+
+
+
+###note
+
+Calling this endpoint multiple times for a particular app does not start multiple servers for it; if an app's server is already running a new one will **not** be started.
 
 
