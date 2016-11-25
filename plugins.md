@@ -30,6 +30,14 @@ More than one app can specify the same Bolt endpoint in their `plugins`. For ins
 
 Bolt allows end users to specify the default plugin for a Bolt endpoint. Likewise, with the user's permission, you can set your plugin as the default. More on this later.
 
+### Types of Plugins
+
+There are 3 types of plugins your app can provide:
+
+1. Views
+2. Data
+3. Actions
+
 ### A Little Tip for You
 
 One day we may allow apps to specify external endpoints \(endpoints defined on actual web services\/websites\) in plugins.
