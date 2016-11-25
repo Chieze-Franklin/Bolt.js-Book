@@ -5,8 +5,6 @@ This is a description of the API endpoints exposed by the Bolt server for intera
 The following endpoints are described here:
 
 * [GET: \/api\/apps](#get-apiapps)
-* [GET: \/api\/apps\/@live](#get-apiappslive)
-* [GET: \/api\/apps\/{{app-name}}](#getapiappsapp-name)
 * [POST: \/api\/apps](#post-apiapps)
 * [POST: \/api\/apps\/reg](#post-apiappsreg)
 * [POST: \/api\/apps\/start](#post-apiappsstart)
