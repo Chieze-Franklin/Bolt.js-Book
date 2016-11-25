@@ -24,6 +24,7 @@
             * [Files \(API\)](files-api.md)
             * [Others \(API\)](others-api.md)
         * [UI Endpoints](ui-endpoints.md)
+            * Apps \(UI\)
             * [Files \(UI\)](files-ui.md)
     * [Bolt Response Codes](bolt-response-codes.md)
     * [Views](views.md)
