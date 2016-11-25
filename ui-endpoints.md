@@ -4,6 +4,6 @@ This is a description of the UI endpoints exposed by the Bolt server. These endp
 
 The following endpoints are described here:
 
-* Apps
-* Files
+* [Apps](/apps-ui.md)
+* [Files](/files-ui.md)
 
