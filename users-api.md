@@ -7,7 +7,7 @@ The following endpoints are described here:
 * [GET: \/api\/users](#get-apiusers)
 * [GET: \/api\/users\/@current](#get-apiuserscurrent)
 * [GET: \/api\/users\/@live](#get-apiuserslive)
-* GET: \/api\/users\/username
+* [GET: \/api\/users\/{{username}}](#get-apiusersusername)
 * [POST: \/api\/users](#post-apiusers)
 * [POST: \/api\/users\/login](#post-apiuserslogin)
 * [POST: \/api\/users\/logout](#post-apiuserslogout)
@@ -56,7 +56,7 @@ This may not work well in scenarios where Bolt is **not** expected to be _always
 
 ---
 
-## GET: \/api\/users\/username
+## GET: \/api\/users\/{{username}}
 
 Gets the user with the specified name.
 
