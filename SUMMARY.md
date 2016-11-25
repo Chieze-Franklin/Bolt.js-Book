@@ -27,4 +27,5 @@
             * [Files \(UI\)](files-ui.md)
     * [Bolt Response Codes](bolt-response-codes.md)
     * [Views](views.md)
+    * [Objects](objects.md)
 
