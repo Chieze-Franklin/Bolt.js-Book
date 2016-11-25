@@ -2,7 +2,7 @@
 
 This is a list and description of Bolt response codes.
 
-Note that apart from when checking to see if the code is `0` (no error) or `1000` (unknown error), it may be better to check for a range than for an exact number. For instance, it may be better to check if the code is between `200` and `299` (inclusive) than to check if it is `201`.
+Note that apart from when checking to see if the code is `0` \(no error\) or `1000` \(unknown error\), it may be better to check for a range than for an exact number. For instance, it may be better to check if the code is between `200` and `299` \(inclusive\) than to check if it is `201`.
 
 ## Code 0
 
@@ -27,109 +27,116 @@ Bolt found something wrong with the request.
 User Error.
 
 | Code | Meaning |
+| --- | --- |
+| 200 | Username and\/or password missing |
 
-|:--- |:---|
 
-| 200 | Username and/or password missing |
 
-| 201 | A user with the same username already exists |
+\| Code \| Meaning \|
 
-| 202 | Could not save user to the database |
+\|:--- \|:---\|
 
-| 203 | Could not retrieve user from the database |
+\| 200 \| Username and\/or password missing   \|
+
+\| 201 \| A user with the same username already exists \|
+
+\| 202 \| Could not save user to the database \|
+
+\| 203 \| Could not retrieve user from the database \|
 
 ## Codes 300-399
 
 Access-Control Error.
 
-| Code | Meaning |
+\| Code \| Meaning \|
 
-|:--- |:---|
+\|:--- \|:---\|
 
-| 300 | Role name missing |
+\| 300 \| Role name missing \|
 
-| 301 | A role with the same name already exists |
+\| 301 \| A role with the same name already exists \|
 
-| 302 | Could not save role to the database |
+\| 302 \| Could not save role to the database \|
 
-| 303 | Could not retrieve role from the database |
+\| 303 \| Could not retrieve role from the database \|
 
-| 310 | Username and/or role name missing |
+\| 310 \| Username and\/or role name missing \|
 
-| 311 | A user-role with the same user and role already exists |
+\| 311 \| A user-role with the same user and role already exists \|
 
-| 312 | Could not save user-role to the database |
+\| 312 \| Could not save user-role to the database \|
 
-| 313 | Could not retrieve user-role from the database |
+\| 313 \| Could not retrieve user-role from the database \|
 
-| 320 | App name and/or role name missing |
+\| 320 \| App name and\/or role name missing \|
 
-| 321 | An app-role with the same app and role already exists |
+\| 321 \| An app-role with the same app and role already exists \|
 
-| 322 | Could not save app-role to the database |
+\| 322 \| Could not save app-role to the database \|
 
-| 323 | Could not retrieve app-role from the database |
+\| 323 \| Could not retrieve app-role from the database \|
 
 ## Codes 400-499
 
 App Error.
 
-| Code | Meaning |
+\| Code \| Meaning \|
 
-|:--- |:---|
+\|:--- \|:---\|
 
-| 400 | App name missing |
+\| 400 \| App name missing \|
 
-| 401 | An app with the same name already exists |
+\| 401 \| An app with the same name already exists \|
 
-| 402 | Could not save app to the database |
+\| 402 \| Could not save app to the database \|
 
-| 403 | Could not retrieve app from the database |
+\| 403 \| Could not retrieve app from the database \|
 
-| 404 | Could not start app due to security concerns |
+\| 404 \| Could not start app due to security concerns \|
 
-| 410 | App path missing |
+\| 410 \| App path missing \|
 
-| 420 | App port missing |
+\| 420 \| App port missing \|
 
-| 432 | Could not save plugin to the database |
+\| 432 \| Could not save plugin to the database \|
 
-| 433 | Could not retrieve plugin from the database |
+\| 433 \| Could not retrieve plugin from the database \|
 
 ## Codes 500-599
 
 App Permission Error.
 
-| Code | Meaning |
+\| Code \| Meaning \|
 
-|:--- |:---|
+\|:--- \|:---\|
 
-| 504 | This app is not a system app |
+\| 504 \| This app is not a system app \|
 
 ## Codes 600-699
 
 File System Error.
 
-| Code | Meaning |
+\| Code \| Meaning \|
 
-|:--- |:---|
+\|:--- \|:---\|
 
-| 600 | File name missing |
+\| 600 \| File name missing \|
 
-| 601 | A file with the same name already exists |
+\| 601 \| A file with the same name already exists \|
 
-| 602 | Could not save file |
+\| 602 \| Could not save file \|
 
-| 603 | Could not retrieve file |
+\| 603 \| Could not retrieve file \|
 
 ## Codes 700-799
 
 File System Error.
 
-| Code | Meaning |
+\| Code \| Meaning \|
 
-|:--- |:---|
+\|:--- \|:---\|
 
-| 700 | Endpoint missing |
+\| 700 \| Endpoint missing \|
 
-| 703 | Could not find endpoint |
+\| 703 \| Could not find endpoint \|
+
