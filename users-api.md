@@ -10,6 +10,7 @@ The following endpoints are described here:
 * GET: \/api\/users\/username
 * [POST: \/api\/users](#post-apiusers)
 * [POST: \/api\/users\/login](#post-apiuserslogin)
+* [POST: \/api\/users\/logout](#post-apiuserslogout)
 
 ## GET: \/api\/users
 
@@ -91,7 +92,7 @@ Only system apps \(and native views\) can send requests to this endpoint.
 
 ## POST: \/api\/users\/login
 
-Logs a user into the system.
+Logs a user into the system for the current session.
 
 ### request
 
@@ -115,32 +116,15 @@ Only system apps \(and native views\) can send requests to this endpoint.
 
 ---
 
-## POST: \/api\/apps\/stop
+## POST: \/api\/users\/logout
 
-Starts the server of the app with the specified name.
-
-### request
-
-A standard [Bolt request](bolt-request.md).
-
-`{`
-
-`"app" : String //the nameh of the app to stop`
-
-`}`
+Logs a user out of the system for the current session.
 
 ### response
 
-* If the app is found to be running and was stopped successfully, the `body` field of the response should hold a context object.
-* If the app is not found to be running, the `error` field of the response may hold an error object. \(see **notes** below.\)
+If the user was logged out successfully, the `body` field of the response should hold a user object.
 
 ### security
 
-A check is made to see if the current user has the right to start an app. For startup apps, no such check may be made.
-
-This is the same check made when starting an app. The rationale is that you should be able to stop only apps you have the right to start.
-
-### note
-
-Although this may change, currently, trying to stop an app that is not running may return a [Bolt response](bolt-response.md) with [response code](bolt-response-codes.md) `420`. Code `420` means the port on which an app should be running cannot be found. The rationale is that you can only stop apps running on ports, so trying to stop an app that is not running \(for which no port can be found\) will result in an error with code `420`.
+Only system apps \(and native views\) can send requests to this endpoint.
 
