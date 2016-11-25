@@ -26,25 +26,25 @@ Then, whenever your app is started \(let's say on port 500\), necessary informat
 
 The `JSON` body of the `POST` will look something like this:
 
-{
+`{`
 
-protocol: String, \/\/protocol via which Bolt can be accessed
+`protocol: String, //protocol via which Bolt can be accessed`
 
-host: String, \/\/host via which Bolt can be accessed
+`host: String, //host via which Bolt can be accessed`
 
-port: Number \| String, \/\/port on which the Bolt server is running
+`port: Number | String, //port on which the Bolt server is running`
 
-appPort: Number \| String, \/\/port on which this app is running
+`appPort: Number | String, //port on which this app is running`
 
-reqid: String \/\/include this in the "X-Bolt-Req-Id" custom header of requests you send to Bolt endpoints
+`reqid: String //include this in the "X-Bolt-Req-Id" custom header of requests you send to Bolt endpoints`
 
-}
+`}`
 
-You do not need to store these data as they are dynamically generated \(appPort, reqid\) or can be changed in a config file \(protocol, host, port\).
+You do not need to store these data as they are dynamically generated \(`appPort`,` reqid`\) or can be changed in a config file \(`protocol`, `host`, `port`\).
 
 You are now free to use those data to interact with Bolt.
 
-A Note on "X-Bolt-Req-Id" header
+### A Note on "X-Bolt-Req-Id" header
 
-A Little Tip for You
+### A Little Tip for You
 
