@@ -107,7 +107,7 @@ A standard [Bolt request](bolt-request.md).
 
 ### response
 
-If the user was added successfully, the `body` field of the response should hold a user object.
+If the user was logged in successfully, the `body` field of the response should hold a user object.
 
 ### security
 
