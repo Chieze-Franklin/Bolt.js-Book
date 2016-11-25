@@ -6,7 +6,7 @@ The following endpoints are described here:
 
 * [GET: \/api\/users](#get-apiusers)
 * [GET: \/api\/users\/@current](#get-apiuserscurrent)
-* [POST: \/api\/apps\/reg](#post-apiappsreg)
+* [GET: \/api\/users\/@live](#get-apiuserslive)
 * [POST: \/api\/apps\/start](#post-apiappsstart)
 * [POST: \/api\/apps\/stop](#post-apiappsstop)
 
@@ -40,13 +40,17 @@ A better way of getting the logged-in user is by directing them to the \/login v
 
 ---
 
-## GET: \/api\/apps\/@live
+## GET: \/api\/users\/@live
 
-Gets an array of context objects for all running contexts.
+Gets an array of user objects for all currently logged-in users.
 
 ### response
 
-If there is no error during the processing of the request, the `body` field of the response should hold an array of context objects.
+If there is no error during the processing of the request, the `body` field of the response should hold an array of user objects.
+
+### note
+
+This may not work well in scenarios where Bolt is **not** expected to be _always on_.
 
 ---
 
