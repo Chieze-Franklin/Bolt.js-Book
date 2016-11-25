@@ -36,6 +36,8 @@ If the logged-in user for the current session is successfully found, the `body` 
 
 This may not work well in scenarios where Bolt is **not** expected to be _always on_.
 
+A better way of getting the logged-in user is by directing them to the \/login view, and specifying a return url to which the username will be sent.
+
 ---
 
 ## GET: \/api\/apps\/@live
