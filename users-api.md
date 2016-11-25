@@ -10,7 +10,7 @@ The following endpoints are described here:
 
 * [GET: \/api\/users\/@live](#get-apiuserslive)
 
-* [GET: \/api\/users\/{{username}}](#get-apiusersusername)
+* [GET: \/api\/users\/\{\{username\}\}](#get-apiusersusername)
 
 * [POST: \/api\/users](#post-apiusers)
 
@@ -61,7 +61,7 @@ This may not work well in scenarios where Bolt is **not** expected to be _always
 
 ---
 
-## GET: \/api\/users\/{{username}}
+## GET: \/api\/users\/\{\{username\}\}
 
 Gets the user with the specified name.
 
