@@ -39,7 +39,7 @@ If there is no error during the processing of the request, the `body` field of t
 ---
 
 
-## GET:\/api\/apps\/{{app-name}}
+## GET:\/api\/apps\/\{\{app\-name\}\}
 
 Gets the app object of the app with the specified name.
 
