@@ -20,7 +20,7 @@ You specify search criteria in the URL query portion. For instance, to get all u
 
 ### response
 
-If there is no error during the processing of the request, the `body` field of the response should hold an array of app [objects](objects.md).
+If there is no error during the processing of the request, the `body` field of the response should hold an array of user [objects](objects.md).
 
 ---
 
