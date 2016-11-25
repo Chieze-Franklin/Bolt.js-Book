@@ -8,7 +8,7 @@ The following endpoints are described here:
 
 * [GET: \/api\/user-roles](#get-apiuser-roles)
 
-* POST: \/api\/user-roles
+* [POST: \/api\/user-roles](#post-apiuser-roles)
 
 
 ## GET: \/api\/user-roles
@@ -22,4 +22,8 @@ You specify search criteria in the URL query portion. For instance, to get all u
 ### response
 
 If there is no error during the processing of the request, the `body` field of the response should hold an array of user-role [objects](objects.md).
+
+---
+
+# POST: \/api\/user-roles
 
