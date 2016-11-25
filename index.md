@@ -26,7 +26,7 @@ Then, whenever the user navigates to a UI endpoint like `localhost:400/apps/Note
 
 Also note that necessary information will be sent in the query portion of the URL:
 
-* `uid`: user ID of the logged-in user in the current session \(we pass user ID to avoid passing usernames\/emails in URL\)
+* `userid`: user ID of the logged-in user in the current session \(we pass user ID to avoid passing usernames\/emails in URL\)
 
 ### A Little Tip for You
 
