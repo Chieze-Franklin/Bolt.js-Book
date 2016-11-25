@@ -5,7 +5,7 @@ This is a description of the API endpoints exposed by the Bolt server for intera
 The following endpoints are described here:
 
 * [GET: \/api\/users](#get-apiusers)
-* [POST: \/api\/apps](#post-apiapps)
+* [GET: \/api\/users\/@current](#get-apiuserscurrent)
 * [POST: \/api\/apps\/reg](#post-apiappsreg)
 * [POST: \/api\/apps\/start](#post-apiappsstart)
 * [POST: \/api\/apps\/stop](#post-apiappsstop)
@@ -21,6 +21,16 @@ You specify search criteria in the URL query portion. For instance, to get all u
 ### response
 
 If there is no error during the processing of the request, the `body` field of the response should hold an array of user [objects](objects.md).
+
+---
+
+## GET: \/api\/users\/@current
+
+Gets an array of context objects for all running contexts.
+
+### response
+
+If there is no error during the processing of the request, the `body` field of the response should hold an array of context objects.
 
 ---
 
