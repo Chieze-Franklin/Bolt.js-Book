@@ -26,11 +26,11 @@ If there is no error during the processing of the request, the `body` field of t
 
 ## GET: \/api\/users\/@current
 
-Gets an array of context objects for all running contexts.
+Gets the logged-in user for the current session.
 
 ### response
 
-If there is no error during the processing of the request, the `body` field of the response should hold an array of context objects.
+If the logged-in user for the current session is successfully found, the `body` field of the response should hold a user object.
 
 ---
 
