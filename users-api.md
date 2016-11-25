@@ -7,7 +7,7 @@ The following endpoints are described here:
 * [GET: \/api\/users](#get-apiusers)
 * [GET: \/api\/users\/@current](#get-apiuserscurrent)
 * [GET: \/api\/users\/@live](#get-apiuserslive)
-* [GET: \/api\/users\/\{\{username\}\}](#get-apiusersusername)
+* [GET: \/api\/users\/{{username}}](#get-apiusersusername)
 * [POST: \/api\/users](#post-apiusers)
 * [POST: \/api\/users\/login](#post-apiuserslogin)
 * [POST: \/api\/users\/logout](#post-apiuserslogout)
@@ -36,9 +36,7 @@ If the logged-in user for the current session is successfully found, the `body` 
 
 ### note
 
-This may not work well in scenarios where Bolt is **not** expected to be _always on_.
-
-A better way of getting the logged-in user is by directing them to the \/login view, and specifying a return url to which the username will be sent.
+This endpoint works for native views only. A better way of getting the logged-in user is by directing the user to the `/login` native view, and specifying a return url to which the username will be sent.
 
 ---
 
@@ -56,7 +54,7 @@ This may not work well in scenarios where Bolt is **not** expected to be _always
 
 ---
 
-## GET: \/api\/users\/\{\{username\}\}
+## GET: \/api\/users\/{{username}}
 
 Gets the user with the specified name.
 
