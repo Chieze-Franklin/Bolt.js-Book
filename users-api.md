@@ -58,9 +58,11 @@ This may not work well in scenarios where Bolt is **not** expected to be _always
 
 ## GET: \/api\/users\/username
 
-Installs an app from an online repository \(current only npm is supported\).
+Gets the user with the specified name.
 
-This endpoint is still experimental.
+### response
+
+If the user is successfully found, the `body` field of the response should hold a user object.
 
 ---
 
