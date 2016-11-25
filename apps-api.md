@@ -118,9 +118,6 @@ Calling this endpoint multiple times for a particular app does not start multipl
 Starts the server of the app with the specified name.
 
 ###request
-
-
-
 A standard [Bolt request](bolt-request.md).
 
 
