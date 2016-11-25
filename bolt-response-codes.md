@@ -39,19 +39,18 @@ User Error.
 
 Access-Control Error.
 
-\| Code \| Meaning \|
+| **Code** | **Meaning** |
+| --- | --- |
+| 300 | Role name missing |
+| 301 | A role with the same name already exists |
+| 302 | Could not save role to the database |
+| 303 | Could not retrieve role from the database |
+|  |  |
+| 310 | Username and\/or role name missing |
 
-\|:--- \|:---\|
+\| 301 \| A role with the same name already exi
 
-\| 300 \| Role name missing \|
-
-\| 301 \| A role with the same name already exists \|
-
-\| 302 \| Could not save role to the database \|
-
-\| 303 \| Could not retrieve role from the database \|
-
-\| 310 \| Username and\/or role name missing \|
+\| 310 \|  \|
 
 \| 311 \| A user-role with the same user and role already exists \|
 
