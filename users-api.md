@@ -5,11 +5,17 @@ This is a description of the API endpoints exposed by the Bolt server for intera
 The following endpoints are described here:
 
 * [GET: \/api\/users](#get-apiusers)
+
 * [GET: \/api\/users\/@current](#get-apiuserscurrent)
+
 * [GET: \/api\/users\/@live](#get-apiuserslive)
-* [GET: \/api\/users\/{{username}}](#get-apiusersusername)
+
+* [GET: \/api\/users\/\{\{username\}\}](#get-apiusersusername)
+
 * [POST: \/api\/users](#post-apiusers)
+
 * [POST: \/api\/users\/login](#post-apiuserslogin)
+
 * [POST: \/api\/users\/logout](#post-apiuserslogout)
 
 ## GET: \/api\/users
@@ -54,7 +60,7 @@ This may not work well in scenarios where Bolt is **not** expected to be _always
 
 ---
 
-## GET: \/api\/users\/{{username}}
+## GET: \/api\/users\/\{\{username\}\}
 
 Gets the user with the specified name.
 
@@ -127,4 +133,5 @@ If the user was logged out successfully, the `body` field of the response should
 ### security
 
 Only system apps \(and native views\) can send requests to this endpoint.
+
 
