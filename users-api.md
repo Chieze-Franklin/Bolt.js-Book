@@ -1,26 +1,22 @@
 # Users \(API\)
-This is a description of the API endpoints exposed by the Bolt server for interacting with users.
 
+This is a description of the API endpoints exposed by the Bolt server for interacting with users.
 
 The following endpoints are described here:
 
-* [GET: \/api\/apps](#get-apiapps)
+* [GET: \/api\/users](#get-apiusers)
 * [POST: \/api\/apps](#post-apiapps)
 * [POST: \/api\/apps\/reg](#post-apiappsreg)
 * [POST: \/api\/apps\/start](#post-apiappsstart)
 * [POST: \/api\/apps\/stop](#post-apiappsstop)
 
-## GET: \/api\/apps
+## GET: \/api\/users
 
-Gets an array of app objects for all installed apps matching the specified criteria.
+Gets an array of user [objects](/objects.md) for all registered users matching the specified criteria.
 
-You specify search criteria in the URL query portion. For instance, to get all apps that have a version of `1.1`:
+You specify search criteria in the URL query portion. For instance, to get all users who have visited \(logged into\) the service 7 times:
 
-`localhost:400/api/apps?version=1.1`
-
-To get all apps that have `settings` as one of their tags:
-
-`localhost:400/api/apps?tags=settings`
+`localhost:400/api/users?visits=7`
 
 ### response
 
