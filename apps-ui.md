@@ -4,7 +4,9 @@ This is a description of the UI endpoints exposed by the Bolt server for interac
 
 The following endpoints are described here:
 
-* [GET: \/apps\/\{\{app-name\}\}](#get-appsapp-name)
+* [GET: \/apps\/{{app-name}}](#get-appsapp-name)
 
-## GET: \/apps\/\{\{app-name\}\}
+## GET: \/apps\/{{app-name}}
+
+This endpoint runs the app with the specified name.
 
