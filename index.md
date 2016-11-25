@@ -30,7 +30,7 @@ Also note that necessary information will be sent in the query portion of the UR
 
 To get the user from the userid:
 
-`GET: localhost:400/api/users?_id=userid`
+`GET: localhost:400/api/users?_id={{userid}}`
 
 This will return an array of users with that ID. Since the ID is unique, it should not contain more than one user.
 
