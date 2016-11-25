@@ -32,6 +32,10 @@ Gets the logged-in user for the current session.
 
 If the logged-in user for the current session is successfully found, the `body` field of the response should hold a user object.
 
+### note
+
+This may not work well in scenarios where Bolt is not expected to be _always on_.
+
 ---
 
 ## GET: \/api\/apps\/@live
