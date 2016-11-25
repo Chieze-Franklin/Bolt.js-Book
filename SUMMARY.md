@@ -23,6 +23,7 @@
         * [API Endpoints](api-endpoints.md)
             * [Apps \(API\)](apps-api.md)
             * [Users \(API\)](users-api.md)
+            * User-Roles \(API\)
             * [Files \(API\)](files-api.md)
             * [Others \(API\)](others-api.md)
         * [UI Endpoints](ui-endpoints.md)
