@@ -2,7 +2,7 @@
 
 This is a list and description of Bolt response codes.
 
-Note that apart from when checking to see if the code is <code>0</code> (no error) or <code>1000</code> (unknown error), it may be better to check for a range than for an exact number. For instance, it may be better to check if the code is between <code>200</code> and <code>299</code> (inclusive) than to check if it is <code>201</code>.
+Note that apart from when checking to see if the code is `0` (no error) or `1000` (unknown error), it may be better to check for a range than for an exact number. For instance, it may be better to check if the code is between `200` and `299` (inclusive) than to check if it is `201`.
 
 ## Code 0
 
