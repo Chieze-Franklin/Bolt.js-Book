@@ -47,12 +47,9 @@ Access-Control Error.
 | 303 | Could not retrieve role from the database |
 |  |  |
 | 310 | Username and\/or role name missing |
+| 311 | A user-role with the same user and role already exists. |
 
-\| 301 \| A role with the same name already exi
 
-\| 310 \|  \|
-
-\| 311 \| A user-role with the same user and role already exists \|
 
 \| 312 \| Could not save user-role to the database \|
 
