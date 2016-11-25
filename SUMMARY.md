@@ -12,7 +12,7 @@
     * [The Bolt Server](the-bolt-server.md)
     * Apps Without Servers
     * Non-Node Servers
-    * Installing the App
+    * [Installing the App](installing-the-app.md)
 * [Integrating With Bolt](integrating-with-bolt.md)
     * The Setup View
     * The Settings App
