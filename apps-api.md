@@ -122,20 +122,11 @@ A standard [Bolt request](bolt-request.md).
 
 `{`
 
-
-
-`"app" : String //the nameh of the app to start`
-
-
+`"app" : String //the nameh of the app to stop`
 
 `}`
 
-
-
 ###response
-
-
-
 If the app is started successfully, the `body` field of the response should hold a context object.
 
 * To know if a server was started for the app, check if their is a defined `port` field for the context object.
