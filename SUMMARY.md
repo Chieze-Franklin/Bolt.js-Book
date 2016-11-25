@@ -7,6 +7,7 @@
     * [The package.json File](packagejson.md)
         * [main](main.md)
         * [index](index.md)
+        * [ini](ini.md)
         * [plugins](plugins.md)
     * [The Bolt Server](the-bolt-server.md)
     * Apps Without Servers
