@@ -34,7 +34,7 @@ If the logged-in user for the current session is successfully found, the `body` 
 
 ### note
 
-This may not work well in scenarios where Bolt is not expected to be _always on_.
+This may not work well in scenarios where Bolt is **not** expected to be _always on_.
 
 ---
 
