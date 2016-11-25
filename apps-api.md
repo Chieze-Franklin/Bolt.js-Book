@@ -106,21 +106,10 @@ If the app is started successfully, the `body` field of the response should hold
 
 * To know if a server was started on another process, check if there is a defined `pid` field for the context object.
 
-
 ###security
+A check is made to see if the current user has the right to start an app. For startup apps, no such check may be made.
 
-
-
-Any app can send a request to this endpoint provided:
-
-
-
-* The user has granted the app [permission](user-permissions.md) to perform an installation.
-
-
-
-* The user has administrative privileges.
-
+###note
 
 ## POST: \/api\/apps\/stop
 
