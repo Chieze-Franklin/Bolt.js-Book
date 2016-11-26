@@ -8,6 +8,7 @@ The following endpoints are described here:
 
 * [GET: \/api\/roles](#get-apiroles)
 
+* [GET: \/api\/roles\/{{role-name}}](#get-apirolesrole-name)
 * [POST: \/api\/user-roles](#post-apiuser-roles)
 
 
@@ -25,13 +26,13 @@ If there is no error during the processing of the request, the `body` field of t
 
 ---
 
-## GET: \/api\/roles\/\{\{name\}\}
+## GET: \/api\/roles\/{{role-name}}
 
-Gets the user with the specified name.
+Gets the role with the specified name.
 
 ### response
 
-If the user is successfully found, the `body` field of the response should hold a user object.
+If the role is successfully found, the `body` field of the response should hold a role object.
 
 # POST: \/api\/roles
 
