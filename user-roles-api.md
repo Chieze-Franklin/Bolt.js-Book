@@ -27,3 +27,5 @@ If there is no error during the processing of the request, the `body` field of t
 
 # POST: \/api\/user-roles
 
+Adds a user-role association to the database.
+
