@@ -6,12 +6,12 @@ This is a description of the API endpoints exposed by the Bolt server for intera
 
 The following endpoints are described here:
 
-* [GET: \/api\/user-roles](#get-apiuser-roles)
+* [GET: \/api\/roles](#get-apiroles)
 
 * [POST: \/api\/user-roles](#post-apiuser-roles)
 
 
-## GET: \/api\/user-roles
+## GET: \/api\/roles
 
 Gets an array of user [objects](/objects.md) for all registered user-roles matching the specified criteria.
 
