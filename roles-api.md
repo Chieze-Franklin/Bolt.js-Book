@@ -25,6 +25,14 @@ If there is no error during the processing of the request, the `body` field of t
 
 ---
 
+## GET: \/api\/roles\/\{\{name\}\}
+
+Gets the user with the specified name.
+
+### response
+
+If the user is successfully found, the `body` field of the response should hold a user object.
+
 # POST: \/api\/roles
 
 Adds a role to the database.
