@@ -60,27 +60,20 @@ Access-Control Error.
 
 App Error.
 
-\| Code \| Meaning \|
-
-\|:--- \|:---\|
-
-\| 400 \| App name missing \|
-
-\| 401 \| An app with the same name already exists \|
-
-\| 402 \| Could not save app to the database \|
-
-\| 403 \| Could not retrieve app from the database \|
-
-\| 404 \| Could not start app due to security concerns \|
-
-\| 410 \| App path missing \|
-
-\| 420 \| App port missing \|
-
-\| 432 \| Could not save plugin to the database \|
-
-\| 433 \| Could not retrieve plugin from the database \|
+| **Code** | **Meaning** |
+| --- | --- |
+| 400 | App name missing |
+| 401 | An app with the same name already exists |
+| 402 | Could not save app to the database |
+| 403 | Could not retrieve app from the database |
+| 404 | Could not start app due to security concerns |
+|  |  |
+| 410 | App path missing |
+|  |  |
+| 420 | App port missing |
+|  |  |
+| 432 | Could not save plugin to the database |
+| 433 | Could not retrieve plugin from the database |
 
 ## Codes 500-599
 
