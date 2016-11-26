@@ -2,7 +2,7 @@
 
 A role encapsulates rights and permissions.
 
-This is a description of the API endpoints exposed by the Bolt server for interacting with user-roles.
+This is a description of the API endpoints exposed by the Bolt server for interacting with roles.
 
 The following endpoints are described here:
 
