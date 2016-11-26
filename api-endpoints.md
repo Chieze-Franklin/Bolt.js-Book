@@ -7,7 +7,10 @@ These are the core endpoints that govern the inner workings of Bolt. The respons
 * [Users](/users-api.md)
 
 * [Roles](/roles-api.md)
+
 * [User-Roles](/user-roles-api.md)
 
+* [App-Roles](/app-roles-api.md)
 * [Others](/others-api.md)
+
 
