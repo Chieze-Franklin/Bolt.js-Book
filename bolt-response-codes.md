@@ -22,6 +22,11 @@ Request Error.
 
 Bolt found something wrong with the request.
 
+| **Code** | **Meaning** |
+| --- | --- |
+| 100 | Endpoint not specified |
+| 103 | Could not find endpoint |
+
 ## Codes 200-299
 
 User Error.
@@ -94,15 +99,5 @@ File System Error.
 | 602 | Could not save file |
 | 603 | Could not retrieve file |
 
-## Codes 700-799
-
-File System Error.
-
-\| Code \| Meaning \|
-
-\|:--- \|:---\|
-
-\| 700 \| Endpoint missing \|
-
-\| 703 \| Could not find endpoint \|
+## 
 
