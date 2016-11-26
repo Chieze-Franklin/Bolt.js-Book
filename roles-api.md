@@ -25,9 +25,9 @@ If there is no error during the processing of the request, the `body` field of t
 
 ---
 
-# POST: \/api\/user-roles
+# POST: \/api\/roles
 
-Adds a user-role association to the database.
+Adds a role to the database.
 
 ### request
 
@@ -35,15 +35,19 @@ A standard [Bolt request](bolt-request.md).
 
 `{`
 
-`"user" : String, //username of the user being referenced`
+`"name" : String, //the name with which the role can be gotten internally`
 
-`"role" : String //name of the role being referenced`
+`"title" : String, //user-friendly text for the role`
+
+`"description" : String, //user-friendly description for the role`
+
+`"isAdmin" : Boolean //determines if this role should be granted administrative privileges`
 
 `}`
 
 ### response
 
-If the user-role was added successfully, the `body` field of the response should hold a user-role object.
+If the role was added successfully, the `body` field of the response should hold a role object.
 
 ### security
 
