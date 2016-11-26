@@ -13,15 +13,15 @@ The following endpoints are described here:
 
 ## GET: \/api\/roles
 
-Gets an array of user [objects](/objects.md) for all registered user-roles matching the specified criteria.
+Gets an array of role [objects](/objects.md) for all registered roles matching the specified criteria.
 
-You specify search criteria in the URL query portion. For instance, to get all user-roles for user `user1`:
+You specify search criteria in the URL query portion. For instance, to get all roles with administrative privileges:
 
-`localhost:400/api/user-roles?user=user1`
+`localhost:400/api/roles?isAdmin=true`
 
 ### response
 
-If there is no error during the processing of the request, the `body` field of the response should hold an array of user-role [objects](objects.md).
+If there is no error during the processing of the request, the `body` field of the response should hold an array of role [objects](objects.md).
 
 ---
 
