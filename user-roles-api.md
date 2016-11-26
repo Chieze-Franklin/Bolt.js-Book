@@ -13,7 +13,7 @@ The following endpoints are described here:
 
 ## GET: \/api\/user-roles
 
-Gets an array of user [objects](/objects.md) for all registered user-roles matching the specified criteria.
+Gets an array of user-role association [objects](/objects.md) for all registered user-roles matching the specified criteria.
 
 You specify search criteria in the URL query portion. For instance, to get all user-roles for user `user1`:
 
