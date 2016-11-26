@@ -29,3 +29,23 @@ If there is no error during the processing of the request, the `body` field of t
 
 Adds a user-role association to the database.
 
+### request
+
+A standard [Bolt request](bolt-request.md).
+
+`{`
+
+`"user" : String, //username of the user being referenced`
+
+`"role" : String //name of the role being referenced`
+
+`}`
+
+### response
+
+If the user-role was added successfully, the `body` field of the response should hold a user-role object.
+
+### security
+
+Only system apps \(and native views\) can send requests to this endpoint.
+
