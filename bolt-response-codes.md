@@ -79,11 +79,9 @@ App Error.
 
 App Permission Error.
 
-\| Code \| Meaning \|
-
-\|:--- \|:---\|
-
-\| 504 \| This app is not a system app \|
+| **Code** | **Meaning** |
+| --- | --- |
+| 504 | This app is not a system app |
 
 ## Codes 600-699
 
