@@ -87,17 +87,12 @@ App Permission Error.
 
 File System Error.
 
-\| Code \| Meaning \|
-
-\|:--- \|:---\|
-
-\| 600 \| File name missing \|
-
-\| 601 \| A file with the same name already exists \|
-
-\| 602 \| Could not save file \|
-
-\| 603 \| Could not retrieve file \|
+| **Code** | **Meaning** |
+| --- | --- |
+| 600 | File name missing |
+| 601 | A file with the same name already exists |
+| 602 | Could not save file |
+| 603 | Could not retrieve file |
 
 ## Codes 700-799
 
