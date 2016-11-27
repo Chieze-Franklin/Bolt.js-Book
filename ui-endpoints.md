@@ -6,4 +6,5 @@ The following endpoints are described here:
 
 * [Apps](/apps-ui.md)
 * [Files](/files-ui.md)
+* [Views](/views-ui.md)
 
