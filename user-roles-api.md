@@ -49,3 +49,21 @@ If the user-role was added successfully, the `body` field of the response should
 
 Only system apps \(and native views\) can send requests to this endpoint.
 
+---
+
+## DELETE: \/api\/user-roles
+
+Deletes an array of user-role association objects for all registered user-roles matching the specified criteria.
+
+You specify search criteria in the URL query portion. For instance, to delete all user-roles for user `user1`:
+
+`localhost:400/api/user-roles?user=user1`
+
+### response
+
+If there is no error during the processing of the request, the `body` field of the response should hold an array of user-role objects.
+
+### security
+
+Only system apps \(and native views\) can send requests to this endpoint.
+
