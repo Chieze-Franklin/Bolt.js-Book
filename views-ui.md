@@ -30,45 +30,27 @@ If there are registered users Bolt will check for a current session \(a logged-i
 
 ---
 
-# POST: \/api\/user-roles
+# GET: \/login
 
-Adds a user-role association to the database.
-
-### request
-
-A standard [Bolt request](bolt-request.md).
-
-`{`
-
-`"user" : String, //username of the user being referenced`
-
-`"role" : String //name of the role being referenced`
-
-`}`
-
-### response
-
-If the user-role was added successfully, the `body` field of the response should hold a user-role object.
-
-### security
-
-Only system apps \(and native views\) can send requests to this endpoint.
+This displays the native login view.
 
 ---
 
-## DELETE: \/api\/user-roles
+## GET: \/logout
 
-Deletes an array of user-role association objects for all registered user-roles matching the specified criteria.
+This displays the native logout view.
 
-You specify search criteria in the URL query portion. For instance, to delete all user-roles for user `user1`:
+---
 
-`localhost:400/api/user-roles?user=user1`
+## GET: \/setup
 
-### response
+This displays the native setup view.
 
-If there is no error during the processing of the request, the `body` field of the response should hold an array of user-role objects.
+---
 
-### security
+## GET: \/:view
 
-Only system apps \(and native views\) can send requests to this endpoint.
+This displays the \(non-native\) view with the specified name. 
+
+Bolt looks for an installed app to serves this view. See [plugins](/plugins.md). Obviously more than one app can register to serve this view; in that case Bolt looks for the app that has been set as the default app for the view. If no app is found for the specified view Bolt loads an appropriate native view. If no native view is found Bolt redirects to the 404 view \(`/404`\) which is also a view that can be served by an app.
 
