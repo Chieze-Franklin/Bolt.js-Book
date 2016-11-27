@@ -31,6 +31,7 @@
         * [UI Endpoints](ui-endpoints.md)
             * [Apps \(UI\)](apps-ui.md)
             * [Files \(UI\)](files-ui.md)
+            * [Views \(UI\)](views-ui.md)
     * [Bolt Response Codes](bolt-response-codes.md)
     * [Views](views.md)
     * [Objects](objects.md)
