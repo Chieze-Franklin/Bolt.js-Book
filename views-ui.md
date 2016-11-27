@@ -4,7 +4,7 @@ This is a description of the UI endpoints exposed by the Bolt server for interac
 
 The following endpoints are described here:
 
-* [GET: \/](#get-apiuser-roles)
+* [GET: \/](#get-)
 
 * [POST: \/api\/user-roles](#post-apiuser-roles)
 
