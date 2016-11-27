@@ -10,6 +10,7 @@ The following endpoints are described here:
 
 * [POST: \/api\/user-roles](#post-apiuser-roles)
 
+* [DELETE: \/api\/user-roles](#delete-apiuser-roles)
 
 ## GET: \/api\/user-roles
 
