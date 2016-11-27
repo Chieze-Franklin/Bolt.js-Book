@@ -12,7 +12,7 @@ The following endpoints are described here:
 
 * [GET: \/setup](#get-setup)
 
-* [GET: \/{{view}}](#get-view)
+* [GET: \/\{\{view\}\}](#get-view)
 
 ## GET: \/
 
@@ -51,7 +51,7 @@ This displays the native setup view.
 
 ---
 
-## GET: \/{{view}}
+## GET: \/\{\{view\}\}
 
 This displays the \(non-native\) view with the specified name.
 
