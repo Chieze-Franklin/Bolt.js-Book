@@ -6,7 +6,7 @@
 * [Your First Bolt App](your-first-bolt-app.md)
     * [The package.json File](packagejson.md)
         * [main](main.md)
-        * [index](_index.md)
+        * [index](package-index.md)
         * [ini](ini.md)
         * [plugins](plugins.md)
     * [The Bolt Server](the-bolt-server.md)
