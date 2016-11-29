@@ -24,7 +24,7 @@ Assuming you set your `index` as shown below:
 
 Then, whenever the user navigates to a UI endpoint like `localhost:400/apps/Notes`, your app will automatically be started \(let's say on port 500\), and the user will automatically be redirected to `localhost:500/notes`.
 
-Also note that necessary information will be sent in the query portion of the URL:
+Also note that necessary information **may** be sent in the query portion of the URL:
 
 * `userid`: user ID of the logged-in user in the current session \(we pass user ID to avoid passing usernames\/emails in URL\)
 
