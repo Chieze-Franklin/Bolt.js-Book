@@ -12,7 +12,6 @@ The following endpoints are described here:
 
 * [DELETE: \/api\/user-roles](#delete-apiuser-roles)
 
-* [PUT: \/api\/user-roles](#put-apiuser-roles)
 
 ## GET: \/api\/user-roles
 
@@ -65,24 +64,6 @@ You specify search criteria in the URL query portion. For instance, to delete al
 ### request
 
 An object whose keys represent the fields you want to update and whole values represent the new values for the update.
-
-### response
-
-If there is no error during the processing of the request, the `body` field of the response should hold an array of user-role objects.
-
-### security
-
-Only system apps \(and native views\) can send requests to this endpoint.
-
----
-
-## PUT: \/api\/user-roles
-
-Updates an array of user-role association objects for all registered user-roles matching the specified criteria.
-
-You specify search criteria in the URL query portion. For instance, to update all user-roles for user `user1`:
-
-`localhost:400/api/user-roles?user=user1`
 
 ### response
 
