@@ -10,7 +10,7 @@ The following endpoints are described here:
 
 * [GET: \/api\/users\/@live](#get-apiuserslive)
 
-* [GET: \/api\/users\/\{\{username\}\}](#get-apiusersusername)
+* [GET: \/api\/users\/{{name}}](#get-apiusersname)
 
 * [POST: \/api\/users](#post-apiusers)
 
@@ -18,6 +18,10 @@ The following endpoints are described here:
 
 * [POST: \/api\/users\/logout](#post-apiuserslogout)
 
+* [DELETE: \/api\/users](#delete-apiusers)
+* DELETE: \/api\/users\/{{name}}
+* PUT: \/api\/users
+* PUT: \/api\/users\/{{name}}
 
 ## GET: \/api\/users
 
@@ -61,7 +65,7 @@ This may not work well in scenarios where Bolt is **not** expected to be _always
 
 ---
 
-## GET: \/api\/users\/\{\{username\}\}
+## GET: \/api\/users\/{{name}}
 
 Gets the user with the specified name.
 
@@ -134,4 +138,32 @@ If the user was logged out successfully, the `body` field of the response should
 ### security
 
 Only system apps \(and native views\) can send requests to this endpoint.
+
+---
+
+## DELETE: \/api\/users
+
+Deletes an array of users matching the specified criteria.
+
+You specify search criteria in the URL query portion. For instance, to delete all users who have visited \(logged into\) the service 7 times:
+
+`localhost:400/api/users?visits=7`
+
+### response
+
+If there is no error during the processing of the request, the `body` field of the response should hold an array of user objects.
+
+---
+
+## DELETE: \/api\/users\/{{name}}
+
+Gets an array of user [objects](/objects.md) for all registered users matching the specified criteria.
+
+You specify search criteria in the URL query portion. For instance, to get all users who have visited \(logged into\) the service 7 times:
+
+`localhost:400/api/users?visits=7`
+
+### response
+
+If there is no error during the processing of the request, the `body` field of the response should hold an array of user [objects](objects.md).
 
