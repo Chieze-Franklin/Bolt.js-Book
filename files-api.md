@@ -4,11 +4,15 @@ This is a description of the API endpoints exposed by the Bolt server for intera
 
 The following endpoints are described here:
 
-* [GET: \/api\/files\/\{\{app\}\}\/\{\{file\}\}](#get-filesappfile)
+* [GET: \/api\/files\/{{app}}\/{{file}}](#get-filesappfile)
 
-## GET: \/api\/files\/\{\{app\}\}\/\{\{file\}\}
+## GET: \/api\/files\/{{app}}\/{{file}}
 
-This gets the file file being served by an app.
+Gets the file [object](/objects.md) of the file being served by the app.
+
+### response
+
+If the file is found, the `body` field of the response should hold a file object.
 
 ### security
 
