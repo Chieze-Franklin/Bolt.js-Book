@@ -12,7 +12,7 @@
         * [install](install.md)
         * [plugins](plugins.md)
         * [tags](tags.md)
-    * [The Bolt Server](the-bolt-server.md)
+    * [The App Server](the-app-server.md)
     * Apps Without Servers
     * Non-Node Servers
     * [Installing the App](installing-the-app.md)
