@@ -10,6 +10,7 @@ The following endpoints are described here:
 
 * [POST: \/api\/app-roles](#post-apiapp-roles)
 
+* [DELETE: \/api\/app-roles](#delete-apiapp-roles)
 
 ## GET: \/api\/app-roles
 
@@ -44,6 +45,28 @@ A standard [Bolt request](bolt-request.md).
 ### response
 
 If the app-role was added successfully, the `body` field of the response should hold an app-role object.
+
+### security
+
+Only system apps \(and native views\) can send requests to this endpoint.
+
+---
+
+## DELETE: \/api\/app-roles
+
+Deletes an array of app-role association objects for all registered app-roles matching the specified criteria.
+
+You specify search criteria in the URL query portion. For instance, to delete all app-roles for app app`1`:
+
+`localhost:400/api/app-roles?app=app1`
+
+### request
+
+An object whose keys represent the fields you want to update and whole values represent the new values for the update.
+
+### response
+
+If there is no error during the processing of the request, the `body` field of the response should hold an array of user-role objects.
 
 ### security
 
