@@ -29,6 +29,6 @@ The following are fields expected inside `bolt`:
 * [ini](/ini.md)
 * [install](/install.md)
 * [plugins](/plugins.md)
-* tags
+* [tags](/tags.md)
 * `title`: a user-friendly caption for your app
 
