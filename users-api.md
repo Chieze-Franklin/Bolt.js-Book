@@ -10,7 +10,7 @@ The following endpoints are described here:
 
 * [GET: \/api\/users\/@live](#get-apiuserslive)
 
-* [GET: \/api\/users\/{{name}}](#get-apiusersname)
+* [GET: \/api\/users\/\{\{name\}\}](#get-apiusersname)
 
 * [POST: \/api\/users](#post-apiusers)
 
@@ -19,9 +19,12 @@ The following endpoints are described here:
 * [POST: \/api\/users\/logout](#post-apiuserslogout)
 
 * [DELETE: \/api\/users](#delete-apiusers)
-* DELETE: \/api\/users\/{{name}}
+
+* DELETE: \/api\/users\/\{\{name\}\}
+
 * PUT: \/api\/users
-* PUT: \/api\/users\/{{name}}
+
+* PUT: \/api\/users\/\{\{name\}\}
 
 ## GET: \/api\/users
 
@@ -65,7 +68,7 @@ This may not work well in scenarios where Bolt is **not** expected to be _always
 
 ---
 
-## GET: \/api\/users\/{{name}}
+## GET: \/api\/users\/\{\{name\}\}
 
 Gets the user with the specified name.
 
@@ -83,13 +86,13 @@ Adds a user to the database.
 
 A standard [Bolt request](bolt-request.md).
 
-`{`
+`\{`
 
 `"username" : String,`
 
 `"password" : String`
 
-`}`
+`\}`
 
 ### response
 
@@ -109,13 +112,13 @@ Logs a user into the system for the current session.
 
 A standard [Bolt request](bolt-request.md).
 
-`{`
+`\{`
 
 `"username" : String,`
 
 `"password" : String`
 
-`}`
+`\}`
 
 ### response
 
@@ -155,7 +158,7 @@ If there is no error during the processing of the request, the `body` field of t
 
 ---
 
-## DELETE: \/api\/users\/{{name}}
+## DELETE: \/api\/users\/\{\{name\}\}
 
 Gets an array of user [objects](/objects.md) for all registered users matching the specified criteria.
 
@@ -166,4 +169,3 @@ You specify search criteria in the URL query portion. For instance, to get all u
 ### response
 
 If there is no error during the processing of the request, the `body` field of the response should hold an array of user [objects](objects.md).
-
