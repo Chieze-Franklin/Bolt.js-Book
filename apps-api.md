@@ -5,11 +5,17 @@ This is a description of the API endpoints exposed by the Bolt server for intera
 The following endpoints are described here:
 
 * [GET: \/api\/apps](#get-apiapps)
+
 * [GET: \/api\/apps\/@live](#get-apiappslive)
-* [GET: \/api\/apps\/{{name}}](#getapiappsname)
+
+* [GET: \/api\/apps\/\{\{name\}\}](#getapiappsname)
+
 * [POST: \/api\/apps](#post-apiapps)
+
 * [POST: \/api\/apps\/reg](#post-apiappsreg)
+
 * [POST: \/api\/apps\/start](#post-apiappsstart)
+
 * [POST: \/api\/apps\/stop](#post-apiappsstop)
 
 ## GET: \/api\/apps
@@ -40,7 +46,7 @@ If there is no error during the processing of the request, the `body` field of t
 
 ---
 
-## GET:\/api\/apps\/{{name}}
+## GET:\/api\/apps\/\{\{name\}\}
 
 Gets the app object of the app with the specified name.
 
@@ -84,7 +90,6 @@ Any app can send a request to this endpoint provided:
 
 * The user has administrative privileges.
 
-
 ---
 
 ## POST: \/api\/apps\/start
@@ -108,7 +113,6 @@ If the app is started successfully, the `body` field of the response should hold
 * To know if a server was started for the app, check if their is a defined `port` field for the context object.
 
 * To know if a server was started on another process, check if there is a defined `pid` field for the context object.
-
 
 ### security
 
@@ -137,6 +141,7 @@ A standard [Bolt request](bolt-request.md).
 ### response
 
 * If the app is found to be running and was stopped successfully, the `body` field of the response should hold a context object.
+
 * If the app is not found to be running, the `error` field of the response may hold an error object. \(see **notes** below.\)
 
 ### security
@@ -148,4 +153,3 @@ This is the same check made when starting an app. The rationale is that you shou
 ### note
 
 Although this may change, currently, trying to stop an app that is not running may return a [Bolt response](bolt-response.md) with [response code](bolt-response-codes.md) `420`. Code `420` means the port on which an app should be running cannot be found. The rationale is that you can only stop apps running on ports, so trying to stop an app that is not running \(for which no port can be found\) will result in an error with code `420`.
-
