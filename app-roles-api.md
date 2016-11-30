@@ -12,6 +12,7 @@ The following endpoints are described here:
 
 * [DELETE: \/api\/app-roles](#delete-apiapp-roles)
 
+
 ## GET: \/api\/app-roles
 
 Gets an array of app-role association [objects](/objects.md) for all registered app-roles matching the specified criteria.
@@ -60,13 +61,9 @@ You specify search criteria in the URL query portion. For instance, to delete al
 
 `localhost:400/api/app-roles?app=app1`
 
-### request
-
-An object whose keys represent the fields you want to update and whole values represent the new values for the update.
-
 ### response
 
-If there is no error during the processing of the request, the `body` field of the response should hold an array of user-role objects.
+If there is no error during the processing of the request, the `body` field of the response should hold an array of app-role objects.
 
 ### security
 
