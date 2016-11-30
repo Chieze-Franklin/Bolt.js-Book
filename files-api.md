@@ -1,2 +1,16 @@
 # Files \(API\)
 
+This is a description of the API endpoints exposed by the Bolt server for interacting with public files.
+
+The following endpoints are described here:
+
+* [GET: \/api\/files\/\{\{app\}\}\/\{\{file\}\}](#get-filesappfile)
+
+## GET: \/api\/files\/\{\{app\}\}\/\{\{file\}\}
+
+This gets the file file being served by an app.
+
+### security
+
+The current user must have \(been given\) the right to access the file.
+
