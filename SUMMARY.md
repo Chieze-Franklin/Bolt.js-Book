@@ -10,6 +10,7 @@
         * [ini](ini.md)
         * [install](install.md)
         * [plugins](plugins.md)
+        * [tags](tags.md)
     * [The Bolt Server](the-bolt-server.md)
     * Apps Without Servers
     * Non-Node Servers
