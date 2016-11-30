@@ -4,7 +4,7 @@ This is a description of the API endpoints exposed by the Bolt server for intera
 
 The following endpoints are described here:
 
-* [GET: \/api\/files\/\{\{app\}\}\/\{\{file\}\}](#get-filesappfile)
+* [GET: \/api\/files\/\{\{app\}\}\/\{\{file\}\}](#get-apifilesappfile)
 
 ## GET: \/api\/files\/\{\{app\}\}\/\{\{file\}\}
 
