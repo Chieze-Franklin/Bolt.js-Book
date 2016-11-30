@@ -8,7 +8,7 @@ The following endpoints are described here:
 
 * [GET: \/api\/roles](#get-apiroles)
 
-* [GET: \/api\/roles\/{{name}}](#get-apirolesname)
+* [GET: \/api\/roles\/\{\{name\}\}](#get-apirolesname)
 
 * [POST: \/api\/user-roles](#post-apiuser-roles)
 
@@ -26,7 +26,7 @@ If there is no error during the processing of the request, the `body` field of t
 
 ---
 
-## GET: \/api\/roles\/{{name}}
+## GET: \/api\/roles\/\{\{name\}\}
 
 Gets the role with the specified name.
 
@@ -82,7 +82,7 @@ Only system apps \(and native views\) can send requests to this endpoint.
 
 ---
 
-## DELETE: \/api\/users\/{{name}}
+## DELETE: \/api\/users\/\{\{name\}\}
 
 Deletes the user with the specified name.
 
@@ -126,7 +126,7 @@ Only system apps \(and native views\) can send requests to this endpoint.
 
 ---
 
-## PUT: \/api\/users\/{{name}}
+## PUT: \/api\/users\/\{\{name\}\}
 
 Updates the user with the specified name.
 
@@ -149,4 +149,5 @@ If the user is successfully updated, the `body` field of the response should hol
 ### security
 
 Only system apps \(and native views\) can send requests to this endpoint.
+
 
