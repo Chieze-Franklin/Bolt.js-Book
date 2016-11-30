@@ -6,6 +6,7 @@
 * [Your First Bolt App](your-first-bolt-app.md)
     * [The package.json File](packagejson.md)
         * [main](main.md)
+        * [checks](checks.md)
         * [index](package-index.md)
         * [ini](ini.md)
         * [install](install.md)

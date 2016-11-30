@@ -25,6 +25,8 @@ Every Bolt-specific field must be contained in an object called `bolt`. So add t
 The following are fields expected inside `bolt`:
 
 * [main](/main.md)
+* checks
+* files
 * [index](/package-index.md)
 * [ini](/ini.md)
 * [install](/install.md)
