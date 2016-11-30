@@ -8,14 +8,17 @@ The following endpoints are described here:
 
 * [GET: \/api\/roles](#get-apiroles)
 
-* [GET: \/api\/roles\/{{name}}](#get-apirolesname)
+* [GET: \/api\/roles\/\{\{name\}\}](#get-apirolesname)
 
 * [POST: \/api\/roles](#post-apiroles)
 
 * [DELETE: \/api\/roles](#delete-apiroles)
-* [DELETE: \/api\/roles\/{{name}}](#delete-apirolesname)
+
+* [DELETE: \/api\/roles\/\{\{name\}\}](#delete-apirolesname)
+
 * [PUT: \/api\/roles](#put-apiroles)
-* [PUT: \/api\/roles\/{{name}}](#put-apirolesname)
+
+* [PUT: \/api\/roles\/\{\{name\}\}](#put-apirolesname)
 
 ## GET: \/api\/roles
 
@@ -31,7 +34,7 @@ If there is no error during the processing of the request, the `body` field of t
 
 ---
 
-## GET: \/api\/roles\/{{name}}
+## GET: \/api\/roles\/\{\{name\}\}
 
 Gets the role with the specified name.
 
@@ -73,7 +76,7 @@ Only system apps \(and native views\) can send requests to this endpoint.
 
 Deletes an array of roles matching the specified criteria.
 
-You specify search criteria in the URL query portion.  For instance, to delete all roles with administrative privileges :
+You specify search criteria in the URL query portion. For instance, to delete all roles with administrative privileges :
 
 `localhost:400/api/roles?isAdmin=true`
 
@@ -87,7 +90,7 @@ Only system apps \(and native views\) can send requests to this endpoint.
 
 ---
 
-## DELETE: \/api\/roles\/{{name}}
+## DELETE: \/api\/roles\/\{\{name\}\}
 
 Deletes the role with the specified name.
 
@@ -105,7 +108,7 @@ Only system apps \(and native views\) can send requests to this endpoint.
 
 Updates an array of roles matching the specified criteria.
 
-You specify search criteria in the URL query portion.  For instance, to update all roles with administrative privileges :
+You specify search criteria in the URL query portion. For instance, to update all roles with administrative privileges :
 
 `localhost:400/api/roles?isAdmin=true`
 
@@ -133,7 +136,7 @@ Only system apps \(and native views\) can send requests to this endpoint.
 
 ---
 
-## PUT: \/api\/roles\/{{name}}
+## PUT: \/api\/roles\/\{\{name\}\}
 
 Updates the role with the specified name.
 
@@ -158,4 +161,5 @@ If the role is successfully updated, the `body` field of the response should hol
 ### security
 
 Only system apps \(and native views\) can send requests to this endpoint.
+
 
