@@ -8,9 +8,9 @@ The following endpoints are described here:
 
 * [GET: \/api\/roles](#get-apiroles)
 
-* [GET: \/api\/roles\/\{\{role-name\}\}](#get-apirolesrole-name)
-* [POST: \/api\/user-roles](#post-apiuser-roles)
+* [GET: \/api\/roles\/{{name}}](#get-apirolesname)
 
+* [POST: \/api\/user-roles](#post-apiuser-roles)
 
 ## GET: \/api\/roles
 
@@ -26,7 +26,7 @@ If there is no error during the processing of the request, the `body` field of t
 
 ---
 
-## GET: \/api\/roles\/\{\{role-name\}\}
+## GET: \/api\/roles\/{{name}}
 
 Gets the role with the specified name.
 
@@ -46,7 +46,7 @@ A standard [Bolt request](bolt-request.md).
 
 `"name" : String, //the name with which the role can be gotten internally`
 
-`"title" : String, //user-friendly text for the role`
+`"displayName" : String, //user-friendly text for the role`
 
 `"description" : String, //user-friendly description for the role`
 
@@ -57,6 +57,94 @@ A standard [Bolt request](bolt-request.md).
 ### response
 
 If the role was added successfully, the `body` field of the response should hold a role object.
+
+### security
+
+Only system apps \(and native views\) can send requests to this endpoint.
+
+---
+
+## DELETE: \/api\/users
+
+Deletes an array of users matching the specified criteria.
+
+You specify search criteria in the URL query portion. For instance, to delete all users who have visited \(logged into\) the service 7 times:
+
+`localhost:400/api/users?visits=7`
+
+### response
+
+If there is no error during the processing of the request, the `body` field of the response should hold an array of user objects.
+
+### security
+
+Only system apps \(and native views\) can send requests to this endpoint.
+
+---
+
+## DELETE: \/api\/users\/{{name}}
+
+Deletes the user with the specified name.
+
+### response
+
+If the user is successfully deleted, the `body` field of the response should hold a user object.
+
+### security
+
+Only system apps \(and native views\) can send requests to this endpoint.
+
+---
+
+## PUT: \/api\/users
+
+Updates an array of users matching the specified criteria.
+
+You specify search criteria in the URL query portion. For instance, to update all users who have visited \(logged into\) the service 7 times:
+
+`localhost:400/api/users?visits=7`
+
+### request
+
+A standard [Bolt request](bolt-request.md).
+
+`{`
+
+`"displayName": String`
+
+`"isBlocked": Boolean`
+
+`}`
+
+### response
+
+If the user was updated successfully, the `body` field of the response should hold a user object.
+
+### security
+
+Only system apps \(and native views\) can send requests to this endpoint.
+
+---
+
+## PUT: \/api\/users\/{{name}}
+
+Updates the user with the specified name.
+
+### request
+
+A standard [Bolt request](bolt-request.md).
+
+`{`
+
+`"displayName": String`
+
+`"isBlocked": Boolean`
+
+`}`
+
+### response
+
+If the user is successfully updated, the `body` field of the response should hold a user object.
 
 ### security
 
