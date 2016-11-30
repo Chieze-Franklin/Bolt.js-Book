@@ -8,6 +8,7 @@
         * [main](main.md)
         * [index](package-index.md)
         * [ini](ini.md)
+        * [install](install.md)
         * [plugins](plugins.md)
     * [The Bolt Server](the-bolt-server.md)
     * Apps Without Servers
