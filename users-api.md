@@ -10,7 +10,7 @@ The following endpoints are described here:
 
 * [GET: \/api\/users\/@live](#get-apiuserslive)
 
-* [GET: \/api\/users\/\{\{name\}\}](#get-apiusersname)
+* [GET: \/api\/users\/{{name}}](#get-apiusersname)
 
 * [POST: \/api\/users](#post-apiusers)
 
@@ -20,11 +20,12 @@ The following endpoints are described here:
 
 * [DELETE: \/api\/users](#delete-apiusers)
 
-* DELETE: \/api\/users\/\{\{name\}\}
+* [DELETE: \/api\/users\/{{name}}](#delete-apiusersname)
 
-* PUT: \/api\/users
+* [PUT: \/api\/users](#put-apiusers)
 
-* PUT: \/api\/users\/\{\{name\}\}
+* [PUT: \/api\/users\/{{name}}](#put-apiusersname)
+
 
 ## GET: \/api\/users
 
@@ -68,7 +69,7 @@ This may not work well in scenarios where Bolt is **not** expected to be _always
 
 ---
 
-## GET: \/api\/users\/\{\{name\}\}
+## GET: \/api\/users\/{{name}}
 
 Gets the user with the specified name.
 
@@ -86,13 +87,13 @@ Adds a user to the database.
 
 A standard [Bolt request](bolt-request.md).
 
-`\{`
+`{`
 
-`"username" : String,`
+`"name" : String,`
 
 `"password" : String`
 
-`\}`
+`}`
 
 ### response
 
@@ -112,13 +113,13 @@ Logs a user into the system for the current session.
 
 A standard [Bolt request](bolt-request.md).
 
-`\{`
+`{`
 
-`"username" : String,`
+`"name" : String,`
 
 `"password" : String`
 
-`\}`
+`}`
 
 ### response
 
@@ -156,16 +157,73 @@ You specify search criteria in the URL query portion. For instance, to delete al
 
 If there is no error during the processing of the request, the `body` field of the response should hold an array of user objects.
 
+### security
+
+Only system apps \(and native views\) can send requests to this endpoint.
+
 ---
 
-## DELETE: \/api\/users\/\{\{name\}\}
+## DELETE: \/api\/users\/{{name}}
 
-Gets an array of user [objects](/objects.md) for all registered users matching the specified criteria.
-
-You specify search criteria in the URL query portion. For instance, to get all users who have visited \(logged into\) the service 7 times:
-
-`localhost:400/api/users?visits=7`
+Deletes the user with the specified name.
 
 ### response
 
-If there is no error during the processing of the request, the `body` field of the response should hold an array of user [objects](objects.md).
+If the user is successfully deleted, the `body` field of the response should hold a user object.
+
+### security
+
+Only system apps \(and native views\) can send requests to this endpoint.
+
+---
+
+## PUT: \/api\/users
+
+Updates an array of users matching the specified criteria.
+
+You specify search criteria in the URL query portion. For instance, to update all users who have visited \(logged into\) the service 7 times:
+
+`localhost:400/api/users?visits=7`
+
+### request
+
+A standard [Bolt request](bolt-request.md).
+
+`{`
+
+`"isBlocked": Boolean`
+
+`}`
+
+### response
+
+If the user was updated successfully, the `body` field of the response should hold a user object.
+
+### security
+
+Only system apps \(and native views\) can send requests to this endpoint.
+
+---
+
+## PUT: \/api\/users\/{{name}}
+
+Updates the user with the specified name.
+
+### request
+
+A standard [Bolt request](bolt-request.md).
+
+`{`
+
+`"isBlocked": Boolean`
+
+`}`
+
+### response
+
+If the user is successfully updated, the `body` field of the response should hold a user object.
+
+### security
+
+Only system apps \(and native views\) can send requests to this endpoint.
+
