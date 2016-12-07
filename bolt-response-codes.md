@@ -87,6 +87,8 @@ App Permission Error.
 | **Code** | **Meaning** |
 | --- | --- |
 | 504 | This app is not a system app |
+|  |  |
+| 510 | Object to tokenize missing |
 
 ## Codes 600-699
 
