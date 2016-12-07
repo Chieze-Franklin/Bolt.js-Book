@@ -14,7 +14,7 @@
         * [tags](tags.md)
     * [The App Server](the-app-server.md)
     * Apps Without Servers
-    * Non-Node Servers
+    * [Non-Node Servers](non-node-servers.md)
     * [Installing the App](installing-the-app.md)
 * [Integrating With Bolt](integrating-with-bolt.md)
     * The Setup View
