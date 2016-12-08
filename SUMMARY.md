@@ -12,13 +12,14 @@
         * [install](install.md)
         * [plugins](plugins.md)
         * [tags](tags.md)
+        * public
     * [The App Server](the-app-server.md)
     * Apps Without Servers
     * [Non-Node Servers](non-node-servers.md)
     * [Installing the App](installing-the-app.md)
 * [Integrating With Bolt](integrating-with-bolt.md)
     * The Setup View
-    * The Settings App
+    * [The Settings App](the-settings-app.md)
     * [Bolt Response](bolt-response.md)
     * [Bolt Request](bolt-request.md)
 * [Appendix](appendix.md)
