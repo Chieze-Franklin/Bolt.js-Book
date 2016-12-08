@@ -32,5 +32,5 @@ The following are fields expected inside `bolt`:
 * [install](/install.md)
 * [plugins](/plugins.md)
 * [tags](/tags.md)
-* `title`: a user-friendly caption for your app
+* displayName: a user-friendly caption for your app
 
