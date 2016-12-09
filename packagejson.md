@@ -26,11 +26,15 @@ The following are fields expected inside `bolt`:
 
 * [main](/main.md)
 * [checks](/checks.md)
-* files
+* displayName: String \/\/a user-friendly caption for your app 
+* [files](/files.md)
 * [index](/package-index.md)
 * [ini](/ini.md)
 * [install](/install.md)
 * [plugins](/plugins.md)
+* [public](/public.md)
+* startup: Boolean \/\/set to true if you want your app to be started as soon as Bolt boots up
+* system: Boolean \/\/set to true if you want your app to have root privilege
 * [tags](/tags.md)
-* displayName: a user-friendly caption for your app
 
+Note that users have the final say concerning the startup and system attributes of your app.
