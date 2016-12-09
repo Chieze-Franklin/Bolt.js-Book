@@ -8,7 +8,9 @@ Bolt is a runtime environment for web apps. Bolt seeks to provide a rich environ
 
 ## When should I use Bolt
 
-* When creating complex apps. Bolt allows you to break an app into small pieces. Each piece can then be developed individually, with very little coupling between any two pieces.
+* When creating complex apps with _many moving parts_. Bolt allows you to break an app into small pieces. Each piece can then be developed individually, with very little coupling between any two pieces.
+* When building multi-user apps, especially when different users are to have different roles. Bolt provides access control out of the box, reducing the work you have to do to ensure only authorized users access certain parts of the app.
+* When you need to run the app both offline and online. This may mean that the app is used in a local area network \(like within a school or an office\) but has a cloud backup. Again, Bolt provides this with no extra effort on the part of the developer.
 * When you need to deploy an app in batches. Not only does Bolt allow you to develop an app in batches, you can also deploy your app in batches. You can deploy your app with missing components and Bolt will still be able to present it to your users in a graceful manner. Missing components do not make the system crash; Bolt handles all exceptions with grace. This means you can start testing certain parts of your apps before other needed parts are ready.
 
 * When you need to develop an app others can extend. Sometimes it may be better to give other developers the opportunity to extend your app by adding new features to it. Bolt supports this out-of-the-box with little or no effort on your part.
@@ -17,6 +19,7 @@ Bolt is a runtime environment for web apps. Bolt seeks to provide a rich environ
 
 * When you want to use web technologies to work in a desktop-like environment.
 
+* A typical example of a solution where you may consider using Bolt is an enterprise resource planning solution like a school management systems, hotel management system, hospital management system, just to name a few.
 
 ## Advantages of using Bolt
 
