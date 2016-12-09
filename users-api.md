@@ -10,7 +10,7 @@ The following endpoints are described here:
 
 * [GET: \/api\/users\/@live](#get-apiuserslive)
 
-* [GET: \/api\/users\/\{\{name\}\}](#get-apiusersname)
+* [GET: \/api\/users\/{{name}}](#get-apiusersname)
 
 * [POST: \/api\/users](#post-apiusers)
 
@@ -20,11 +20,12 @@ The following endpoints are described here:
 
 * [DELETE: \/api\/users](#delete-apiusers)
 
-* [DELETE: \/api\/users\/\{\{name\}\}](#delete-apiusersname)
+* [DELETE: \/api\/users\/{{name}}](#delete-apiusersname)
 
 * [PUT: \/api\/users](#put-apiusers)
 
-* [PUT: \/api\/users\/\{\{name\}\}](#put-apiusersname)
+* [PUT: \/api\/users\/{{name}}](#put-apiusersname)
+
 
 ## GET: \/api\/users
 
@@ -42,15 +43,11 @@ If there is no error during the processing of the request, the `body` field of t
 
 ## GET: \/api\/users\/@current
 
-Gets the logged-in user for the current session.
+Gets the logged-in user for the current session \(for native views only\) or the user whose token has been included in the request header `X-Bolt-User-Token`.
 
 ### response
 
-If the logged-in user for the current session is successfully found, the `body` field of the response should hold a user object.
-
-### note
-
-This endpoint works for native views only.
+If the appropriate user is successfully found, the `body` field of the response should hold a user object.
 
 ---
 
@@ -68,7 +65,7 @@ This may not work well in scenarios where Bolt is **not** expected to be _always
 
 ---
 
-## GET: \/api\/users\/\{\{name\}\}
+## GET: \/api\/users\/{{name}}
 
 Gets the user with the specified name.
 
@@ -164,7 +161,7 @@ Only system apps \(and native views\) can send requests to this endpoint.
 
 ---
 
-## DELETE: \/api\/users\/\{\{name\}\}
+## DELETE: \/api\/users\/{{name}}
 
 Deletes the user with the specified name.
 
@@ -208,7 +205,7 @@ Only system apps \(and native views\) can send requests to this endpoint.
 
 ---
 
-## PUT: \/api\/users\/\{\{name\}\}
+## PUT: \/api\/users\/{{name}}
 
 Updates the user with the specified name.
 
@@ -231,5 +228,4 @@ If the user is successfully updated, the `body` field of the response should hol
 ### security
 
 Only system apps \(and native views\) can send requests to this endpoint.
-
 
