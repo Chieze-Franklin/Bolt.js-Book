@@ -8,7 +8,7 @@ The following endpoints are described here:
 
 * [GET: \/api\/apps\/@live](#get-apiappslive)
 
-* [GET: \/api\/apps\/\{\{name\}\}](#getapiappsname)
+* [GET: \/api\/apps\/{{name}}](#getapiappsname)
 
 * [POST: \/api\/apps](#post-apiapps)
 
@@ -17,6 +17,7 @@ The following endpoints are described here:
 * [POST: \/api\/apps\/start](#post-apiappsstart)
 
 * [POST: \/api\/apps\/stop](#post-apiappsstop)
+
 
 ## GET: \/api\/apps
 
@@ -46,7 +47,7 @@ If there is no error during the processing of the request, the `body` field of t
 
 ---
 
-## GET:\/api\/apps\/\{\{name\}\}
+## GET:\/api\/apps\/{{name}}
 
 Gets the app object of the app with the specified name.
 
@@ -64,9 +65,17 @@ This endpoint is still experimental.
 
 ---
 
+## POST: \/api\/apps\/package
+
+Gets an object representing the package.json of an app from an online repository \(current only npm is supported\).
+
+This endpoint is still experimental.
+
+---
+
 ## POST: \/api\/apps\/reg
 
-Installs an app from an local repository \(current only the node\_modules folder is supported\).
+Installs an app from a local repository \(current only the _node\_modules_ folder is supported\).
 
 ### request
 
@@ -74,7 +83,11 @@ A standard [Bolt request](bolt-request.md).
 
 `{`
 
-`"path" : String //the path of the folder contain the _package.json_, relative to the node_modules folder`
+`"path" : String, //the path of the folder contain the package.json, relative to the node_modules folder`
+
+`"startup" : Boolean, //optional, overrides the startup value specified in the app's package.json`
+
+`"system" : Boolean //optional; overrides the system value specified in the app's package.json`
 
 `}`
 
@@ -89,6 +102,33 @@ Any app can send a request to this endpoint provided:
 * The user has granted the app [permission](user-permissions.md) to perform an installation.
 
 * The user has administrative privileges.
+
+
+---
+
+## POST: \/api\/apps\/reg-package
+
+Gets an object representing the package.json of an app from a local repository \(current only the _node\_modules_ folder is supported\).
+
+This endpoint is important as you use it to fetch info about an app and show it to the user before installation. This should give the user the option of granting\/denying some of the requests the app needs \(like the ability to run as a system app\).
+
+### request
+
+A standard [Bolt request](bolt-request.md).
+
+`{`
+
+`"path" : String //the path of the folder contain the package.json, relative to the node_modules folder`
+
+`}`
+
+### response
+
+If the package.json is found, the `body` field of the response should hold an object that represent's the found package.json.
+
+### security
+
+Currently the current user needs administrative privilege for this request to be processed.
 
 ---
 
@@ -113,6 +153,7 @@ If the app is started successfully, the `body` field of the response should hold
 * To know if a server was started for the app, check if their is a defined `port` field for the context object.
 
 * To know if a server was started on another process, check if there is a defined `pid` field for the context object.
+
 
 ### security
 
@@ -144,6 +185,7 @@ A standard [Bolt request](bolt-request.md).
 
 * If the app is not found to be running, the `error` field of the response may hold an error object. \(see **notes** below.\)
 
+
 ### security
 
 A check is made to see if the current user has the right to start an app. For startup apps, no such check may be made.
@@ -153,3 +195,4 @@ This is the same check made when starting an app. The rationale is that you shou
 ### note
 
 Although this may change, currently, trying to stop an app that is not running may return a [Bolt response](bolt-response.md) with [response code](bolt-response-codes.md) `420`. Code `420` means the port on which an app should be running cannot be found. The rationale is that you can only stop apps running on ports, so trying to stop an app that is not running \(for which no port can be found\) will result in an error with code `420`.
+
