@@ -13,6 +13,7 @@
         * [plugins](plugins.md)
         * [tags](tags.md)
         * [public](public.md)
+        * [files](files.md)
     * [The App Server](the-app-server.md)
     * [Apps Without Servers](apps-without-servers.md)
     * [Non-Node Servers](non-node-servers.md)
