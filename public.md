@@ -24,11 +24,11 @@ Sometimes you may want more control over how your public files\/directories are 
 
 `"public": {`
 
-`"clean": true, //if true empties/clears the public/your-app-name directory`
+`"clean": true, //(default: false) if true empties/clears the public/your-app-name directory`
 
-`"move": true, //if true moves (instead of just copying) the public files/directories to the public/your-app-name directory`
+`"move": true, //(default: false) if true moves (instead of just copying) the public files/directories to the public/your-app-name directory`
 
-`"overwrite": true, //if true overwrites/replaces already-existing files in public/your-app-name with the new files being copied`
+`"overwrite": true, //(default: true) if true overwrites/replaces already-existing files in public/your-app-name with the new files being copied`
 
 `"paths" :  [ "favicon.ico", "assets", "lib/js" ]`
 
