@@ -26,6 +26,7 @@ The following are fields expected inside `bolt`:
 
 * [main](/main.md)
 * [checks](/checks.md)
+* dependencies: String \/\/the same format as npm dependencies but lists apps \(not modules\) that this app depends on
 * displayName: String \/\/a user-friendly caption for your app 
 * [files](/files.md)
 * [index](/package-index.md)
@@ -38,3 +39,4 @@ The following are fields expected inside `bolt`:
 * [tags](/tags.md)
 
 Note that users have the final say concerning the startup and system attributes of your app.
+
