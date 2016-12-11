@@ -32,10 +32,11 @@ The following are fields expected inside `bolt`:
 * [index](/package-index.md)
 * [ini](/ini.md)
 * [install](/install.md)
+* order: Number \/\/\(default: 0\) provides another way for dashboards\/desktops\/launchers to sort apps
 * [plugins](/plugins.md)
 * [public](/public.md)
-* startup: Boolean \/\/set to true if you want your app to be started as soon as Bolt boots up
-* system: Boolean \/\/set to true if you want your app to have root privilege
+* startup: Boolean \/\/\(default: false\) set to true if you want your app to be started as soon as Bolt boots up
+* system: Boolean \/\/\(default: false\) set to true if you want your app to have root privilege
 * [tags](/tags.md)
 
 Note that users have the final say concerning the startup and system attributes of your app.
