@@ -74,6 +74,7 @@ App Error.
 | 404 | Could not start app due to security concerns |
 |  |  |
 | 410 | App path missing |
+| 414 | Could not install app due to incompatible target version |
 |  |  |
 | 420 | App port missing |
 |  |  |
