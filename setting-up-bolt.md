@@ -20,6 +20,10 @@ On your browser, navigate to `{{config-host}}:{{config-port}}` to start working 
 
 And that's all there is to it.
 
+## config.json
+
+This file is located at _\/sys\/server\/config.json_. This file contains configuration data that should be known before Bolt starts up.
+
 ## Setup View
 
 The very first time you run Bolt you will be shown the setup view.
