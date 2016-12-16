@@ -37,6 +37,7 @@ User Error.
 | 201 | A user with the same username already exists |
 | 202 | Could not save user to the database |
 | 203 | Could not retrieve user from the database |
+|  |  |
 | 212 | Could not log user in |
 | 213 | Could not get logged-in user |
 
