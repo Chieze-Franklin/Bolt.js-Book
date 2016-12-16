@@ -61,6 +61,10 @@ Access-Control Error.
 | 321 | An app-role with the same app and role already exists |
 | 322 | Could not save app-role to database |
 | 323 | Could not retrieve app-role from the database |
+|  |  |
+| 334 | User has no right to start this app |
+| 335 | User has no right to access this app feature |
+| 336 | User has no right to access this app file |
 
 ## Codes 400-499
 
