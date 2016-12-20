@@ -11,7 +11,7 @@
         * [index](package-index.md)
         * [ini](ini.md)
         * [install](install.md)
-        * [plugins](plugins.md)
+        * [extensions](extensions.md)
         * [public](public.md)
         * [tags](tags.md)
     * [The App Server](the-app-server.md)
