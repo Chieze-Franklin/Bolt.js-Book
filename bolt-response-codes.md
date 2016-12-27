@@ -83,8 +83,8 @@ App Error.
 |  |  |
 | 420 | App port missing |
 |  |  |
-| 432 | Could not save plugin to the database |
-| 433 | Could not retrieve plugin from the database |
+| 432 | Could not save extension to the database |
+| 433 | Could not retrieve extension from the database |
 
 ## Codes 500-599
 
