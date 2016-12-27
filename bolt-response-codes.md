@@ -118,3 +118,5 @@ Database Error.
 | 702 | Could not save collection to the database |
 | 703 | Could not retrieve collection from the database |
 | 704 | This app has no right to access this collection |
+| | |
+| 710 | Document object missing |
