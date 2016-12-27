@@ -111,12 +111,10 @@ File System Error.
 
 Database Error.
 
-
-
 | **Code** | **Meaning** |
 | --- | --- |
-| 700 | Collection name and \/or app name missing |
+| 700 | Collection name and\/or app name missing |
 | 701 | A collection with the same collection name and app name already exists |
 | 702 | Could not save collection to the database |
 | 703 | Could not retrieve collection from the database |
-
+| 704 | This app has no right to access this collection |
