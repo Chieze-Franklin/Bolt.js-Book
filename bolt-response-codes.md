@@ -26,8 +26,9 @@ Bolt found something wrong with the request.
 | --- | --- |
 | 100 | Endpoint not specified |
 | 103 | Could not find specified endpoint |
-|||
+|  |  |
 | 110 | 'X-Bolt-Req-Id' header missing |
+| 113 | Could not retrieve the specified 'X-Bolt-Req-Id' value from the database |
 
 ## Codes 200-299
 
