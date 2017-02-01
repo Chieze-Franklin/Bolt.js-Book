@@ -2,7 +2,7 @@
 
 This document describes what a typical _package.json_ file should look like, and the relevance of the fields in the file.
 
-As far as integrating your app with Bolt is concerned, this is the starting point. The _package.json_ file can be thought of as the manifest for your application. This is what Bolt will consult during the installation of an app.
+As far as integrating your app with Bolt is concerned, this is the starting point. The _package.json_ file can be thought of as the manifest for your application \(you know, like the AndroidManifest.xml in your Android projects\). This is what Bolt will consult during the installation of an app.
 
 This _package.json_ is expected to be in the root folder of your app. It is no different from the _package.json_ for npm modules, except that a few more fields have been added to it.
 
@@ -12,9 +12,9 @@ First, let us go through some npm-specific fields to see what they mean to Bolt.
 
 As far as Bolt is concerned, the most important npm-specific fields are:
 
-* `name`: This is the name with which Bolt will identify your app. Other apps can also identify\/communicate with your app using that name. App names must be unique through out the system.
-* `version`: Self-descriptive.
-* `description`: Self-descriptive.
+* `name`: This is the name with which Bolt will identify your app. Other apps can also identify/communicate with your app using that name. App names must be unique through out the system.
+* `version`: The version of your app.
+* `description`: A description of your app..
 
 Let us now begin to add Bolt-specific fields.
 
