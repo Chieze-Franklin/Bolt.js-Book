@@ -1,5 +1,7 @@
 # Setting Up Bolt
 
+[![Build Status](https://travis-ci.org/Chieze-Franklin/Bolt.js.svg?branch=master)](https://travis-ci.org/Chieze-Franklin/Bolt.js)
+
 ## Get Bolt
 
 Bolt is built on Node.js, so ensure you have [Node](https://nodejs.org) \(and npm\) installed.
