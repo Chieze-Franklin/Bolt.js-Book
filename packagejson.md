@@ -38,6 +38,7 @@ The following are fields expected inside `bolt`:
 * startup: Boolean \/\/\(default: false\) set to true if you want your app to be started as soon as Bolt boots up
 * system: Boolean \/\/\(default: false\) set to true if you want your app to have root privilege
 * [tags](/tags.md)
+* target: Number //specifies the version of Bolt your app targets
 
 Note that users have the final say concerning the startup and system attributes of your app.
 
