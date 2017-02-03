@@ -2,7 +2,7 @@
 
 Tags are labels with which apps can be searched.
 
-`tags` is simply an array of strings, where each string is a tag\/label applied to your app.
+`tags` is simply an array of strings, where each string is a tag/label applied to your app.
 
 `tags: [ "settings", "my-app", "www.my-company.com" ]`
 
