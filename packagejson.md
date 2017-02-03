@@ -33,7 +33,7 @@ The following are fields expected inside `bolt`:
 * [index](/package-index.md)
 * [ini](/ini.md)
 * [install](/install.md)
-* order: Number \/\/\(default: 0\) provides another way for dashboards\/desktops\/launchers to sort apps
+* order: Number //\(default: 0\) provides another way for dashboards/desktops/launchers to sort apps
 * [public](/public.md)
 * startup: Boolean \/\/\(default: false\) set to true if you want your app to be started as soon as Bolt boots up
 * system: Boolean \/\/\(default: false\) set to true if you want your app to have root privilege
