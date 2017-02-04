@@ -6,5 +6,5 @@ Currently Bolt checks the integrity of the files only during app startup but lat
 
 ### Note
 
-Note that only _local files_ \(files in the app's folder in the Bolt _node\_modules_ folder\) are checked. [Public](/public.md) files are not checked. So, before including a file in the `checks` array, be sure it will not be moved to the Bolt _public_ folder.
+Note that only _local files_ \(files in the app's folder in the Bolt _node\_modules_ folder\) are checked. [Public](/public.md) files are not checked. So, before including a file in the `checks` array, be sure it will not be **moved** to the Bolt _public_ folder.
 
