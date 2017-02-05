@@ -26,7 +26,7 @@ The following are fields expected inside `bolt`:
 
 * [main](/main.md)
 * [checks](/checks.md)
-* collections
+* [collections](/collections.md)
 * dependencies: String \/\/the same format as npm dependencies but lists apps \(not modules\) that this app depends on
 * displayName: String //a user-friendly caption for your app 
 * [extensions](/extensions.md)
