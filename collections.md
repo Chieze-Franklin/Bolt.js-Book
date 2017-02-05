@@ -48,5 +48,5 @@ Using the above syntax, you can give every app read access to the collection as 
 
 `}`
 
-To store a
+For how to store data to \(write\) and retrieve data from \(read\) collections, see [bolt-module-db](/bolt-module-db.md).
 
