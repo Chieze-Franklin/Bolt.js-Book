@@ -27,7 +27,7 @@ The following are fields expected inside `bolt`:
 * [main](/main.md)
 * [checks](/checks.md)
 * [collections](/collections.md)
-* dependencies: String \/\/the same format as npm dependencies but lists apps \(not modules\) that this app depends on
+* dependencies: String //the same format as npm dependencies but lists apps \(not npm modules\) that this app depends on
 * displayName: String //a user-friendly caption for your app 
 * [extensions](/extensions.md)
 * [files](/files.md)
@@ -36,8 +36,8 @@ The following are fields expected inside `bolt`:
 * [install](/install.md)
 * order: Number //\(default: 0\) provides another way for dashboards/desktops/launchers to sort apps
 * [public](/public.md)
-* startup: Boolean \/\/\(default: false\) set to true if you want your app to be started as soon as Bolt boots up
-* system: Boolean \/\/\(default: false\) set to true if you want your app to have root privilege
+* startup: Boolean //\(default: false\) set to true if you want your app to be started as soon as Bolt boots up
+* system: Boolean //\(default: false\) set to true if you want your app to have root privilege
 * [tags](/tags.md)
 * target: Number //specifies the version of Bolt your app targets
 
