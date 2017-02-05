@@ -36,5 +36,17 @@ The above snippet can also be rewritten as shown below:
 
 `}`
 
+Using the above syntax, you can give every app read access to the collection as shown below:
+
+`"collections": {`
+
+```
+"students": {
+    "guests": "*"
+}
+```
+
+`}`
+
 To store a
 
