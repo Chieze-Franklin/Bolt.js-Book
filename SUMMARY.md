@@ -38,6 +38,8 @@
       * [Apps \(UI\)](apps-ui.md)
       * [Files \(UI\)](files-ui.md)
       * [Views \(UI\)](views-ui.md)
+  * Bolt Modules
+    * [bolt-module-db](bolt-module-db.md)
   * [Bolt Response Codes](bolt-response-codes.md)
   * [Views](views.md)
   * [Objects](objects.md)
