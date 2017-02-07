@@ -31,6 +31,7 @@ The following are fields expected inside `bolt`:
 * displayName: String //a user-friendly caption for your app 
 * [extensions](/extensions.md)
 * [files](/files.md)
+* hooks
 * [index](/package-index.md)
 * [ini](/ini.md)
 * [install](/install.md)

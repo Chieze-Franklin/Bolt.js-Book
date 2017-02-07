@@ -10,11 +10,12 @@
     * [collections](collections.md)
     * [extensions](extensions.md)
     * [files](files.md)
+    * [hooks](hooks.md)
     * [index](package-index.md)
     * [ini](ini.md)
     * [install](install.md)
     * [public](public.md)
-    * collections
+    * hooks
   * [The App Server](the-app-server.md)
   * [Apps Without Servers](apps-without-servers.md)
   * [Non-Node Servers](non-node-servers.md)
