@@ -4,7 +4,7 @@ Bolt allows different parts of the system to raise/fire events to signify that s
 
 With hooks apps can signify their interests in knowing about various events. A hook is simply a `POST` endpoint in the app's server. When a event occurs every necessary info needed to process the event will be _POSTed_ to the registered endpoints.
 
-To register endpoints for events, create the bolt.hooks field to follow the format shown below:
+To register endpoints for events, create the `bolt.hooks` field to follow the format shown below:
 
 `"hooks": {`
 
