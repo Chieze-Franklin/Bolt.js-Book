@@ -15,7 +15,6 @@
     * [ini](ini.md)
     * [install](install.md)
     * [public](public.md)
-    * hooks
   * [The App Server](the-app-server.md)
   * [Apps Without Servers](apps-without-servers.md)
   * [Non-Node Servers](non-node-servers.md)
@@ -43,5 +42,6 @@
     * [bolt-module-db](bolt-module-db.md)
   * [Bolt Response Codes](bolt-response-codes.md)
   * [Views](views.md)
+  * [Bolt Events](bolt-events.md)
   * [Objects](objects.md)
 
