@@ -6,7 +6,5 @@ With hooks apps can signify their interests in knowing about various events. A h
 
 App authors should make it easy to discover events their apps raise, and the event data that accompany them.
 
-For a list of events raised by Bolt, see Bolt Events.
-
-
+For a list of events raised by Bolt, see [Bolt Events](/bolt-events.md).
 
