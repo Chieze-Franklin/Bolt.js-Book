@@ -37,6 +37,7 @@ The following are fields expected inside `bolt`:
 * [install](/install.md)
 * order: Number //\(default: 0\) provides another way for dashboards/desktops/launchers to sort apps
 * [public](/public.md)
+* routers
 * startup: Boolean //\(default: false\) set to true if you want your app to be started as soon as Bolt boots up
 * system: Boolean //\(default: false\) set to true if you want your app to have root privilege
 * [tags](/tags.md)
