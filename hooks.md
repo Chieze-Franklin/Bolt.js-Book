@@ -16,7 +16,7 @@ To register endpoints for events, create the bolt.hooks field to follow the form
 
 `}`
 
-The _keys_ \(on the left\) in the `hooks` object define the event you are interested in. The event has to be written in this format: 
+The _keys_ \(on the left\) in the `hooks` object define the event you are interested in. The event has to be written in this format:
 
 `{{name-of-app-raising-the-event}}/{{name-of-event}}`
 
@@ -44,7 +44,7 @@ For a list of events raised by Bolt, see [Bolt Events](/bolt-events.md).
 
 For how to raise events, see [bolt-module-events](/bolt-module-events.md).
 
-note
+### note
 
 Note that publishers \(apps that raise events\) can determine what apps they want to be notified of their events. See [bolt-module-events](/bolt-module-events.md).
 
