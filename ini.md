@@ -34,6 +34,8 @@ The `JSON` body of the `POST` will look something like this:
 
 `port: Number | String, //port on which the Bolt server is running`
 
+`appName: String, //the name of the app`
+
 `appPort: Number | String, //port on which this app is running`
 
 `appToken: String //include this in the "X-Bolt-App-Token" custom header of requests you send to Bolt endpoints`
