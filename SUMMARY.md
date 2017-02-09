@@ -25,6 +25,7 @@
   * [The Settings App](the-settings-app.md)
   * [Bolt Response](bolt-response.md)
   * [Bolt Request](bolt-request.md)
+  * [Persistence/Data Storage](persistencedata-storage.md)
 * [Reference](appendix.md)
   * [Bolt Server Endpoints](bolt-server-endpoints.md)
     * [API Endpoints](api-endpoints.md)
