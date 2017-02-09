@@ -21,11 +21,12 @@
   * [Non-Node Servers](non-node-servers.md)
   * [Installing the App](installing-the-app.md)
 * [Integrating With Bolt](integrating-with-bolt.md)
-  * The Setup View
+  * [The Setup View](the-setup-view.md)
   * [The Settings App](the-settings-app.md)
-  * [Bolt Response](bolt-response.md)
   * [Bolt Request](bolt-request.md)
+  * [Bolt Response](bolt-response.md)
   * [Persistence/Data Storage](persistencedata-storage.md)
+  * Events
 * [Reference](appendix.md)
   * [Bolt Server Endpoints](bolt-server-endpoints.md)
     * [API Endpoints](api-endpoints.md)
