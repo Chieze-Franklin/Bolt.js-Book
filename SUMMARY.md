@@ -26,7 +26,8 @@
   * [Bolt Request](bolt-request.md)
   * [Bolt Response](bolt-response.md)
   * [Persistence/Data Storage](persistencedata-storage.md)
-  * Events
+  * [Events](events.md)
+    * [The Console App](events/the-console-app.md)
 * [Reference](appendix.md)
   * [Bolt Server Endpoints](bolt-server-endpoints.md)
     * [API Endpoints](api-endpoints.md)
