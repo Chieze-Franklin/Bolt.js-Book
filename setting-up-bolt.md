@@ -26,11 +26,11 @@ And that's all there is to it.
 
 ## config.json
 
-This file is located at _/sys/server/config.json_. This file contains configuration data that should be known before Bolt starts up.
+This file is located at _/sys/server/config.json_. This file contains configuration data that should be known before Bolt starts up. See [config.json](/setting-up-bolt/config.json.md).
 
 ## setup.json
 
-This file is located at _/sys/server/setup.json_. This file determines the requests that should be sent to the Bolt server during inital setup. If you need to add default users or create predefined roles, this is where you do it.
+This file is located at _/sys/server/setup.json_. This file determines the requests that should be sent to the Bolt server during inital setup. If you need to add default users or create predefined roles, this is where you do it. See setup.json.
 
 ## Setup View
 
