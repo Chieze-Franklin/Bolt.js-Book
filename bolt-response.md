@@ -2,17 +2,19 @@
 
 Bolt always returns a JSON response \(except for the UI endpoints which return HTML responses\). Every such response is returned with a HTTP status code of 200. This means that if the request got to Bolt, the response would containing status code 200. Every JSON response contains the following fields:
 
-* [code](#code  )
+* \[code\]\(\#code
+  \)
 * ~~type~~
 * ~~message~~
 
 If a response body is to be returned to the user, the JSON response will contain the following fields:
 
-* [body](#body  )
+* \[body\]\(\#body
+  \)
 
 If an error occurs during the processing of a request, the JSON response will contain the following fields:
 
-* error
+* [error](#error)
 * errorTraceId
 * errorUserTitle
 * errorUserMessage
