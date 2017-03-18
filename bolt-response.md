@@ -2,8 +2,7 @@
 
 Bolt always returns a JSON response \(except for the UI endpoints which return HTML responses\). Every such response is returned with a HTTP status code of 200. This means that if the request got to Bolt, the response would containing status code 200. Every JSON response contains the following fields:
 
-* \[code\]\(\#code
-  \)
+* [code](#code)
 * ~~type~~
 * ~~message~~
 
