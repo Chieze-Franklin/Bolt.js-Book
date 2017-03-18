@@ -1,4 +1,4 @@
-# Appendix
+# Reference
 
 Find more information here.
 
