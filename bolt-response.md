@@ -8,15 +8,15 @@ Bolt always returns a JSON response \(except for the UI endpoints which return H
 
 If a response body is to be returned to the user, the JSON response will contain the following fields:
 
-* \[body\]\(\#body
+* [body](#body)
   \)
 
 If an error occurs during the processing of a request, the JSON response will contain the following fields:
 
 * [error](#error)
-* errorTraceId
-* errorUserTitle
-* errorUserMessage
+* [errorTraceId](#errortraceid)
+* [errorUserTitle](#errorusertitle)
+* [errorUserMessage](#errorusermessage)
 
 ### body
 
