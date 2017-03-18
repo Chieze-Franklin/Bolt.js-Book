@@ -53,5 +53,6 @@
   * [Bolt Response Codes](bolt-response-codes.md)
   * [Views](views.md)
   * [Bolt Events](bolt-events.md)
+    * [User Events](bolt-events/user-events.md)
   * [Objects](objects.md)
 
