@@ -6,21 +6,21 @@ This is a description of the API endpoints exposed by the Bolt server for intera
 
 The following endpoints are described here:
 
-* [GET: \/api\/roles](#get-apiroles)
+* [GET: /api/roles](#get-apiroles)
 
-* [GET: \/api\/roles\/\{\{name\}\}](#get-apirolesname)
+* [GET: /api/roles/\{\{name\}\}](#get-apirolesname)
 
-* [POST: \/api\/roles](#post-apiroles)
+* [POST: /api/roles](#post-apiroles)
 
-* [DELETE: \/api\/roles](#delete-apiroles)
+* [DELETE: /api/roles](#delete-apiroles)
 
-* [DELETE: \/api\/roles\/\{\{name\}\}](#delete-apirolesname)
+* [DELETE: /api/roles/\{\{name\}\}](#delete-apirolesname)
 
-* [PUT: \/api\/roles](#put-apiroles)
+* [PUT: /api/roles](#put-apiroles)
 
-* [PUT: \/api\/roles\/\{\{name\}\}](#put-apirolesname)
+* [PUT: /api/roles/\{\{name\}\}](#put-apirolesname)
 
-## GET: \/api\/roles
+## GET: /api/roles
 
 Gets an array of role [objects](/objects.md) for all registered roles matching the specified criteria.
 
@@ -34,7 +34,7 @@ If there is no error during the processing of the request, the `body` field of t
 
 ---
 
-## GET: \/api\/roles\/\{\{name\}\}
+## GET: /api/roles/\{\{name\}\}
 
 Gets the role with the specified name.
 
@@ -42,7 +42,7 @@ Gets the role with the specified name.
 
 If the role is successfully found, the `body` field of the response should hold a role object.
 
-# POST: \/api\/roles
+# POST: /api/roles
 
 Adds a role to the database.
 
@@ -72,7 +72,7 @@ Only system apps \(and native views\) can send requests to this endpoint.
 
 ---
 
-## DELETE: \/api\/roles
+## DELETE: /api/roles
 
 Deletes an array of roles matching the specified criteria.
 
@@ -90,7 +90,7 @@ Only system apps \(and native views\) can send requests to this endpoint.
 
 ---
 
-## DELETE: \/api\/roles\/\{\{name\}\}
+## DELETE: /api/roles/\{\{name\}\}
 
 Deletes the role with the specified name.
 
@@ -104,7 +104,7 @@ Only system apps \(and native views\) can send requests to this endpoint.
 
 ---
 
-## PUT: \/api\/roles
+## PUT: /api/roles
 
 Updates an array of roles matching the specified criteria.
 
@@ -136,7 +136,7 @@ Only system apps \(and native views\) can send requests to this endpoint.
 
 ---
 
-## PUT: \/api\/roles\/\{\{name\}\}
+## PUT: /api/roles/\{\{name\}\}
 
 Updates the role with the specified name.
 
