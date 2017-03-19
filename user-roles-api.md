@@ -6,14 +6,13 @@ This is a description of the API endpoints exposed by the Bolt server for intera
 
 The following endpoints are described here:
 
-* [GET: \/api\/user-roles](#get-apiuser-roles)
+* [GET: /api/user-roles](#get-apiuser-roles)
 
-* [POST: \/api\/user-roles](#post-apiuser-roles)
+* [POST: /api/user-roles](#post-apiuser-roles)
 
-* [DELETE: \/api\/user-roles](#delete-apiuser-roles)
+* [DELETE: /api/user-roles](#delete-apiuser-roles)
 
-
-## GET: \/api\/user-roles
+## GET: /api/user-roles
 
 Gets an array of user-role association [objects](/objects.md) for all registered user-roles matching the specified criteria.
 
@@ -27,7 +26,7 @@ If there is no error during the processing of the request, the `body` field of t
 
 ---
 
-# POST: \/api\/user-roles
+# POST: /api/user-roles
 
 Adds a user-role association to the database.
 
@@ -53,7 +52,7 @@ Only system apps \(and native views\) can send requests to this endpoint.
 
 ---
 
-## DELETE: \/api\/user-roles
+## DELETE: /api/user-roles
 
 Deletes an array of user-role association objects for all registered user-roles matching the specified criteria.
 
