@@ -4,29 +4,29 @@ This is a description of the API endpoints exposed by the Bolt server for intera
 
 The following endpoints are described here:
 
-* [GET: \/api\/users](#get-apiusers)
+* [GET: /api/users](#get-apiusers)
 
-* [GET: \/api\/users\/@current](#get-apiuserscurrent)
+* [GET: /api/users/@current](#get-apiuserscurrent)
 
-* [GET: \/api\/users\/@live](#get-apiuserslive)
+* [GET: /api/users/@live](#get-apiuserslive)
 
-* [GET: \/api\/users\/\{\{name\}\}](#get-apiusersname)
+* [GET: /api/users/\{\{name\}\}](#get-apiusersname)
 
-* [POST: \/api\/users](#post-apiusers)
+* [POST: /api/users](#post-apiusers)
 
-* [POST: \/api\/users\/login](#post-apiuserslogin)
+* [POST: /api/users/login](#post-apiuserslogin)
 
-* [POST: \/api\/users\/logout](#post-apiuserslogout)
+* [POST: /api/users/logout](#post-apiuserslogout)
 
-* [DELETE: \/api\/users](#delete-apiusers)
+* [DELETE: /api/users](#delete-apiusers)
 
-* [DELETE: \/api\/users\/\{\{name\}\}](#delete-apiusersname)
+* [DELETE: /api/users/\{\{name\}\}](#delete-apiusersname)
 
-* [PUT: \/api\/users](#put-apiusers)
+* [PUT: /api/users](#put-apiusers)
 
-* [PUT: \/api\/users\/\{\{name\}\}](#put-apiusersname)
+* [PUT: /api/users/\{\{name\}\}](#put-apiusersname)
 
-## GET: \/api\/users
+## GET: /api/users
 
 Gets an array of user [objects](/objects.md) for all registered users matching the specified criteria.
 
@@ -40,7 +40,7 @@ If there is no error during the processing of the request, the `body` field of t
 
 ---
 
-## GET: \/api\/users\/@current
+## GET: /api/users/@current
 
 Gets the logged-in user for the current session \(for native views only\) or the user whose token has been included in the request header `X-Bolt-User-Token`.
 
@@ -50,7 +50,7 @@ If the appropriate user is successfully found, the `body` field of the response 
 
 ---
 
-## GET: \/api\/users\/@live
+## GET: /api/users/@live
 
 Gets an array of user objects for all currently logged-in users.
 
@@ -64,7 +64,7 @@ This may not work well in scenarios where Bolt is **not** expected to be _always
 
 ---
 
-## GET: \/api\/users\/\{\{name\}\}
+## GET: /api/users/\{\{name\}\}
 
 Gets the user with the specified name.
 
@@ -74,21 +74,26 @@ If the user is successfully found, the `body` field of the response should hold 
 
 ---
 
-## POST: \/api\/users
+## POST: /api/users
 
 Adds a user to the database.
 
 ### request
 
-A standard [Bolt request](bolt-request.md).
+A standard [Bolt request](bolt-request.md).  
+
+The body of the request is typically a `form` object which defines the following fields:
 
 `{`
 
-`"name" : String,`
+`"name" : String, //the username with which the user logs in`
 
-`"password" : String,`
+`"password" : String, //the password with which the user logs in`
 
-`"displayName": String`
+`"displayName": String,`
+`"displayPic": String //the file path of the display pic`
+`"email": String,`
+`"phone": String,`
 
 `}`
 
@@ -102,7 +107,7 @@ Only system apps \(and native views\) can send requests to this endpoint.
 
 ---
 
-## POST: \/api\/users\/login
+## POST: /api/users/login
 
 Logs a user into the system for the current session.
 
@@ -128,7 +133,7 @@ Only system apps \(and native views\) can send requests to this endpoint.
 
 ---
 
-## POST: \/api\/users\/logout
+## POST: /api/users/logout
 
 Logs a user out of the system for the current session.
 
@@ -142,7 +147,7 @@ Only system apps \(and native views\) can send requests to this endpoint.
 
 ---
 
-## DELETE: \/api\/users
+## DELETE: /api/users
 
 Deletes an array of users matching the specified criteria.
 
@@ -160,7 +165,7 @@ Only system apps \(and native views\) can send requests to this endpoint.
 
 ---
 
-## DELETE: \/api\/users\/\{\{name\}\}
+## DELETE: /api/users/\{\{name\}\}
 
 Deletes the user with the specified name.
 
@@ -174,7 +179,7 @@ Only system apps \(and native views\) can send requests to this endpoint.
 
 ---
 
-## PUT: \/api\/users
+## PUT: /api/users
 
 Updates an array of users matching the specified criteria.
 
@@ -208,7 +213,7 @@ Only system apps \(and native views\) can send requests to this endpoint.
 
 ---
 
-## PUT: \/api\/users\/\{\{name\}\}
+## PUT: /api/users/\{\{name\}\}
 
 Updates the user with the specified name.
 
