@@ -47,7 +47,7 @@
       * [Apps \(UI\)](apps-ui.md)
       * [Files \(UI\)](files-ui.md)
       * [Views \(UI\)](views-ui.md)
-  * Bolt Modules
+  * [Bolt Modules](bolt-modules.md)
     * [bolt-module-db](bolt-module-db.md)
     * [bolt-module-events](bolt-module-events.md)
   * [Bolt Response Codes](bolt-response-codes.md)
