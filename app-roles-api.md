@@ -6,12 +6,11 @@ This is a description of the API endpoints exposed by the Bolt server for intera
 
 The following endpoints are described here:
 
-* [GET: \/api\/app-roles](#get-apiapp-roles)
+* [GET: /api/app-roles](#get-apiapp-roles)
 
-* [POST: \/api\/app-roles](#post-apiapp-roles)
+* [POST: /api/app-roles](#post-apiapp-roles)
 
-* [DELETE: \/api\/app-roles](#delete-apiapp-roles)
-
+* [DELETE: /api/app-roles](#delete-apiapp-roles)
 
 ## GET: \/api\/app-roles
 
@@ -27,7 +26,7 @@ If there is no error during the processing of the request, the `body` field of t
 
 ---
 
-# POST: \/api\/app-roles
+# POST: /api/app-roles
 
 Adds an app-role association to the database.
 
@@ -53,7 +52,7 @@ Only system apps \(and native views\) can send requests to this endpoint.
 
 ---
 
-## DELETE: \/api\/app-roles
+## DELETE: /api/app-roles
 
 Deletes an array of app-role association objects for all registered app-roles matching the specified criteria.
 
