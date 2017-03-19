@@ -6,17 +6,17 @@ The following endpoints are described here:
 
 * [GET: /api/apps](#get-apiapps)
 
-* [GET: \/api\/apps\/@live](#get-apiappslive)
+* [GET: /api/apps/@live](#get-apiappslive)
 
-* [GET: \/api\/apps\/{{name}}](#getapiappsname)
+* [GET: /api/apps/\{\{name\}\}](#getapiappsname)
 
-* [POST: \/api\/apps](#post-apiapps)
+* [POST: /api/apps](#post-apiapps)
 
-* [POST: \/api\/apps\/package](#post-apiappspackage)
+* [POST: /api/apps/package](#post-apiappspackage)
 
-* [POST: \/api\/apps\/reg](#post-apiappsreg)
+* [POST: /api/apps/reg](#post-apiappsreg)
 
-* [POST: \/api\/apps\/reg-package](#post-apiappsreg-package)
+* [POST: /api/apps/reg-package](#post-apiappsreg-package)
 
 * [POST: \/api\/apps\/start](#post-apiappsstart)
 
@@ -40,7 +40,7 @@ If there is no error during the processing of the request, the `body` field of t
 
 ---
 
-## GET: \/api\/apps\/@live
+## GET: /api/apps/@live
 
 Gets an array of context objects for all running contexts.
 
@@ -50,7 +50,7 @@ If there is no error during the processing of the request, the `body` field of t
 
 ---
 
-## GET:\/api\/apps\/{{name}}
+## GET:/api/apps/\{\{name\}\}
 
 Gets the app object of the app with the specified name.
 
@@ -60,7 +60,7 @@ If the app is found, the `body` field of the response should hold an app object.
 
 ---
 
-## POST: \/api\/apps
+## POST: /api/apps
 
 Installs an app from an online repository \(current only npm is supported\).
 
@@ -68,7 +68,7 @@ This endpoint is still experimental.
 
 ---
 
-## POST: \/api\/apps\/package
+## POST: /api/apps/package
 
 Gets an object representing the package.json of an app from an online repository \(current only npm is supported\).
 
@@ -76,7 +76,7 @@ This endpoint is still experimental.
 
 ---
 
-## POST: \/api\/apps\/reg
+## POST: /api/apps/reg
 
 Installs an app from a local repository \(current only the _node\_modules_ folder is supported\).
 
@@ -108,11 +108,11 @@ Any app can send a request to this endpoint provided:
 
 ---
 
-## POST: \/api\/apps\/reg-package
+## POST: /api/apps/reg-package
 
 Gets an object representing the package.json of an app from a local repository \(current only the _node\_modules_ folder is supported\).
 
-This endpoint is important as you use it to fetch info about an app and show it to the user before installation. This should give the user the option of granting\/denying some of the requests the app needs \(like the ability to run as a system app\).
+This endpoint is important as you use it to fetch info about an app and show it to the user before installation. This should give the user the option of granting/denying some of the requests the app needs \(like the ability to run as a system app\).
 
 ### request
 
@@ -134,7 +134,7 @@ Currently the current user needs administrative privilege for this request to be
 
 ---
 
-## POST: \/api\/apps\/start
+## POST: /api/apps/start
 
 Starts the server of the app with the specified name.
 
@@ -156,17 +156,13 @@ If the app is started successfully, the `body` field of the response should hold
 
 * To know if a server was started on another process, check if there is a defined `pid` field for the context object.
 
-### security
-
-A check is made to see if the current user has the right to start an app. For startup apps, no such check may be made.
-
 ### note
 
 Calling this endpoint multiple times for a particular app does not start multiple servers for it; if an app's server is already running a new one will **not** be started.
 
 ---
 
-## POST: \/api\/apps\/stop
+## POST: /api/apps/stop
 
 Starts the server of the app with the specified name.
 
@@ -185,12 +181,6 @@ A standard [Bolt request](bolt-request.md).
 * If the app is found to be running and was stopped successfully, the `body` field of the response should hold a context object.
 
 * If the app is not found to be running, the `error` field of the response may hold an error object. \(see **notes** below.\)
-
-### security
-
-A check is made to see if the current user has the right to start an app. For startup apps, no such check may be made.
-
-This is the same check made when starting an app. The rationale is that you should be able to stop only apps you have the right to start.
 
 ### note
 
