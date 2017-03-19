@@ -18,9 +18,9 @@ The following endpoints are described here:
 
 * [POST: /api/apps/reg-package](#post-apiappsreg-package)
 
-* [POST: \/api\/apps\/start](#post-apiappsstart)
+* [POST: /api/apps/start](#post-apiappsstart)
 
-* [POST: \/api\/apps\/stop](#post-apiappsstop)
+* [POST: /api/apps/stop](#post-apiappsstop)
 
 ## GET: /api/apps
 
