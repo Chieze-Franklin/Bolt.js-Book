@@ -23,6 +23,7 @@
   * [Apps Without Servers](apps-without-servers.md)
   * [Non-Node Servers](non-node-servers.md)
   * [Installing the App](installing-the-app.md)
+  * [Publishing the App](publishing-the-app.md)
 * [Integrating With Bolt](integrating-with-bolt.md)
   * [The Setup View](the-setup-view.md)
   * [The Settings App](the-settings-app.md)
