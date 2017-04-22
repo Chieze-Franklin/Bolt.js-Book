@@ -24,7 +24,7 @@ Here is what your _package.json_ file should look like:
         "body-parser": "^1.9.3",
         "express": "^4.10.2"
     },
-    
+
     "bolt": {
         "displayName": "My Notebook",
         "main": "bolt-server.js",
@@ -57,7 +57,21 @@ app.listen(3000, function () {
 });
 ```
 
-navigate to /install
+Now to install the app navigate to `http://localhost:400/install` \(assuming Bolt is running on port 400\). Note that you need to be logged in, and with admin privilege, for Bolt to let you successfully install an app.
 
-start the app by /apps/notes \("notes" being the name of the app, as specified in the package.json\)
+Bolt gives you 2 ways to install an app: by downloading it from an online directory or by sideloading it from the local machine. Here we are going to sideload the app. \(We will address downloading when we get to [Publishing the App](/publishing-the-app.md).\)
+
+To sideload an app, first copy its folder to the _node\_modules_ folder. In the future this step may not be necessary.
+
+Type in the path to the folder that contains the _package.json_ file, relative to the _node\_modules_ folder. If the _package.json_ file is in the root folder \(which is very often the case\), all you need to type is the name of the root folder. Click the Sideload button, grant the app the necessary privileges, and install the app. See images below:
+
+![](/assets/sideloading-an-app.png)
+
+After installation, you can run the app by navigating to` http://localhost:400/apps/notes` \("notes" being the name of the app, as specified in the _package.json_\). Bolt will start the app on an appropriate port, as shown below:
+
+![](/assets/notebook.png)
+
+Congratulation! You have successfully installed an app on Bolt.
+
+
 
