@@ -10,5 +10,31 @@ The following events are described here:
 
 This event is raised when a user logs into Bolt.
 
+### body
 
+`{`
+
+```
+    "name": String, //the name of the event, in this case 'user-logged-in'
+    "body": Object, //an object representing the user that has just log
+    "publisher": String, //the name of the app that published
+```
+
+`}`
+
+---
+
+## bolt/user-logged-out
+
+This event is raised when a user logs out of Bolt.
+
+### body
+
+`{`
+
+```
+    "body": Object //an object representing the user that has just logged out
+```
+
+`}`
 
