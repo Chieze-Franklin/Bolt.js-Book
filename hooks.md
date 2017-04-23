@@ -6,15 +6,13 @@ With hooks apps can signify their interests in knowing about various events. A h
 
 To register endpoints for events, create the `bolt.hooks` field to follow the format shown below:
 
-`"hooks": {`
-
-`"bolt/user-logged-in": "hooks/bolt/user-logged-in",`
-
-`"bolt/app-started": "hooks/bolt/app-started",`
-
-`"camera/photo-saved": "hooks/my-favorite-event"`
-
-`}`
+```
+"hooks" : {
+    "bolt/user-logged-in": "hooks/bolt/user-logged-in",
+    "bolt/app-started": "hooks/bolt/app-started",
+    "camera/photo-saved": "hooks/my-favorite-event"
+}
+```
 
 The _keys_ \(on the left\) in the `hooks` object define the event you are interested in. The event has to be written in this format:
 
