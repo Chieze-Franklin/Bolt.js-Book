@@ -27,12 +27,12 @@ The event object that will be _POSTed_ to your hooks has the following schema:
     "name": String, //the name of the event
     "body": Object, //the actual payload of the event
     "publisher": String, //the name of the app that raised the event
-    "time": Date, //the time the event was published
-    "id": String //identifies this instance of event object
+    "time": Date //the time the event was published
+    "token": String //identifies this instance of event object
 }
 ```
 
-**Note:** Currently `id` is undefined but will be present in future versions of Bolt, and will be used to check the authenticity of event objects. Different `id` values will be generated for different apps, for every event dispatched.
+explain how token works
 
 The module actually responsible for dispatching to appropriate hooks is [bolt-module-events](/bolt-module-events.md).
 
