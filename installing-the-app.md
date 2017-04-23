@@ -63,15 +63,13 @@ Bolt gives you 2 ways to install an app: by downloading it from an online direct
 
 To sideload an app, first copy its folder to the _node\_modules_ folder. In the future this step may not be necessary.
 
-Type in the path to the folder that contains the _package.json_ file, relative to the _node\_modules_ folder. If the _package.json_ file is in the root folder \(which is very often the case\), all you need to type is the name of the root folder. Click the Sideload button, grant the app the necessary privileges, and install the app. See images below:
+Type in the path to the folder that contains the _package.json_ file, relative to the _node\_modules_ folder. If the _package.json_ file is in the root folder \(which is very often the case\), all you need to type is the name of the root folder. Click the Sideload button, grant the app the necessary privileges, and install the app. See views below:
 
 ![](/assets/sideloading-an-app.png)
 
-After installation, you can run the app by navigating to` http://localhost:400/apps/notes` \("notes" being the name of the app, as specified in the _package.json_\). Bolt will start the app on an appropriate port, as shown below:
+After installation, you can run the app by navigating to`http://localhost:400/apps/notes` \("notes" being the name of the app, as specified in the _package.json_\). Bolt will start the app on an appropriate port, as shown below:
 
 ![](/assets/notebook.png)
 
 Congratulation! You have successfully installed an app on Bolt.
-
-
 
