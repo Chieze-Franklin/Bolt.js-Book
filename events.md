@@ -16,9 +16,27 @@ To register endpoints for events, create the `bolt.hooks` field in your _package
 }
 ```
 
-how to listen for an event, including the schema of the object u receive
+The _keys_ \(on the left\) in the `hooks` object define the event you are interested in. The _values_ \(on the right\) in the `hooks` object are endpoints to which event data will be _POSTed_. For more info see [hooks](/hooks.md).
 
-how to raise an event, includiing the schema of the object u send
+## event data
+
+The event object that will be _POSTed_ to your hooks has the following schema:
+
+```
+{
+    "name": String, //the name of the event
+    "body": Object, //the actual payload of the event
+    "publisher": String, //the name of the app that raised the event
+    "time": Date, //the time the event was published
+    "id": String //identifies this instance of event object
+}
+```
+
+**Note:** Currently `id` is undefined but will be present in future versions of Bolt, and will be used to check the authenticity of event objects. Different `id` values will be generated for different apps, for every event dispatched.
+
+The module actually responsible for dispatching to appropriate hooks is [bolt-module-events](/bolt-module-events.md).
+
+how to raise an event, includiing the schema of the object u send and subscribers to determine who gets the event
 
 u can use events to create real time apps...socket.io...see examples: console app and chat app
 
