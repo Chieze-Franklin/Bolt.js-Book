@@ -8,5 +8,5 @@ Recall that on the install view \(`localhost:400/install`, assuming Bolt is runn
 * You get a copy of the app that hasn't been altered by the wrong party.
 * Along with the app comes every module it depends on.
 
-However, the option of sideloading is there to make the transfer of already downloaded apps possible.
+However, the option of sideloading is there to make the transfer of already downloaded apps possible. Just make sure the files aren't altered in any way.
 
