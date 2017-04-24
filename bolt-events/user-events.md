@@ -17,7 +17,7 @@ This event is raised when a user logs into Bolt.
 ```
     "name": String, //the name of the event, in this case 'user-logged-in'
     "body": Object, //an object representing the user that has just log
-    "publisher": String, //the name of the app that published
+    "publisher": String, //the name of the app that published, in this case 'bolt'
 ```
 
 `}`
