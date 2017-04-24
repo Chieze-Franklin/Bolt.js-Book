@@ -54,6 +54,7 @@
   * [Views](views.md)
   * [Bolt Events](bolt-events.md)
     * [User Events](bolt-events/user-events.md)
+    * [App Events](bolt-events/app-events.md)
   * [Objects](objects.md)
     * [Bolt Event](bolt-event.md)
     * [Bolt Request](bolt-request.md)
