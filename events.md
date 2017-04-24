@@ -49,5 +49,5 @@ To raise an event, send a `POST` request to the `/api/events/{{event-name}}` end
 
 By default an event is dispatched to all apps that have registered to listen for it \(all subscribers\). This may not always be what you want. Sometimes you want an event to be dispatched only to certain apps. For instance, imagine you have a chat app with raises an event every time a user posts a chat/message. You probably don't want every app receiving this event \(with the user's message\). In situations like this you specify a collection of the names of the apps you want the event to be sent to in the `subscribers` field of your `POST` body; all other apps not listed will be ignored, even if they registered to listen for that event.
 
-u can use events to create real time apps...socket.io...see examples: console app and chat app
+There are different ways to use events in Bolt, and the apps presented in this section demonstrate those ways.
 
