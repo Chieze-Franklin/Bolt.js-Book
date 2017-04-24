@@ -27,9 +27,6 @@
 * [Integrating With Bolt](integrating-with-bolt.md)
   * [The Setup View](the-setup-view.md)
   * [The Settings App](the-settings-app.md)
-  * [Bolt Event](bolt-event.md)
-  * [Bolt Request](bolt-request.md)
-  * [Bolt Response](bolt-response.md)
   * [Persistence/Data Storage](persistencedata-storage.md)
     * The Logger App
   * [Events](events.md)
@@ -58,4 +55,7 @@
   * [Bolt Events](bolt-events.md)
     * [User Events](bolt-events/user-events.md)
   * [Objects](objects.md)
+    * [Bolt Event](bolt-event.md)
+    * [Bolt Request](bolt-request.md)
+    * [Bolt Response](bolt-response.md)
 
