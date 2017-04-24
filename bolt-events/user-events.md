@@ -4,7 +4,11 @@ These are the events raised by the [/api/users](/users-api.md) endpoint.
 
 The following events are described here:
 
+* [bolt/user-created](#boltuser-created)
+* [bolt/user-deleted](#boltuser-deleted)
 * [bolt/user-logged-in](#boltuser-logged-in)
+* [bolt/user-logged-out](#boltuser-logged-out)
+* [bolt/user-updated](#boltuser-updated)
 
 ## bolt/user-created
 
