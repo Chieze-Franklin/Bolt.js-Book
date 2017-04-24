@@ -20,7 +20,7 @@ The _keys_ \(on the left\) in the `hooks` object define the event you are intere
 
 ## event object
 
-
+The object that will be POSTed to your hooks is a standard [Bolt event](/bolt-event.md).
 
 The module actually responsible for dispatching to appropriate hooks is [bolt-module-events](/bolt-module-events.md).
 
