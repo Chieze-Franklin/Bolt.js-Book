@@ -38,7 +38,16 @@ The module actually responsible for dispatching to appropriate hooks is [bolt-mo
 
 ## raising an event
 
-how to raise an event, includiing the schema of the object u send and subscribers to determine who gets the event. note that only Bolt servers that have bolt-module-events installed can do this evnt thingy
+To raise an event, send a `POST` request to the `/api/events/{{event-name}}` endpoint of the Bolt server. This endpoint does **NOT** come with Bolt by default; you must install the [bolt-module-events](/bolt-module-events.md) module to have it. For instance, to raise an event called `photo-saved`, perform a `POST: localhost:400/api/events/photo-saved` \(assuming the Bolt server is running on port 400\). The body of the `POST` should look this:
+
+```
+{
+    "body": Object, //the actual payload of the event
+    "subscribers": [String] //(optional) a collection of the names of the apps you want this event to be dispatched to
+}
+```
+
+By default an event is dispatched to all apps that have registered to listen for it \(all subscribers\). This may not always be what you want. Sometimes you want an event to be dispatched only to certain apps. For instance, imagine you have a chat app with raises an event every time a user posts a chat/message. You probably don't want every app receiving this event \(with the user's message\). In situations like this you specify a collection of the names of the apps you want the event to be sent to in the `subscribers` field of your `POST` body; all other apps not listed will be ignored, even if they registered to listen for that event.
 
 u can use events to create real time apps...socket.io...see examples: console app and chat app
 
