@@ -10,17 +10,17 @@ The following events are described here:
 
 This event is raised when a user logs into Bolt.
 
-### body
+### event object
 
-`{`
+A standard [Bolt event](/bolt-event.md).
 
 ```
+{
     "name": String, //the name of the event, in this case 'user-logged-in'
-    "body": Object, //an object representing the user that has just log
+    "body": Object, //an object representing the user that has just logged in
     "publisher": String, //the name of the app that published, in this case 'bolt'
+}
 ```
-
-`}`
 
 ---
 
@@ -28,13 +28,17 @@ This event is raised when a user logs into Bolt.
 
 This event is raised when a user logs out of Bolt.
 
-### body
+### event object
 
-`{`
+A standard [Bolt event](/bolt-event.md).
 
 ```
-    "body": Object //an object representing the user that has just logged out
+{
+    "name": String, //the name of the event, in this case 'user-logged-out'
+    "body": Object, //an object representing the user that has just logged out
+    "publisher": String, //the name of the app that published, in this case 'bolt'
+}
 ```
 
-`}`
+
 
