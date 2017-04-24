@@ -27,7 +27,7 @@ The event object that will be _POSTed_ to your hooks has the following schema:
     "name": String, //the name of the event
     "body": Object, //the actual payload of the event
     "publisher": String, //the name of the app that raised the event
-    "time": Date //the time the event was published
+    "time": Date, //the time the event was published
     "token": String //identifies this instance of event object
 }
 ```
