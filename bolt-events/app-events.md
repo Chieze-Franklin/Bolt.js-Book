@@ -4,6 +4,11 @@ These are the events raised by the [/api/apps](/apps-api.md) endpoints.
 
 The following events are described here:
 
+* [bolt/app-installed](#boltapp-installed)
+* [bolt/app-router-loaded](#boltapp-router-loaded)
+* [bolt/app-started](#boltapp-started)
+* [bolt/app-stopped](#boltapp-stopped)
+
 ## bolt/app-installed
 
 This event is raised when an app is installed.
