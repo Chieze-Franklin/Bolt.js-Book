@@ -22,6 +22,24 @@ A standard [Bolt event](/bolt-event.md).
 
 ---
 
+## bolt/app-router-loaded
+
+This event is raised when an external router is loaded.
+
+### event object
+
+A standard [Bolt event](/bolt-event.md).
+
+```
+{
+    "name": String, //the name of the event, in this case 'app-router-loaded'
+    "body": Object, //an object representing the router that has just been loaded
+    "publisher": String //the name of the app that published, in this case 'bolt'
+}
+```
+
+---
+
 ## bolt/app-started
 
 This event is raised when an app is started.
