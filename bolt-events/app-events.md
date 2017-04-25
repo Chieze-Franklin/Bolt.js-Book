@@ -38,5 +38,23 @@ A standard [Bolt event](/bolt-event.md).
 }
 ```
 
+---
+
+## bolt/app-stopped
+
+This event is raised when an app is stopped.
+
+### event object
+
+A standard [Bolt event](/bolt-event.md).
+
+```
+{
+    "name": String, //the name of the event, in this case 'app-stopped'
+    "body": Object, //an object representing the context of the app that has just been stopped
+    "publisher": String //the name of the app that published, in this case 'bolt'
+}
+```
+
 
 
