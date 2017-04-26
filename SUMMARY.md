@@ -61,7 +61,8 @@
     * [App-Role Object](app-role-object.md)
     * [Bolt Event](bolt-event.md)
     * [Bolt Request](bolt-request.md)
-    * [Context \(App\) Object](context-(app)-object.md)
+    * [Context \(App\) Object-object.md\)](context-(app)
     * [Bolt Response](bolt-response.md)
+    * [Router Object](router-object.md)
     * [User Object](user-object.md)
 
