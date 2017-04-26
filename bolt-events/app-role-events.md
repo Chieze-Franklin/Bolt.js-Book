@@ -7,7 +7,7 @@ These are the event raised by the [/api/app-roles](/app-roles-api.md) endpoint.
 
 ## bolt/app-role-created
 
-This event is raised when an app-role association is created.
+This event is raised when an [app-role association](/app-role-object.md) is created.
 
 ### event object
 
@@ -25,7 +25,7 @@ A standard [Bolt event](/bolt-event.md).
 
 ## bolt/app-role-deleted
 
-This event is raised when an app-role association is deleted.
+This event is raised when an [app-role association](/app-role-object.md) is deleted.
 
 ### event object
 
