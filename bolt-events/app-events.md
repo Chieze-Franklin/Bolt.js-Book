@@ -48,7 +48,7 @@ A standard [Bolt event](/bolt-event.md).
 
 ## bolt/app-router-loaded
 
-This event is raised when an external router is loaded.
+This event is raised when an [external router](/router-object.md) is loaded.
 
 ### event object
 
@@ -66,7 +66,7 @@ A standard [Bolt event](/bolt-event.md).
 
 ## bolt/app-started
 
-This event is raised when an app is started.
+This event is raised when an [app](/app-object.md) is started.
 
 ### event object
 
