@@ -6,6 +6,8 @@ To see how to listen for events, refer to [Events \(Integrating With Bolt\)](/ev
 
 * [App Events](/bolt-events/app-events.md)
 * [User Events](/bolt-events/user-events.md)
+* [Role Events](/bolt-events/role-events.md)
+* [App-Role Events](/bolt-events/app-role-events.md)
 
 
 
