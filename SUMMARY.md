@@ -64,6 +64,7 @@
     * [Bolt Request](bolt-request.md)
     * [Bolt Response](bolt-response.md)
     * [Context Object](context-object.md)
+    * [Role Object](role-object.md)
     * [Router Object](router-object.md)
     * [User Object](user-object.md)
 
