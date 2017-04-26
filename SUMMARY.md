@@ -62,6 +62,7 @@
     * [Bolt Event](bolt-event.md)
     * [Bolt Request](bolt-request.md)
     * [Bolt Response](bolt-response.md)
+    * [Context Object](context-object.md)
     * [Router Object](router-object.md)
     * [User Object](user-object.md)
 
