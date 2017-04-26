@@ -4,10 +4,29 @@ These are the events raised by the [/api/apps](/apps-api.md) endpoints.
 
 The following events are described here:
 
+* [bolt/app-downloaded](#boltapp-downloaded)
 * [bolt/app-installed](#boltapp-installed)
 * [bolt/app-router-loaded](#boltapp-router-loaded)
 * [bolt/app-started](#boltapp-started)
 * [bolt/app-stopped](#boltapp-stopped)
+
+## bolt/app-downloaded
+
+This event is raised when an app is downloaded, before the actual installation happens.
+
+### event object
+
+A standard [Bolt event](/bolt-event.md).
+
+```
+{
+    "name": String, //the name of the event, in this case 'app-downloaded'
+    "body": String, //the name of the app that has just been downloaded
+    "publisher": String //the name of the app that published, in this case 'bolt'
+}
+```
+
+---
 
 ## bolt/app-installed
 
