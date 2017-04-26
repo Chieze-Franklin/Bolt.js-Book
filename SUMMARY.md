@@ -57,9 +57,11 @@
     * [User Events](bolt-events/user-events.md)
     * [App-Role Events](bolt-events/app-role-events.md)
   * [Objects](objects.md)
+    * [App Object](app-object.md)
     * [App-Role Object](app-role-object.md)
     * [Bolt Event](bolt-event.md)
     * [Bolt Request](bolt-request.md)
+    * [Context \(App\) Object](context-(app)-object.md)
     * [Bolt Response](bolt-response.md)
     * [User Object](user-object.md)
 
