@@ -84,7 +84,7 @@ A standard [Bolt event](/bolt-event.md).
 
 ## bolt/app-stopped
 
-This event is raised when an app is stopped.
+This event is raised when an [app](/app-object.md) is stopped.
 
 ### event object
 
