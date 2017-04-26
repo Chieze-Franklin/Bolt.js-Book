@@ -61,4 +61,5 @@
     * [Bolt Event](bolt-event.md)
     * [Bolt Request](bolt-request.md)
     * [Bolt Response](bolt-response.md)
+    * [User Object](user-object.md)
 
