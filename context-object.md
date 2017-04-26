@@ -1,4 +1,4 @@
-# Context \(App\) Object
+# Context Object
 
 
 
