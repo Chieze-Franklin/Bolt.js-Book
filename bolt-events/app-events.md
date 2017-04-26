@@ -12,7 +12,7 @@ The following events are described here:
 
 ## bolt/app-downloaded
 
-This event is raised when an app is downloaded, before the actual installation happens.
+This event is raised when an [app](/app-object.md) is downloaded, before the actual installation happens.
 
 ### event object
 
@@ -30,7 +30,7 @@ A standard [Bolt event](/bolt-event.md).
 
 ## bolt/app-installed
 
-This event is raised when an app is installed.
+This event is raised when an [app](/app-object.md) is installed.
 
 ### event object
 
