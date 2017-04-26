@@ -66,7 +66,7 @@ A standard [Bolt event](/bolt-event.md).
 
 ## bolt/app-started
 
-This event is raised when an [app](/app-object.md) is started.
+This event is raised when an [app](/app-object.md) is started. The `body` field of the event object is a context object.
 
 ### event object
 
@@ -88,7 +88,7 @@ This event is raised when an [app](/app-object.md) is stopped.
 
 ### event object
 
-A standard [Bolt event](/bolt-event.md).
+A standard [Bolt event](/bolt-event.md). The `body` field of the event object is a context object.
 
 ```
 {
