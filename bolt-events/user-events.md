@@ -12,7 +12,7 @@ The following events are described here:
 
 ## bolt/user-created
 
-This event is raised when a user is created.
+This event is raised when a [user](/user-object.md) is created.
 
 ### event object
 
@@ -30,7 +30,7 @@ A standard [Bolt event](/bolt-event.md).
 
 ## bolt/user-deleted
 
-This event is raised when a user is deleted.
+This event is raised when a [user](/user-object.md) is deleted.
 
 ### event object
 
@@ -48,7 +48,7 @@ A standard [Bolt event](/bolt-event.md).
 
 ## bolt/user-logged-in
 
-This event is raised when a user logs into Bolt.
+This event is raised when a [user](/user-object.md) logs into Bolt.
 
 ### event object
 
@@ -66,7 +66,7 @@ A standard [Bolt event](/bolt-event.md).
 
 ## bolt/user-logged-out
 
-This event is raised when a user logs out of Bolt.
+This event is raised when a [user](/user-object.md) logs out of Bolt.
 
 ### event object
 
@@ -84,7 +84,7 @@ A standard [Bolt event](/bolt-event.md).
 
 ## bolt/user-updated
 
-This event is raised when a user is updated.
+This event is raised when a [user](/user-object.md) is updated.
 
 ### event object
 
