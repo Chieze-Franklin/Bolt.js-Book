@@ -4,15 +4,25 @@
 
 ## Get Bolt
 
-Bolt is built on Node.js, so ensure you have [Node](https://nodejs.org) \(and npm\) installed.
-
 To get Bolt you need to download the compressed files, pull or clone it from its [GitHub repository](https://github.com/Chieze-Franklin/Bolt.js).
 
+Bolt is built on Node.js, so ensure you have [Node](https://nodejs.org) \(and npm\) installed.
+
+Bolt also relies on MongoDB, so ensure you have [MonogoDB](https://www.mongodb.com/) installed and running.
+
+Set the following environment variables:
+
+* PORT: Set this to the port on which the Bolt server will run. You do NOT set this on Heroku, as Heroku does that for you.
+* MONGODB\_URI: Set this to your MongoDB URI, like 'mongodb://&lt;user&gt;:&lt;password&gt;@ds056979.mlab.com:56979/bolt' or 'mongodb://127.0.0.1:27017/bolt'.
+* BOLT\_ADDRESS: Set this to the host on which Bolt is to run, like 'https://my-bolt-app.herokuapp.com' or 'http://127.0.0.1:400' \(no trailing slash '/', but include the http\(s\) protocol\).
+* BOLT\_SESSION\_SECRET: Set this to a secret \(like a password\).
+
+Set the following optional environment variables if you want to support running apps that are not system \(root\) apps \(Note that certain cloud services may no allow Bolt run apps this way\):
+
+* BOLT\_PROTOCOL: Set to the appropriate http/https protocol.
+* BOLT\_IP: Set to the IP address on which the Bolt server will be running.
+
 After that, navigate to the root folder \(the folder containing _bolt.js_\) and run `npm install` to install dependencies.
-
-Download the appropriate MongoDB files into the appropriate folder in _/sys/bins/mongodb_.
-
-Ensure the path _/sys/data/mongodb_ exists.
 
 Configure Bolt as required in /_sys/server/config.json_.
 
@@ -20,9 +30,11 @@ You can also specify what you want to happen during initial setup in /_sys/serve
 
 Run `npm start` or `node bolt`.
 
-On your browser, navigate to `{{config-host}}:{{config-port}}` to start working in the Bolt environment. Using the default config values, that should be `localhost:400`. \(The remainder of this book will use `localhost:400` as the default location of Bolt.\)
+On your browser, navigate to `{{BOLT_ADDRESS}}` \(or, if you set the optional environment variables, `{{BOLT_PROTOCOL}}://{{BOLT_IP}}:{{PORT}}`\)  to start working in the Bolt environment.
 
 And that's all there is to it.
+
+The rest of this book assumes you are running Bolt locally `localhost:400` or `127.0.0.1:400`.
 
 ## config.json
 
@@ -38,14 +50,14 @@ The very first time you run Bolt you will be shown the setup view.
 
 The setup view registers the first user with administrative privilege, and then presents all the steps listed in `setup.json` to the user, with the option to skip each step.
 
-After that you are directed to `localhost:400/settings`. Since there may currently be no installed app that serves that endpoint, the native settings view will be shown to you. This view will encourage you to install the official settings app.
+After that you are directed to `127.0.0.1:400/settings`. Since there may currently be no installed app that serves that endpoint, the native settings view will be shown to you. This view will encourage you to install the official settings app.
 
 After installing the official settings app you will then be able to perform various administrative tasks like:
 
 * Add new roles \(in addition to the admin role that was auto-created\).
 * Add new users, and assign them roles. A user can be assigned more than one role.
 
-* Install new apps. You can use this opportunity to install apps that serve common endpoints like `localhost:400/home`.
+* Install new apps. You can use this opportunity to install apps that serve common endpoints like `127.0.0.1:400/home`.
 
 
 
