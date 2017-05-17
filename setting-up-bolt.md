@@ -13,8 +13,8 @@ Bolt also relies on MongoDB, so ensure you have [MonogoDB](https://www.mongodb.c
 Set the following environment variables:
 
 * PORT: Set this to the port on which the Bolt server will run. You do NOT set this on Heroku, as Heroku does that for you.
-* MONGODB\_URI: Set this to your MongoDB URI, like 'mongodb://&lt;user&gt;:&lt;password&gt;@ds056979.mlab.com:56979/bolt' or 'mongodb://127.0.0.1:27017/bolt'.
-* BOLT\_ADDRESS: Set this to the host on which Bolt is to run, like 'https://my-bolt-app.herokuapp.com' or 'http://127.0.0.1:400' \(no trailing slash '/', but include the http\(s\) protocol\).
+* MONGODB\_URI: Set this to your MongoDB URI, like 'mongodb://&lt;user&gt;:&lt;password&gt;@ds056789.mlab.com:56789/bolt' or 'mongodb://127.0.0.1:27017/bolt'.
+* BOLT\_ADDRESS: Set this to the host on which Bolt is to run, like '[https://my-bolt-app.herokuapp.com](https://my-bolt-app.herokuapp.com)' or '[http://127.0.0.1:400](http://127.0.0.1:400)' \(no trailing slash '/', but include the http\(s\) protocol\).
 * BOLT\_SESSION\_SECRET: Set this to a secret \(like a password\).
 
 Set the following optional environment variables if you want to support running apps that are not system \(root\) apps \(Note that certain cloud services may no allow Bolt run apps this way\):
