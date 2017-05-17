@@ -12,7 +12,7 @@ First, let us go through some npm-specific fields to see what they mean to Bolt.
 
 As far as Bolt is concerned, the most important npm-specific fields are:
 
-* `name`: This is the name with which Bolt will identify your app. Other apps can also identify/communicate with your app using that name. App names must be unique through out the system.
+* `name`: This is the name with which Bolt will identify your app. Other apps can also identify/communicate with your app using that name. App names must be unique through out the system. App names are **NOT** case-sensitive, but npm encourages you to use lowercase characters only. DO not use slashes, question marks or other characters that may cause issues when inserted in a URL. You can stick to alpha-numeric, dash, and underscore characters.
 * `version`: The version of your app.
 * `description`: A description of your app..
 
