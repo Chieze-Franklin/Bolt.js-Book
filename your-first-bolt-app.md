@@ -9,7 +9,7 @@ Bolt is built on top of Node.js. As a result, it very readily runs Express apps.
 * First navigating to the project directory: `cd the/project/directory`
 * And then running: `node server.js`
 
-On the console you should see a message like _Server started. Open _[http://localhost:3000](http://localhost:3000)_ in your browser_. Navigate to `http://localhost:3000` on your browser. You should see the app's UI now.
+On the console you should see a message like _Server started. Open _[http://127.0.0.1:3000](http://127.0.0.1:3000)_ in your browser_. You should see the app's UI now.
 
 Now that we are sure the app works, let's integrate it into Bolt. \(This is one of the great advantages of using Bolt: you can develop various parts of your app completely independent of the rest of the app, and integrate everything when ready.\)
 
