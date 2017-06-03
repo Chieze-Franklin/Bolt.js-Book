@@ -6,9 +6,13 @@ In this section we will talk about a few of the important actions performed by t
 
 ## Registering a User
 
-To register a new user with Bolt, send a `POST` request to the Bolt endpoint [/api/users](/users-api.md). The body of the request is typically a `form` object \(which can be created in JavaScript by typing `var form = new FormData();`\).
+To register a new user with Bolt, send a `POST` request to the Bolt endpoint [/api/users](/users-api.md). The body of the request is typically a `FormData` object \(which can be created in JavaScript by typing `var form = new FormData();`\).
 
-Creating a Role
+This is how the setup view registers you as a user: it takes all the values you typed into the various fields, puts them in a programmatically created `FormData` object, and makes a `POST` request to `/api/users`. That endpoint is a sensitive endpoint, so Bolt already grants requests \(to that endpoint\) that are coming from system apps. This is why every `POST` request to /api/users must include the `X-Bolt-App-Token` custom header with which Bolt can determine if the app making the request is a system app or not. See [Bolt Request](/bolt-request.md) for more information on `X-Bolt-App-Token`.
+
+See [/api/users](/users-api.md) for more information.
+
+# Creating a Role
 
 Assigning a Role to a User
 
