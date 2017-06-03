@@ -26,6 +26,7 @@
   * [Publishing the App](publishing-the-app.md)
 * [Integrating With Bolt](integrating-with-bolt.md)
   * [The Setup View](the-setup-view.md)
+  * [The Home App](the-home-app.md)
   * [The Admin App](the-settings-app.md)
   * [Persistence/Data Storage](persistencedata-storage.md)
     * The Logger App
