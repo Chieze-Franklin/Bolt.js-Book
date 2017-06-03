@@ -16,11 +16,19 @@ See [/api/users](/users-api.md) for more information.
 
 Bolt employs a role-based access control mechanism: your capabilities on Bolt are determined by the roles you assume.
 
-To create a role, send a `POST` request to [/api/roles](/roles-api.md). This endpoint is also a sensitive endpoint, so every `POST` request to it must include the `X-Bolt-App-Token` custom header.
+To create a role, send a `POST` request to [/api/roles](/roles-api.md). This endpoint is also a sensitive endpoint and available only to system apps, so every `POST` request to it must include the `X-Bolt-App-Token` custom header.
 
 See [/api/roles](/roles-api.md) for more information.
 
 ## Assigning a Role to a User
 
-Performing the Steps in setup.json
+With a user created, and a role created, the next step is to associate the user with the role. Note that Bolt allows you to associate more than one role with a user.
+
+To assign a role to a user, send a `POST` request to [/api/user-roles](/user-roles-api.md). This endpoint is available only to system apps, so every `POST` request to it must include the `X-Bolt-App-Token` custom header.
+
+See [/api/user-roles](/user-roles-api.md) for more information.
+
+## Performing the Steps in setup.json
+
+The steps in [setup.json](/setting-up-bolt/setup.json.md) are simply requests to the Bolt server. Any valide request can be specified.
 
