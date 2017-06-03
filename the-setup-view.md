@@ -6,7 +6,7 @@ In this section we will talk about a few of the important actions performed by t
 
 ## Registering a User
 
-To register a new user with Bolt, send a `POST` request to the Bolt endpoint [/api/users](/users-api.md). The body of the request is typically a `form` object \(which can be created in JavaScript by typing var form = new FormData\(\);\).
+To register a new user with Bolt, send a `POST` request to the Bolt endpoint [/api/users](/users-api.md). The body of the request is typically a `form` object \(which can be created in JavaScript by typing `var form = new FormData();`\).
 
 Creating a Role
 
