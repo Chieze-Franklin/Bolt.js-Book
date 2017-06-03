@@ -4,7 +4,9 @@ When ever you attempt to log into Bolt, a check is made to see if there is any r
 
 In this section we will talk about a few of the important actions performed by the setup view, and how those actions are performed. The goal here is to introduce you to some Bolt [endpoints](/bolt-server-endpoints.md) you can use in your app.
 
-Registering a User
+## Registering a User
+
+To register a new user with Bolt, send a `POST` request to the Bolt endpoint [/api/users](/users-api.md). The body of the request is typically a `form` object \(which can be created in JavaScript by typing var form = new FormData\(\);\).
 
 Creating a Role
 
