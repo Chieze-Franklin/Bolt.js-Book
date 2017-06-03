@@ -18,6 +18,7 @@
     * [install](install.md)
     * [public](public.md)
     * [routers](routers.md)
+    * [system](system.md)
     * [tags](tags.md)
   * [The App Server](the-app-server.md)
   * [Apps Without Servers](apps-without-servers.md)
