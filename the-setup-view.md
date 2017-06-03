@@ -12,9 +12,15 @@ This is how the setup view registers you as a user: it takes all the values you 
 
 See [/api/users](/users-api.md) for more information.
 
-# Creating a Role
+## Creating a Role
 
-Assigning a Role to a User
+Bolt employs a role-based access control mechanism: your capabilities on Bolt are determined by the roles you assume.
+
+To create a role, send a `POST` request to [/api/roles](/roles-api.md). This endpoint is also a sensitive endpoint, so every `POST` request to it must include the `X-Bolt-App-Token` custom header.
+
+See [/api/roles](/roles-api.md) for more information.
+
+## Assigning a Role to a User
 
 Performing the Steps in setup.json
 
