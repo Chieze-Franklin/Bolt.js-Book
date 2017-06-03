@@ -16,7 +16,15 @@ A big advantage of system apps is that the request object that gets to a system 
 
 Another big advantage of system apps is that no new port or process is created in order to run them. This means they get to run on pretty much any hosting or cloud service that supports Node. You do not have to worry about the possibility of the service preventing you from creating new processes or opening new ports.
 
--how to know if the app is running as a system app or not
+As a developer, how do you know if your app is running as a system app or not? Check for the variable `BOLT_CHILD_PROC`.
+
+```
+if (process.env.BOLT_CHILD_PROC) {
+    console.log("I am running on a child process, therefore I am not currently a system app.");
+} else {
+    console.log("I am currently a system app.");
+}
+```
 
 -the URL for system apps "/x/app-name/..."
 
