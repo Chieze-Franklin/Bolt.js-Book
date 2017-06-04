@@ -14,8 +14,6 @@
     * [files](files.md)
     * [hooks](hooks.md)
     * [index](package-index.md)
-    * [ini](ini.md)
-    * [install](install.md)
     * [module](module.md)
     * [public](public.md)
     * [routers](routers.md)

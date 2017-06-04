@@ -33,8 +33,6 @@ The following are fields expected inside `bolt`:
 * [files](/files.md)
 * [hooks](/hooks.md)
 * [index](/package-index.md)
-* [ini](/ini.md)
-* [install](/install.md)
 * [module](/module.md)
 * order: Number //\(default: 0\) provides another way for dashboards/desktops/launchers to sort apps
 * [public](/public.md)
