@@ -35,6 +35,7 @@ The following are fields expected inside `bolt`:
 * [index](/package-index.md)
 * [ini](/ini.md)
 * [install](/install.md)
+* module
 * order: Number //\(default: 0\) provides another way for dashboards/desktops/launchers to sort apps
 * [public](/public.md)
 * [routers](/routers.md)
