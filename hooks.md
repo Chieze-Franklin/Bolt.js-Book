@@ -36,7 +36,37 @@ When there is no `"/"` character in the event, the text provided is the name of 
 
 The _values_ \(on the right\) in the `hooks` object are endpoints to which event data will be _POSTed_.
 
-App authors should make it easy to discover events their apps raise, and the event data that accompany them.
+In the above examples the endpoints to which the event data will be _POSTed_ reside in the app defining the hooks. Every time the listed events occur the app will be started \(if it wasn't already started\), and the event data will be _POSTed_ appropriately. Sometimes this isn't what you want. There are 2 other scenarios covered by Bolt:
+
+* When the endpoint resides on an external server.
+* When you want to handle the event in a function without having to start the app.
+
+### When the endpoint resides on an external server.
+
+Sometimes you want Bolt to dispatch the event data to an endpoint on an external server. To do this, the value \(on the right\) of an event field in the `hooks` object should be defined as an object \(not string\), and should have 2 fields, `route` which is the URL to which the event will be _POSTed_, and `type` which must be set to `"web"`. For example,
+
+```
+"hooks": {
+    "photo-saved": {
+        "route": "https://my-photo-catalog.herokuapp.com/photos-from-bolt",
+        "type": "web"
+    }
+}
+```
+
+If the route value does not start with _http://_ or _https://_, Bolt will assume it to be a HTTP route.
+
+More details later.
+
+### When you want to handle the event in a function without having to start the app.
+
+This is in line with the _serverless_ architecture. Just create functions, and Bolt will execute those functions at the appropriate time, as relevant events occur.
+
+More details later.
+
+### In Conclusion,
+
+App authors should make it easy for others to discover events their apps raise, and the event data that accompany them.
 
 For a list of events raised by Bolt, see [Bolt Events](/bolt-events.md).
 
