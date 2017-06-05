@@ -26,7 +26,7 @@ The module actually responsible for dispatching to appropriate hooks is [bolt-mo
 
 ## raising an event
 
-To raise an event, send a `POST` request to the `/api/events/{{event-name}}` endpoint of the Bolt server. This endpoint does **NOT** come with Bolt by default; you must install the [bolt-module-events](/bolt-module-events.md) module to have it. For instance, to raise an event called `photo-saved`, perform a `POST: localhost:400/api/events/photo-saved` \(assuming the Bolt server is running on port 400\). The body of the `POST` should look this:
+To raise an event, send a `POST` request to the `/api/events/{{event-name}}` endpoint of the Bolt server. The request must have the `X-Bolt-App-Token` custom header. This endpoint does **NOT** come with Bolt by default; you must install the [bolt-module-events](/bolt-module-events.md) module to have it. For instance, to raise an event called `photo-saved`, perform a `POST: localhost:400/api/events/photo-saved` \(assuming the Bolt server is running on port 400\). The body of the `POST` should look this:
 
 ```
 {
