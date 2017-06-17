@@ -36,7 +36,7 @@ User Error.
 
 | **Code** | **Meaning** |
 | --- | --- |
-| 200 | Username and\/or password missing |
+| 200 | Username and/or password missing |
 | 201 | A user with the same username already exists |
 | 202 | Could not save user to the database |
 | 203 | Could not retrieve user from the database |
@@ -55,12 +55,12 @@ Access-Control Error.
 | 302 | Could not save role to the database |
 | 303 | Could not retrieve role from the database |
 |  |  |
-| 310 | Username and\/or role name missing |
+| 310 | Username and/or role name missing |
 | 311 | A user-role with the same user and role already exists. |
 | 312 | Could not save user-role to the database |
 | 313 | Could not retrieve user-role from the database |
 |  |  |
-| 320 | App name and\/or role name missing |
+| 320 | App name and/or role name missing |
 | 321 | An app-role with the same app and role already exists |
 | 322 | Could not save app-role to database |
 | 323 | Could not retrieve app-role from the database |
@@ -117,7 +117,7 @@ Database Error.
 
 | **Code** | **Meaning** |
 | --- | --- |
-| 700 | Collection name and\/or app name missing |
+| 700 | Collection name and/or app name missing |
 | 701 | A collection with the same collection name and app name already exists |
 | 702 | Could not save collection to the database |
 | 703 | Could not retrieve collection from the database |
