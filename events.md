@@ -22,11 +22,11 @@ The _keys_ \(on the left\) in the `hooks` object define the event you are intere
 
 The object that will be POSTed to your hooks is a standard [Bolt event](/bolt-event.md).
 
-The module actually responsible for dispatching to appropriate hooks is [bolt-module-events](/bolt-module-events.md).
+The endpoints actually responsible for dispatching to appropriate hooks are defined in the [events API](/events-api.md).
 
 ## raising an event
 
-To raise an event, send a `POST` request to the `/api/events/{{event-name}}` endpoint of the Bolt server. The request must have the `X-Bolt-App-Token` custom header. This endpoint does **NOT** come with Bolt by default; you must install the [bolt-module-events](/bolt-module-events.md) module to have it. For instance, to raise an event called `photo-saved`, perform a `POST: localhost:400/api/events/photo-saved` \(assuming the Bolt server is running on port 400\). The body of the `POST` should look this:
+To raise an event, send a `POST` request to the `/api/events/{{event-name}}` endpoint of the Bolt server. The request must have the `X-Bolt-App-Token` custom header. For instance, to raise an event called `photo-saved`, perform a `POST: localhost:400/api/events/photo-saved` \(assuming the Bolt server is running on port 400\). The body of the `POST` should look this:
 
 ```
 {
@@ -35,7 +35,7 @@ To raise an event, send a `POST` request to the `/api/events/{{event-name}}` end
 }
 ```
 
-By default an event is dispatched to all apps that have registered to listen for it \(all subscribers\). This may not always be what you want. Sometimes you want an event to be dispatched only to certain apps. For instance, imagine you have a chat app with raises an event every time a user posts a chat/message. You probably don't want every app receiving this event \(with the user's message\). In situations like this you specify a collection of the names of the apps you want the event to be sent to in the `subscribers` field of your `POST` body; all other apps not listed will be ignored, even if they registered to listen for that event.
+By default an event is dispatched to all apps that have registered to listen for it \(all subscribers\). This may not always be what you want. Sometimes you want an event to be dispatched only to certain apps. For instance, imagine you have a chat app with raises an event every time a user posts a chat/message. You probably don't want every app receiving this event \(which caontains the user's message\). In situations like this you specify a collection of the names of the apps you want the event to be sent to in the `subscribers` field of your `POST` body; all other apps not listed will be ignored, even if they registered to listen for that event.
 
-There are different ways to use events in Bolt, and the apps presented in this section demonstrate those ways.
+There are different ways to use events in Bolt, and the apps presented in this section demonstrate some of those ways.
 
