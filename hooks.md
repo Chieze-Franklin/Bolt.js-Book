@@ -70,9 +70,9 @@ App authors should make it easy for others to discover events their apps raise, 
 
 For a list of events raised by Bolt, see [Bolt Events](/bolt-events.md).
 
-For how to raise events, see [Events](/events.md) and [bolt-module-events](/bolt-module-events.md).
+For how to raise events, see [Events](/events.md) and [Events \(API\)](/events-api.md).
 
 ### note
 
-Note that publishers \(apps that raise events\) can determine what apps they want to be notified of their events. See [Events](/events.md) and [bolt-module-events](/bolt-module-events.md).
+Note that publishers \(apps that raise events\) can determine what apps they want to be notified of their events. See [Events](/events.md) and [Events \(API\)](/events-api.md).
 
