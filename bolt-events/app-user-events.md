@@ -2,12 +2,12 @@
 
 These are the event raised by the [/api/app-users](/app-users-api.md) endpoint.
 
-* bolt/app-role-created
-* bolt/app-role-deleted
+* [bolt/app-role-created](#boltapp-user-created)
+* [bolt/app-role-deleted](#boltapp-user-deleted)
 
 ## bolt/app-user-created
 
-This event is raised when an [app-role association](/app-role-object.md) is created.
+This event is raised when an [app-user association](/app-user-object.md) is created.
 
 ### event object
 
@@ -15,17 +15,17 @@ A standard [Bolt event](/bolt-event.md).
 
 ```
 {
-    "name": String, //the name of the event, in this case 'app-role-created'
-    "body": Object, //an object representing the app-role that has just been created
+    "name": String, //the name of the event, in this case 'app-user-created'
+    "body": Object, //an object representing the app-user that has just been created
     "publisher": String //the name of the app that published, in this case 'bolt'
 }
 ```
 
 ---
 
-## bolt/app-role-deleted
+## bolt/app-user-deleted
 
-This event is raised when an [app-role association](/app-role-object.md) is deleted.
+This event is raised when an [app-user association](/app-user-object.md) is deleted.
 
 ### event object
 
@@ -33,8 +33,8 @@ A standard [Bolt event](/bolt-event.md).
 
 ```
 {
-    "name": String, //the name of the event, in this case 'app-role-deleted'
-    "body": Object, //an object representing the app-role that has just been deleted
+    "name": String, //the name of the event, in this case 'app-user-deleted'
+    "body": Object, //an object representing the app-user that has just been deleted
     "publisher": String //the name of the app that published, in this case 'bolt'
 }
 ```
