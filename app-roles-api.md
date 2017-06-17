@@ -12,7 +12,7 @@ The following endpoints are described here:
 
 * [DELETE: /api/app-roles](#delete-apiapp-roles)
 
-## GET: \/api\/app-roles
+## GET: /api/app-roles
 
 Gets an array of app-role association [objects](/objects.md) for all registered app-roles matching the specified criteria.
 
