@@ -58,6 +58,7 @@
     * [User Events](bolt-events/user-events.md)
     * [Role Events](bolt-events/role-events.md)
     * [App-Role Events](bolt-events/app-role-events.md)
+    * [App-User Events](bolt-events/app-user-events.md)
   * [Objects](objects.md)
     * [App Object](app-object.md)
     * [App-Role Object](app-role-object.md)
