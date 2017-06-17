@@ -16,7 +16,7 @@ The following endpoints are described here:
 
 Gets an array of app-role association [objects](/objects.md) for all registered app-roles matching the specified criteria.
 
-You specify search criteria in the URL query portion. For instance, to get all app-roles for role admin:
+You specify search criteria in the URL query portion. For instance, to get all app-roles for role _admin_:
 
 `localhost:400/api/app-roles?role=admin`
 
@@ -56,9 +56,9 @@ Only system apps \(and native views\) can send requests to this endpoint.
 
 Deletes an array of app-role association objects for all registered app-roles matching the specified criteria.
 
-You specify search criteria in the URL query portion. For instance, to delete all app-roles for app app`1`:
+You specify search criteria in the URL query portion. For instance, to delete all app-roles for app _settings_:
 
-`localhost:400/api/app-roles?app=app1`
+`localhost:400/api/app-roles?app=settings`
 
 ### response
 
