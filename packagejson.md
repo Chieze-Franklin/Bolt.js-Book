@@ -37,7 +37,6 @@ The following are fields expected inside `bolt`:
 * order: Number //\(default: 0\) provides another way for dashboards/desktops/launchers to sort apps
 * [public](/public.md)
 * [routers](/routers.md)
-* startup: Boolean //\(default: false\) set to true if you want your app to be started as soon as Bolt boots up
 * [system](/system.md)
 * [tags](/tags.md)
 * target: Number //specifies the version of Bolt your app targets
