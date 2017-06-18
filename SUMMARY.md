@@ -52,6 +52,7 @@
       * [Views \(UI\)](views-ui.md)
   * [Bolt Modules](bolt-modules.md)
     * [bolt-module-db](bolt-module-db.md)
+    * [bolt-module-system](bolt-module-system.md)
   * [Bolt Response Codes](bolt-response-codes.md)
   * [Views](views.md)
   * [Bolt Events](bolt-events.md)
