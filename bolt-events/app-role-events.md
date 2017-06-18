@@ -17,7 +17,8 @@ A standard [Bolt event](/bolt-event.md).
 {
     "name": String, //the name of the event, in this case 'app-role-created'
     "body": Object, //an object representing the app-role that has just been created
-    "publisher": String //the name of the app that published, in this case 'bolt'
+    "publisher": String, //the name of the app that published, in this case 'bolt'
+    "body": Object //an object representing the app-role that has just been created
 }
 ```
 
@@ -35,7 +36,8 @@ A standard [Bolt event](/bolt-event.md).
 {
     "name": String, //the name of the event, in this case 'app-role-deleted'
     "body": Object, //an object representing the app-role that has just been deleted
-    "publisher": String //the name of the app that published, in this case 'bolt'
+    "publisher": String, //the name of the app that published, in this case 'bolt'
+    "body": Object //an object representing the app-role that has just been deleted
 }
 ```
 
