@@ -20,19 +20,15 @@ The _keys_ \(on the left\) in the `hooks` object define the event you are intere
 
 When there is no `"/"` character in the event, the text provided is the name of the event. In this case you are interested in all events having that name, irrespective of the app raising the event. The `"*"` character can be used to match all apps or all events. For instance:
 
-`"hooks": {`
-
-`"photo-saved": "this-will-be-notified-of-all-photo-saved-events",`
-
-`"*": "this-will-be-notified-of-all-events",`
-
-`"*/*": "this-will-be-notified-of-all-events-raised-by-all-apps",`
-
-`"*/photo-saved": "this-will-be-notified-of-all-photo-saved-events",`
-
-`"camera/*": "this-will-be-notified-of-all-events-raised-by-camera"`
-
-`}`
+```
+"hooks": {
+    "photo-saved": "this-will-be-notified-of-all-photo-saved-events",
+    "*": "this-will-be-notified-of-all-events",
+    "*/*": "this-will-be-notified-of-all-events-raised-by-all-apps",
+    "*/photo-saved": "this-will-be-notified-of-all-photo-saved-events",
+    "camera/*": "this-will-be-notified-of-all-events-raised-by-camera"
+}
+```
 
 The _values_ \(on the right\) in the `hooks` object are endpoints to which event data will be _POSTed_.
 
