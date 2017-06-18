@@ -31,11 +31,23 @@ To raise an event, send a `POST` request to the `/api/events/{{event-name}}` end
 ```
 {
     "body": Object, //the actual payload of the event
-    "subscribers": [String] //(optional) a collection of the names of the apps you want this event to be dispatched to
+    "subscribers": [String], //(optional) a collection of the names of the apps you want this event to be dispatched to
+    "headers": Object //(optional) headers to be added in the POST request sent to subscribers
 }
 ```
 
 By default an event is dispatched to all apps that have registered to listen for it \(all subscribers\). This may not always be what you want. Sometimes you want an event to be dispatched only to certain apps. For instance, imagine you have a chat app with raises an event every time a user posts a chat/message. You probably don't want every app receiving this event \(which caontains the user's message\). In situations like this you specify a collection of the names of the apps you want the event to be sent to in the `subscribers` field of your `POST` body; all other apps not listed will be ignored, even if they registered to listen for that event.
+
+The `headers` field is an object whose fields represent the various headers you want the Bolt event-dispatching system to include in every `POST` it makes to the subscribers of the event. Do not specify sensitive headers like `X-Bolt-App-Token`. A sample `headers` object is:
+
+```
+"headers": {
+    "X-Bolt-User-Name": request.user.name,
+    "A-Custom-Header" : "Value for a custom header"
+}
+```
+
+Subscribers will be able to get the specified headers from the `POST` request the event-dispatcher sends to them.
 
 There are different ways to use events in Bolt, and the apps presented in this section demonstrate some of those ways.
 
