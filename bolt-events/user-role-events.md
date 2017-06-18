@@ -2,12 +2,12 @@
 
 These are the event raised by the [/api/user-roles](/user-roles-api.md) endpoint.
 
-* bolt/app-role-created
-* bolt/app-role-deleted
+* [bolt/user-role-created](#boltuser-role-created)
+* [bolt/user-role-deleted](#boltuser-role-deleted)
 
 ## bolt/user-role-created
 
-This event is raised when a user-role association is created.
+This event is raised when a [user-role association](/user-role-object.md) is created.
 
 ### event object
 
