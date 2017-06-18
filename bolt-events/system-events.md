@@ -6,6 +6,7 @@ These are the event raised by [bolt-module-system](/bolt-module-system.md) and o
 * [bolt/system-db-connected](#boltsystem-db-connected)
 * [bolt/system-db-resetting](#boltsystem-db-resetting)
 * [bolt/system-exiting](#boltsystem-exiting)
+* [bolt/system-started](#boltsystem-started)
 
 ## bolt/system-collection-resetting
 
@@ -80,6 +81,25 @@ A standard [Bolt event](/bolt-event.md).
     "body": {
         "code": Number //(may be undefined) represents the Node shutdown code with which the Bolt process is exiting
     }
+}
+```
+
+---
+
+## bolt/system-started
+
+This event is raised when an Bolt is done booting.
+
+### event object
+
+A standard [Bolt event](/bolt-event.md).
+
+```
+{
+    "name": String, //the name of the event, in this case 'system-started'
+    "body": Object, //an object representing the app-user that has just been deleted
+    "publisher": String, //the name of the app that published, in this case 'bolt'
+    "body": Object //an empty object
 }
 ```
 
