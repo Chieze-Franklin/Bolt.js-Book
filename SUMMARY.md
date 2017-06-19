@@ -5,6 +5,7 @@
   * [Setting Up Bolt](setting-up-bolt.md)
     * [config.json](setting-up-bolt/config.json.md)
     * [setup.json](setting-up-bolt/setup.json.md)
+  * [Deploying to Heroku](deploying-to-heroku.md)
 * [Your First Bolt App](your-first-bolt-app.md)
   * [The package.json File](packagejson.md)
     * [main](main.md)
