@@ -32,9 +32,9 @@
   * [Persistence/Data Storage](persistencedata-storage.md)
     * The Logger App
   * [Events](events.md)
+    * [Client-Side Events](events/client-side-events.md)
     * [The Console App](events/the-console-app.md)
     * The Chat App
-    * [Client-Side Events](events/client-side-events.md)
 * [Simplifying Complex Apps](simplifying-complex-apps.md)
 * [Reference](appendix.md)
   * [Bolt Server Endpoints](bolt-server-endpoints.md)
