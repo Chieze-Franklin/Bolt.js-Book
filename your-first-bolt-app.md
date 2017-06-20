@@ -7,6 +7,7 @@ The complete source code for the app you will be working on can be found at  [ht
 Bolt is built on top of Node.js. As a result, it very readily runs Express apps. The project you just downloaded is an Express app, and you can run it by:
 
 * First navigating to the project directory: `cd the/project/directory`
+* Run `npm install`
 * And then running: `node server.js`
 
 On the console you should see a message like _Server started. Open _[http://127.0.0.1:3000](http://127.0.0.1:3000)_ in your browser_. You should see the app's UI now.
