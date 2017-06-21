@@ -10,19 +10,19 @@ In the end Bolt is just a Node.js app, and you deploy it to Heroku like you depl
 
 Next you set up environment variables. I have deployed a Bolt instance to Heroku under the name _guarded-journey-25495_. The app is now available at [https://guarded-journey-25495.herokuapp.com](https://guarded-journey-25495.herokuapp.com).
 
-\[insert screenshot with visible address bar on firefox\]
+![](/assets/heroku-home.png)
 
 Navigate to your Heroku [dashboard](https://dashboard.heroku.com/) and click on the app.
 
-\[insert screenshot with red marker identifying/pointing at the app\]
+![](/assets/heroku-dashboard.png)
 
 Click on **Settings**, then **Reveal Config Vars** to view and create environment variables.
 
-\[insert screen shot with markers on Settings and Reveal Config Vars\]
+![](/assets/heroku-settings.png)
 
 You can see that I have created the necessary environment variables. Notice the variable _MONGODB\_URI_ which points to an online MongoDB instance being hosted by [mlab](https://mlab.com).
 
-\[insert screen shot, conceal sensitive variables like the user and pwd for MONGODB_URI and BOLT_SESSION\_SECRET\]
+![](/assets/heroku-config.png)
 
 On the terminal/console, execute the following commands to deploy on Heroku:
 
