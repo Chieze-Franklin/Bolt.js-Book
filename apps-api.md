@@ -8,15 +8,19 @@ The following endpoints are described here:
 
 * [GET: /api/apps/@live](#get-apiappslive)
 
-* [GET: /api/apps/\{\{name\}\}](#getapiappsname)
+* [GET: /api/apps/{{name}}](#getapiappsname)
 
 * [POST: /api/apps](#post-apiapps)
 
 * [POST: /api/apps/package](#post-apiappspackage)
 
-* [POST: /api/apps/reg](#post-apiappsreg)
+* [POST: /api/apps/readme](#post-apiappsreadme)
 
-* [POST: /api/apps/reg-package](#post-apiappsreg-package)
+* [POST: /api/apps/local](#post-apiappslocal)
+
+* [POST: /api/apps/local-package](#post-apiappslocal-package)
+
+* [POST: /api/apps/local-readme](#post-apiappslocal-readme)
 
 * [POST: /api/apps/start](#post-apiappsstart)
 
@@ -50,7 +54,7 @@ If there is no error during the processing of the request, the `body` field of t
 
 ---
 
-## GET:/api/apps/\{\{name\}\}
+## GET:/api/apps/{{name}}
 
 Gets the app object of the app with the specified name.
 
@@ -62,55 +66,36 @@ If the app is found, the `body` field of the response should hold an app object.
 
 ## POST: /api/apps
 
-Installs an app from an online repository \(current only npm is supported\).
-
-This endpoint is still experimental.
-
----
-
-## POST: /api/apps/package
-
-Gets an object representing the package.json of an app from an online repository \(current only npm is supported\).
-
-This endpoint is still experimental.
-
----
-
-## POST: /api/apps/reg
-
-Installs an app from a local repository \(current only the _node\_modules_ folder is supported\).
+Installs an app from an online repository \(current only the [npm](https://www.npmjs.com/) is supported\).
 
 ### request
 
 A standard [Bolt request](bolt-request.md).
 
-`{`
-
-`"path" : String, //the path of the folder contain the package.json, relative to the node_modules folder`
-
-`"startup" : Boolean, //optional, overrides the startup value specified in the app's package.json`
-
-`"system" : Boolean //optional; overrides the system value specified in the app's package.json`
-
-`}`
+```
+{
+    "name" : String, //the name of the app
+    "system" : Boolean //(optional) determines if the app should be a system app (with root privilege)
+}
+```
 
 ### response
 
-If the app installed successfully, the `body` field of the response should hold an app object.
+If the app installed successfully, the `body` field of the response should hold an [app object](/app-object.md).
 
 ### security
 
 Any app can send a request to this endpoint provided:
 
-* The user has granted the app [permission](user-permissions.md) to perform an installation.
+* The app is a system app.
 
 * The user has administrative privileges.
 
 ---
 
-## POST: /api/apps/reg-package
+## POST: /api/apps/package
 
-Gets an object representing the package.json of an app from a local repository \(current only the _node\_modules_ folder is supported\).
+Gets an object representing the _package.json_ of an app from an online repository \(current only [npm](https://www.npmjs.com/) is supported\).
 
 This endpoint is important as you use it to fetch info about an app and show it to the user before installation. This should give the user the option of granting/denying some of the requests the app needs \(like the ability to run as a system app\).
 
@@ -118,15 +103,122 @@ This endpoint is important as you use it to fetch info about an app and show it 
 
 A standard [Bolt request](bolt-request.md).
 
-`{`
-
-`"path" : String //the path of the folder contain the package.json, relative to the node_modules folder`
-
-`}`
+```
+{
+    "name": String //the name of the app
+}
+```
 
 ### response
 
-If the package.json is found, the `body` field of the response should hold an object that represent's the found package.json.
+If the _package.json_ is found, the `body` field of the response should hold an object that represent's the found _package.json_.
+
+### security
+
+Currently the current user needs administrative privilege for this request to be processed.
+
+---
+
+## POST: /api/apps/readme
+
+Gets the data in the _readme.md_ of an app from an online repository \(current only the [npm](https://www.npmjs.com/) is supported\).
+
+This endpoint is important as you use it to fetch info about an app and show it to the user before installation.
+
+### request
+
+A standard [Bolt request](bolt-request.md).
+
+```
+{
+    "name" : String //the name of the app
+}
+```
+
+### response
+
+If the package.json is found, the `body` field of the response should hold the data in the _readme_ file. The data will most likely be in [markdown](https://en.wikipedia.org/wiki/Markdown) format, and may need to be converted to HTML using a package like [showdown](https://www.npmjs.com/package/showdown).
+
+### security
+
+Currently the current user needs administrative privilege for this request to be processed.
+
+---
+
+## POST: /api/apps/local
+
+Installs an app from a local repository \(current only the _node\_modules_ folder is supported\).
+
+### request
+
+A standard [Bolt request](bolt-request.md).
+
+```
+{
+    "path" : String, //the path of the folder contain the package.json, relative to the node_modules folder
+    "system" : Boolean //(optional) determines if the app should be a system app (with root privilege)
+}
+```
+
+### response
+
+If the app installed successfully, the `body` field of the response should hold an [app object](/app-object.md).
+
+### security
+
+Any app can send a request to this endpoint provided:
+
+* The app is a system app.
+
+* The user has administrative privileges.
+
+---
+
+## POST: /api/apps/local-package
+
+Gets an object representing the _package.json_ of an app from a local repository \(current only the _node\_modules_ folder is supported\).
+
+This endpoint is important as you use it to fetch info about an app and show it to the user before installation. This should give the user the option of granting/denying some of the requests the app needs \(like the ability to run as a system app\).
+
+### request
+
+A standard [Bolt request](bolt-request.md).
+
+```
+{
+    "path": String //the path of the folder contain the package.json, relative to the node_modules folder
+}
+```
+
+### response
+
+If the _package.json_ is found, the `body` field of the response should hold an object that represent's the found _package.json_.
+
+### security
+
+Currently the current user needs administrative privilege for this request to be processed.
+
+---
+
+## POST: /api/apps/local-readme
+
+Gets the data in the _readme.md_ of an app from a local repository \(current only the _node\_modules_ folder is supported\). Currently it searches for a _readme_ file with extension _.md_.
+
+This endpoint is important as you use it to fetch info about an app and show it to the user before installation.
+
+### request
+
+A standard [Bolt request](bolt-request.md).
+
+```
+{
+    "path" : String //the path of the folder contain the package.json, relative to the node_modules folder
+}
+```
+
+### response
+
+If the package.json is found, the `body` field of the response should hold the data in the _readme.md_ file. The data will most likely be in [markdown](https://en.wikipedia.org/wiki/Markdown) format, and may need to be converted to HTML using a package like [showdown](https://www.npmjs.com/package/showdown).
 
 ### security
 
