@@ -8,7 +8,7 @@ The following endpoints are described here:
 
 * [GET: /api/apps/@live](#get-apiappslive)
 
-* [GET: /api/apps/{{name}}](#getapiappsname)
+* [GET: /api/apps/\{\{name\}\}](#getapiappsname)
 
 * [POST: /api/apps](#post-apiapps)
 
@@ -54,7 +54,7 @@ If there is no error during the processing of the request, the `body` field of t
 
 ---
 
-## GET:/api/apps/{{name}}
+## GET:/api/apps/\{\{name\}\}
 
 Gets the app object of the app with the specified name.
 
@@ -74,8 +74,8 @@ A standard [Bolt request](bolt-request.md).
 
 ```
 {
-    "name" : String, //the name of the app
-    "system" : Boolean //(optional) determines if the app should be a system app (with root privilege)
+"name" : String, //the name of the app
+"system" : Boolean //(optional) determines if the app should be a system app (with root privilege)
 }
 ```
 
@@ -105,7 +105,7 @@ A standard [Bolt request](bolt-request.md).
 
 ```
 {
-    "name": String //the name of the app
+"name": String //the name of the app
 }
 ```
 
@@ -131,7 +131,7 @@ A standard [Bolt request](bolt-request.md).
 
 ```
 {
-    "name" : String //the name of the app
+"name" : String //the name of the app
 }
 ```
 
@@ -155,8 +155,8 @@ A standard [Bolt request](bolt-request.md).
 
 ```
 {
-    "path" : String, //the path of the folder contain the package.json, relative to the node_modules folder
-    "system" : Boolean //(optional) determines if the app should be a system app (with root privilege)
+"path" : String, //the path of the folder contain the package.json, relative to the node_modules folder
+"system" : Boolean //(optional) determines if the app should be a system app (with root privilege)
 }
 ```
 
@@ -186,7 +186,7 @@ A standard [Bolt request](bolt-request.md).
 
 ```
 {
-    "path": String //the path of the folder contain the package.json, relative to the node_modules folder
+"path": String //the path of the folder contain the package.json, relative to the node_modules folder
 }
 ```
 
@@ -212,7 +212,7 @@ A standard [Bolt request](bolt-request.md).
 
 ```
 {
-    "path" : String //the path of the folder contain the package.json, relative to the node_modules folder
+"path" : String //the path of the folder contain the package.json, relative to the node_modules folder
 }
 ```
 
@@ -277,4 +277,3 @@ A standard [Bolt request](bolt-request.md).
 ### note
 
 Although this may change, currently, trying to stop an app that is not running may return a [Bolt response](bolt-response.md) with [response code](bolt-response-codes.md) `420`. Code `420` means the port on which an app should be running cannot be found. The rationale is that you can only stop apps running on ports, so trying to stop an app that is not running \(for which no port can be found\) will result in an error with code `420`.
-
