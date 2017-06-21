@@ -8,7 +8,7 @@ The following endpoints are described here:
 
 * [GET: /api/apps/@live](#get-apiappslive)
 
-* [GET: /api/apps/\{\{name\}\}](#getapiappsname)
+* [GET: /api/apps/{{name}}](#getapiappsname)
 
 * [POST: /api/apps](#post-apiapps)
 
@@ -26,6 +26,10 @@ The following endpoints are described here:
 
 * [POST: /api/apps/stop](#post-apiappsstop)
 
+* [DELETE: /api/apps](#delete-apiapps)
+
+* [DELETE: /api/apps/{{name}}](#delete-apiappsname)
+
 ## GET: /api/apps
 
 Gets an array of app objects for all installed apps matching the specified criteria.
@@ -40,7 +44,7 @@ To get all apps that have `settings` as one of their tags:
 
 ### response
 
-If there is no error during the processing of the request, the `body` field of the response should hold an array of app [objects](objects.md).
+If there is no error during the processing of the request, the `body` field of the response should hold an array of [app objects](/app-object.md).
 
 ---
 
@@ -54,7 +58,7 @@ If there is no error during the processing of the request, the `body` field of t
 
 ---
 
-## GET:/api/apps/\{\{name\}\}
+## GET:/api/apps/{{name}}
 
 Gets the app object of the app with the specified name.
 
@@ -274,6 +278,65 @@ A standard [Bolt request](bolt-request.md).
 
 * If the app is not found to be running, the `error` field of the response may hold an error object. \(see **notes** below.\)
 
+---
+
+## DELETE: /api/apps
+
+Deletes an array of apps matching the specified criteria.
+
+You specify search criteria in the URL query portion. For instance, to delete all apps that have a version of `1.1`:
+
+`localhost:400/api/apps?version=1.1`
+
+### request
+
+A standard [Bolt request](bolt-request.md).
+
+```
+{
+    "deleteDatabase" : Boolean, //(optional) if true the app's database will be deleted
+    "deletePublicFolder" : Boolean, //(optional) if true the folder holding the app's public files will be deleted
+    "deleteSourceFolder" : Boolean //(optional) if true the folder holding the app's source files will be deleted
+}
+```
+
+### response
+
+If there is no error during the processing of the request, the `body` field of the response should hold an array of the deleted [app objects](/app-object.md).
+
+### security
+
+Only system apps \(and native views\) can send requests to this endpoint. The logged-in user must also have administrative privilege.
+
+---
+
+## DELETE: /api/apps/{{name}}
+
+Deletes the app with the specified name.
+
+### request
+
+A standard [Bolt request](bolt-request.md).
+
+```
+{
+    "deleteDatabase" : Boolean, //(optional) if true the app's database will be deleted
+    "deletePublicFolder" : Boolean, //(optional) if true the folder holding the app's public files will be deleted
+    "deleteSourceFolder" : Boolean //(optional) if true the folder holding the app's source files will be deleted
+}
+```
+
+### response
+
+If the user is successfully deleted, the `body` field of the response should hold the deleted app object.
+
+### security
+
+Only system apps \(and native views\) can send requests to this endpoint. The logged-in user must also have administrative privilege.
+
+---
+
 ### note
 
 Although this may change, currently, trying to stop an app that is not running may return a [Bolt response](bolt-response.md) with [response code](bolt-response-codes.md) `420`. Code `420` means the port on which an app should be running cannot be found. The rationale is that you can only stop apps running on ports, so trying to stop an app that is not running \(for which no port can be found\) will result in an error with code `420`.
+
