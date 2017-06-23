@@ -1,5 +1,7 @@
 # The Home App
 
+talk about /home extension
+
 talk about adding `{{root}}` to ur UI, then
 
 if\(process.env.BOLT\_CHILD\_PROC \|\| app.get\("no\_bolt"\)\) root = ""; else root = process.env.BOLT\_ADDRESS + '/x/' + appname

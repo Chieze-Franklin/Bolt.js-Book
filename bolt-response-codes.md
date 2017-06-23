@@ -29,6 +29,8 @@ Bolt found something wrong with the request.
 |  |  |
 | 110 | 'X-Bolt-App-Token' header missing |
 | 113 | Could not retrieve the specified 'X-Bolt-App-Token' value from the database |
+| 120 | Bulk delete criterion missing |
+| 130 | Bulk update criterion missing |
 
 ## Codes 200-299
 
