@@ -91,6 +91,10 @@ App Error.
 | 410 | App path missing |
 | 414 | Could not install app due to unsupported target version |
 | 415 | Could not download app from online repository |
+| 416 | Could not retrieve package.json from online repository |
+| 417 | Could not retrieve readme from online repository |
+| 418 | Could not retrieve package.json from local repository |
+| 419 | Could not retrieve readme from local repository |
 |  |  |
 | 420 | App port missing |
 |  |  |
