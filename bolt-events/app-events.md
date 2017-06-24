@@ -11,9 +11,9 @@ The following events are described here:
 * [bolt/app-starting](#boltapp-starting)
 * [bolt/app-stopped](#boltapp-stopped)
 * [bolt/app-stopping](#boltapp-stopping)
-* bolt/app-uninstalled
-* bolt/app-uninstalling
-* bolt/app-updated
+* [bolt/app-uninstalled](#boltapp-uninstalled)
+* [bolt/app-uninstalling](#boltapp-uninstalling)
+* [bolt/app-updated](#boltapp-updated)
 
 ## bolt/app-downloaded
 
@@ -44,7 +44,6 @@ A standard [Bolt event](/bolt-event.md).
 ```
 {
     "name": String, //the name of the event, in this case 'app-installed'
-    "body": Object, //an object representing the app that has just been installed
     "publisher": String, //the name of the app that published, in this case 'bolt'
     "body": Object //an object representing the app that has just been installed
 }
@@ -196,7 +195,7 @@ A standard [Bolt event](/bolt-event.md).
 
 ## bolt/app-updated
 
-This event is raised when an [app](/app-object.md) is updated. The update being discussed here is not the update you do when you install a higher version of an app but the update you do when you edit a property of the app, like changing the app from a system app to a non-system app. 
+This event is raised when an [app](/app-object.md) is updated. The update being discussed here is not the update you do when you install a higher version of an app but the update you do when you edit a property of the app, like changing the app from a system app to a non-system app.
 
 That other update \(installing a higher version of the app\) does not raise an event of its own. Instead it performs two operations, a delete operation and an install operation, which raise their own events. The delete removes the existing app and raises [app-uninstalling](#boltapp-uninstalling) and [app-uninstalled](#boltapp-uninstalled) events. The install operation installs a higher version of the app and raises the [app-installed](#boltapp-installed) event.
 
@@ -208,7 +207,7 @@ A standard [Bolt event](/bolt-event.md).
 {
     "name": String, //the name of the event, in this case 'app-stopping'
     "publisher": String, //the name of the app that published, in this case 'bolt'
-    "body": Object //currently an object representing the context of the app that is about to be stopped
+    "body": Object //an object representing the app that has just been updated
 }
 ```
 
