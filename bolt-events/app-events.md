@@ -62,7 +62,6 @@ A standard [Bolt event](/bolt-event.md).
 ```
 {
     "name": String, //the name of the event, in this case 'app-router-loaded'
-    "body": Object, //an object representing the router that has just been loaded
     "publisher": String, //the name of the app that published, in this case 'bolt'
     "body": Object //an object representing the router that has just been loaded
 }
@@ -81,7 +80,6 @@ A standard [Bolt event](/bolt-event.md).
 ```
 {
     "name": String, //the name of the event, in this case 'app-started'
-    "body": Object, //an object representing the context of the app that has just been started
     "publisher": String, //the name of the app that published, in this case 'bolt'
     "body": Object //an object representing the context of the app that has just been started
 }
@@ -125,7 +123,6 @@ A standard [Bolt event](/bolt-event.md). The `body` field of the event object is
 ```
 {
     "name": String, //the name of the event, in this case 'app-stopped'
-    "body": Object, //an object representing the context of the app that has just been stopped
     "publisher": String, //the name of the app that published, in this case 'bolt'
     "body": Object //an object representing the context of the app that has just been stopped
 }
@@ -146,8 +143,6 @@ A standard [Bolt event](/bolt-event.md).
     "name": String, //the name of the event, in this case 'app-stopping'
     "publisher": String, //the name of the app that published, in this case 'bolt'
     "body": Object //currently an object representing the context of the app that is about to be stopped
-
-    "publisher": String //the name of the app that published, in this case 'bolt'
 }
 ```
 
@@ -155,7 +150,7 @@ A standard [Bolt event](/bolt-event.md).
 
 ## bolt/app-uninstalled
 
-This event is raised when an [app](/app-object.md) is about to be stopped. This event is targeted only to the app that is about to be stopped; no other app can receive the event.
+This event is raised when an [app](/app-object.md) is uninstalled.
 
 ### event object
 
@@ -163,11 +158,9 @@ A standard [Bolt event](/bolt-event.md).
 
 ```
 {
-    "name": String, //the name of the event, in this case 'app-stopping'
+    "name": String, //the name of the event, in this case 'app-uninstalled'
     "publisher": String, //the name of the app that published, in this case 'bolt'
-    "body": Object //currently an object representing the context of the app that is about to be stopped
-
-    "publisher": String //the name of the app that published, in this case 'bolt'
+    "body": Object //an object representing the app that has just been uninstalled
 }
 ```
 
@@ -175,7 +168,7 @@ A standard [Bolt event](/bolt-event.md).
 
 ## bolt/app-uninstalling
 
-This event is raised when an [app](/app-object.md) is about to be stopped. This event is targeted only to the app that is about to be stopped; no other app can receive the event.
+This event is raised when an [app](/app-object.md) is about to be uninstalled. This event is targeted only to the app that is about to be uninstalled; no other app can receive the event.
 
 ### event object
 
@@ -183,11 +176,9 @@ A standard [Bolt event](/bolt-event.md).
 
 ```
 {
-    "name": String, //the name of the event, in this case 'app-stopping'
+    "name": String, //the name of the event, in this case 'app-uninstalling'
     "publisher": String, //the name of the app that published, in this case 'bolt'
-    "body": Object //currently an object representing the context of the app that is about to be stopped
-
-    "publisher": String //the name of the app that published, in this case 'bolt'
+    "body": Object //currently an object representing the app that is about to be uninstalled
 }
 ```
 
@@ -205,7 +196,7 @@ A standard [Bolt event](/bolt-event.md).
 
 ```
 {
-    "name": String, //the name of the event, in this case 'app-stopping'
+    "name": String, //the name of the event, in this case 'app-updated'
     "publisher": String, //the name of the app that published, in this case 'bolt'
     "body": Object //an object representing the app that has just been updated
 }
