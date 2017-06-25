@@ -28,5 +28,3 @@ if (process.env.BOLT_CHILD_PROC) {
 
 If an app is running as a non-system app, then its server may be located at `127.0.0.1:500`, where the port `500` was chosen for it. On the other hand, if an app is running as a system app, then its server is swallowed into the Bolt server, and it runs on the same port as Bolt. The server of such a system app may be located at \(assuming Bolt is running on port `400`\) `127.0.0.1:400/x/{{app-name}}`, where `app-name` is the name of the app.
 
-
-
