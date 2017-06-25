@@ -9,10 +9,9 @@ A module cannot do the following:
 * A module can't have startup privilege
 * A module can't register [extensions](/extensions.md)
 * Although a module can create [hooks](/hooks.md), they cannot be server hooks.
+* A module can't have [permissions](/permissions.md)
 
 If you define any of the following items listed above in your [package.json](/packagejson.md) for a module they will be ignored.
 
 If all an app does is extend Bolt \(without having a UI of its own\), consider making it a module.
-
-
 
