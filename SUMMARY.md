@@ -77,4 +77,5 @@
     * [Role Object](role-object.md)
     * [Router Object](router-object.md)
     * Error Object
+    * [User-Role Object](user-role-object.md)
 
