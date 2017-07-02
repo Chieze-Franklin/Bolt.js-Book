@@ -7,7 +7,7 @@ This object represents information about an app. It is returned primarily by the
 ```
 {
     "controlledVisibility": Boolean, //determines if the app is visible to all users (when set to false)
-    "dateCreated": Date, //the app the app was installed (or updated)
+    "dateCreated": Date, //the date the app was installed (or updated)
     "description": String, //the description of the app, same as the description field in the package.json
     "displayName": String, // the display name of the app, same as the bolt.displayName field in the package.json
     "files": Object, //same as the bolt.files field in the package.json
