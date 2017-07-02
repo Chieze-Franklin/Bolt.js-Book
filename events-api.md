@@ -6,13 +6,13 @@ This is a description of the API endpoints exposed by the Bolt server for intera
 
 The following endpoints are described here:
 
-* [POST: /api/events/\{\{name\}\}](#post-apieventsname)
+* [POST: /api/events/{{name}}](#post-apieventsname)
 
 * POST: /api/events/\*
 
 * DELETE: /api/events/\*
 
-## POST: /api/events/\{\{name\}\}
+## POST: /api/events/{{name}}
 
 Publishes an event with the specified name.
 
@@ -22,9 +22,9 @@ A standard [Bolt request](bolt-request.md).
 
 ```
 {
-"body": Object, //the actual payload of the event
-"headers": Object, //(optional) custom headers to be included in every POST dispatched to the event subscribers
-"subscribers": [String] //(optional) if specified, only apps whose names are in the array will receive this event
+    "body": Object, //the actual payload of the event
+    "headers": Object, //(optional) custom headers to be included in every POST dispatched to the event subscribers
+    "subscribers": [String] //(optional) if specified, only apps whose names are in the array will receive this event
 }
 ```
 
@@ -32,14 +32,14 @@ A sample request object to this endpoint is:
 
 ```
 {
-"body": {
-"appName": "app1",
-"appToken": "A456DFE562EEF10"
-},
-"headers": {
-"X-Bolt-User-Name": "frank"
-},
-"subscribers": ["app1"]
+    "body": {
+        "appName": "app1",
+        "appToken": "A456DFE562EEF10"
+    },
+    "headers": {
+        "X-Bolt-User-Name": "frank"
+    },
+    "subscribers": ["app1"]
 }
 ```
 
@@ -64,28 +64,36 @@ A standard [Bolt request](bolt-request.md).
 
 ```
 {
-"route": String, //the
+"route": String, //the endpoint to which the event will be POSTed
+"type": String //(optional) the type of the hook
 }
 ```
 
-### response
+When making a request to this endpoint, replace the `*` character with the event name you are listening for. For instance, to subscribe to the _photo-saved_ event raised by the _camera_ app, make the `POST` to `/api/events/camera/photo-saved`.
 
-If the app-user was added successfully, the `body` field of the response should hold an app-user object.
+Bolt itself makes use of transient hooks, re-creating them every time the server starts. \(Thinking of it, this is the only way Bolt can listen for events since Bolt is not an app which can be installed.\) The following are some of the requests Bolt makes during startup \(the last 2 portions of the routes tell the events Bolt is listening for\):
 
-### security
+* `/api/events/bolt/app-deleted`
+* `/api/events/bolt/app-router-loaded`
+* `/api/events/bolt/app-started`
+* `/api/events/bolt/role-deleted`
+* `/api/events/bolt/user-deleted`
 
-Only system apps \(and native views\) can send requests to this endpoint.
+### note
+
+Every request to this endpoint must include the `X-Bolt-App-Token` custom header.
 
 ---
 
 ## DELETE: /api/events/\*
 
-In as much as Bolt destroys transient hooks at certain times, you may want to manually destroy such hooks at a time of your choosing. To do so, send a DELETE request to this endpoint, replacing the `*` character with whatever you used when creating the hook.
+In as much as Bolt destroys transient hooks at certain times, you may want to manually destroy such hooks at a time of your choosing. To do so, send a DELETE request to this endpoint, replacing the `*` character with whatever you used when creating the hook. For instance, to unsubscribe from `bolt/app-deleted`:
 
-### response
+```
+DELETE: /api/events/bolt/app-deleted
+```
 
-If there is no error during the processing of the request, the `body` field of the response should hold an array of app-user objects.
+### note
 
-### security
+Every request to this endpoint must include the `X-Bolt-App-Token` custom header.
 
-Only system apps \(and native views\) can send requests to this endpoint.
