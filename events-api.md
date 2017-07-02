@@ -1,16 +1,17 @@
+
 # Events \(API\)
 
 This is a description of the API endpoints exposed by the Bolt server for interacting with publishing and subscribing to events.
 
 The following endpoints are described here:
 
-* [POST: /api/events/{{name}}](#post-apieventsname)
+* [POST: /api/events/\{\{name\}\}](#post-apieventsname)
 
 * [POST: /api/events/\*](#post-apievents)
 
 * [DELETE: /api/events/\*](#delete-apievents)
 
-## POST: /api/events/{{name}}
+## POST: /api/events/\{\{name\}\}
 
 Publishes an event with the specified name.
 
@@ -94,4 +95,3 @@ DELETE: /api/events/bolt/app-deleted
 ### note
 
 Every request to this endpoint must include the `X-Bolt-App-Token` custom header.
-
