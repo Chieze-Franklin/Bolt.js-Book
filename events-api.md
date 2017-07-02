@@ -6,13 +6,13 @@ This is a description of the API endpoints exposed by the Bolt server for intera
 
 The following endpoints are described here:
 
-* [POST: /api/events/\{\{name\}\}](#post-apieventsname)
+* [POST: /api/events/{{name}}](#post-apieventsname)
 
-* POST: /api/events/\*
+* [POST: /api/events/\*](#post-apievents)
 
-* DELETE: /api/events/\*
+* [DELETE: /api/events/\*](#delete-apievents)
 
-## POST: /api/events/\{\{name\}\}
+## POST: /api/events/{{name}}
 
 Publishes an event with the specified name.
 
@@ -96,3 +96,4 @@ DELETE: /api/events/bolt/app-deleted
 ### note
 
 Every request to this endpoint must include the `X-Bolt-App-Token` custom header.
+
