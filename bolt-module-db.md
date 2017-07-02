@@ -8,11 +8,11 @@ This app is marked as a module, meaning \(among other things\) that it defines n
 
 The following endpoints are described here:
 
-* DELETE: /api/db
+* [DELETE: /api/db](#delete-apidb)
 
 ## DELETE: /api/db
 
-Drops an app's database. 
+Drops an app's database.
 
 To drop your own database, include the `X-Bolt-App-Token` custom header in the request. To drop another app's database, specify the app's name in the `app` or `db` field of the request body.
 
