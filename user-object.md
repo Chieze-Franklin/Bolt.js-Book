@@ -12,13 +12,10 @@ This object represents information about a user. It is returned primarily by the
     "displayPic": String, //the URL of the user's display picture, relative to the base URL of the Bolt server
     "email": String, //the email address of the user
     "name": String, //the system-unique name of the user
-    "order": Number, //same as the bolt.order field in the package.json
-    "package": Object, //the entire package.json
-    "path": String, //the path to the root folder of the app, relative to the node_modules folder
-    "main": String, //same as the bolt.main field in the package.json
-    "system": Boolean, //same as the bolt.system field in the package.json
-    "tags": [String], //same as the bolt.tags filed in the package.json
-    "version": String //the version of the app, same as the version field of the package.json
+    "isBlocked": Boolean, //determines if the user has been blocked/suspended from accessing the system
+    "lastVisit": Date, //the date of the user's last log into the system
+    "phone": String, //the phone number of the user
+    "visits": Number //the number of times the user has logged into the system
 }
 ```
 
