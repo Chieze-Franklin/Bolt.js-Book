@@ -6,13 +6,13 @@ This is a description of the API endpoints exposed by the Bolt server for intera
 
 The following endpoints are described here:
 
-* [POST: /api/events/{{name}}](#post-apieventsname)
+* [POST: /api/events/\{\{name\}\}](#post-apieventsname)
 
 * POST: /api/events/\*
 
 * DELETE: /api/events/\*
 
-## POST: /api/events/{{name}}
+## POST: /api/events/\{\{name\}\}
 
 Publishes an event with the specified name.
 
@@ -22,9 +22,9 @@ A standard [Bolt request](bolt-request.md).
 
 ```
 {
-    "body": Object, //the actual payload of the event
-    "headers": Object, //(optional) custom headers to be included in every POST dispatched to the event subscribers
-    "subscribers": [String] //(optional) if specified, only apps whose names are in the array will receive this event
+"body": Object, //the actual payload of the event
+"headers": Object, //(optional) custom headers to be included in every POST dispatched to the event subscribers
+"subscribers": [String] //(optional) if specified, only apps whose names are in the array will receive this event
 }
 ```
 
@@ -32,14 +32,14 @@ A sample request object to this endpoint is:
 
 ```
 {
-    "body": {
-        "appName": "app1",
-        "appToken": "A456DFE562EEF10"
-    },
-    "headers": {
-        "X-Bolt-User-Name": "frank"
-    },
-    "subscribers": ["app1"]
+"body": {
+"appName": "app1",
+"appToken": "A456DFE562EEF10"
+},
+"headers": {
+"X-Bolt-User-Name": "frank"
+},
+"subscribers": ["app1"]
 }
 ```
 
@@ -96,4 +96,3 @@ DELETE: /api/events/bolt/app-deleted
 ### note
 
 Every request to this endpoint must include the `X-Bolt-App-Token` custom header.
-
