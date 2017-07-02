@@ -15,9 +15,12 @@ A standard [Bolt event](/bolt-event.md).
 
 ```
 {
-    "name": String, //the name of the event, in this case 'app-downloaded'
+    "name": String, //the name of the event, in this case 'app-db-dropping'
     "publisher": String, //the name of the app that published, in this case 'bolt'
-    "body": String //the name of the app that has just been downloaded
+    "body": {
+        "app": String, //the name of the app whose database is about to be dropped
+        "db": String //same as the app field above
+    }
 }
 ```
 
