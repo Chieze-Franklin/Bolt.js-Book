@@ -16,7 +16,6 @@ This object represents information about an app. It is returned primarily by the
     "module": String, //same as the bolt.module field in the package.json
     "name": String, //the system-unique name of the app, same as the name field in the package.json
     "order": Number, //same as the bolt.order field in the package.json
-    "package": Object, //the entire package.json
     "path": String, //the path to the root folder of the app, relative to the node_modules folder
     "main": String, //same as the bolt.main field in the package.json
     "system": Boolean, //same as the bolt.system field in the package.json
