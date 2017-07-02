@@ -4,6 +4,7 @@ These are the events raised by the [/api/apps](/apps-api.md) endpoints.
 
 The following events are described here:
 
+* bolt/app-db-dropping
 * [bolt/app-downloaded](#boltapp-downloaded)
 * [bolt/app-installed](#boltapp-installed)
 * [bolt/app-router-loaded](#boltapp-router-loaded)
@@ -14,6 +15,24 @@ The following events are described here:
 * [bolt/app-uninstalled](#boltapp-uninstalled)
 * [bolt/app-uninstalling](#boltapp-uninstalling)
 * [bolt/app-updated](#boltapp-updated)
+
+## bolt/app-db-dropping
+
+This event is raised when an app's database is about to be dropped. This event is targeted only to the app whose database is about to be dropped; no other app can receive the event.
+
+### event object
+
+A standard [Bolt event](/bolt-event.md).
+
+```
+{
+    "name": String, //the name of the event, in this case 'app-downloaded'
+    "publisher": String, //the name of the app that published, in this case 'bolt'
+    "body": String //the name of the app that has just been downloaded
+}
+```
+
+---
 
 ## bolt/app-downloaded
 
