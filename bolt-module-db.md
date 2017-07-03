@@ -9,6 +9,8 @@ This app is marked as a module, meaning \(among other things\) that it defines n
 The following endpoints are described here:
 
 * [DELETE: /api/db](#delete-apidb)
+* [DELETE: /api/db/{{collection}}](#delete-apidbcollection)
+* POST: /api/db/{{collection}}/find
 
 ## DELETE: /api/db
 
@@ -29,53 +31,66 @@ A standard [Bolt request](bolt-request.md).
 
 ### response
 
-If there is no error during the processing of the request, the `body` field of the response should hold an boolean value of true \(for a successful drop\) or false.
+If there is no error during the processing of the request, the `body` field of the response should hold an boolean value of `true` \(for a successful drop\) or `false`.
 
 ### security
 
-To drop a database, an app must either be the owner of the database or must be listed as one of the `tenants` of the database.
+To drop a database, an app must be the owner of the database.
 
 ---
 
-# POST: /api/app-roles
+# DELETE: /api/db/{{collection}}
 
-Adds an app-role association to the database.
+Drops a collection in the app's database.
+
+If dealing with your own database, include the `X-Bolt-App-Token` custom header in the request. If dealing with another app's database, specify the app's name in the `app` or `db` field of the request body.
 
 ### request
 
 A standard [Bolt request](bolt-request.md).
 
-`{`
-
-`"app" : String, //name of the app being referenced`
-
-`"role" : String //name of the role being referenced`
-
-`}`
+```
+{
+    "app": String, //(optional) name of the app whose database is to be affected
+    "db": String //(optional) same as the app field above
+}
+```
 
 ### response
 
-If the app-role was added successfully, the `body` field of the response should hold an app-role object.
+If there is no error during the processing of the request, the `body` field of the response should hold an boolean value of `true` \(for a successful drop\) or `false`.
 
 ### security
 
-Only system apps \(and native views\) can send requests to this endpoint.
+To drop a collection in a database, an app must either be the owner of the database or must be listed as one of the `tenants` of the collection.
 
 ---
 
-## DELETE: /api/app-roles
+## POST: /api/db/{{collection}}/find
 
-Deletes an array of app-role association objects for all registered app-roles matching the specified criteria.
+Finds all the objects in the specified collection matching the given query.
 
-You specify search criteria in the URL query portion. For instance, to delete all app-roles for app _settings_:
+If dealing with your own database, include the `X-Bolt-App-Token` custom header in the request. If dealing with another app's database, specify the app's name in the `app` or `db` field of the request body.
 
-`localhost:400/api/app-roles?app=settings`
+### request
+
+A standard [Bolt request](bolt-request.md).
+
+```
+{
+    "app": String, //(optional) name of the app whose database is to be affected
+    "db": String, //(optional) same as the app field above
+    "query": Object, //(optional) specifies selection filter using MongoDB query operators.
+    "map": Object, //(optional) specifies the fields to return using MongoDB projection operators.
+    "projection": Object //(optional) same as "map" above
+}
+```
 
 ### response
 
-If there is no error during the processing of the request, the `body` field of the response should hold an array of app-role objects.
+If there is no error during the processing of the request, the `body` field of the response should hold an array of objects matching the specified query.security
 
 ### security
 
-Only system apps \(and native views\) can send requests to this endpoint.
+To read from a collection in a database, an app must either be the owner of the database or must be listed as one of the`guests`of the collection.
 

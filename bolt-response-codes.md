@@ -134,7 +134,7 @@ Database Error.
 | 703 | Could not retrieve collection from the database |
 | 704 | This app has no right to access this collection |
 |  |  |
-| 710 | Document object missing |
+| 710 | Query object missing |
 
 
 
