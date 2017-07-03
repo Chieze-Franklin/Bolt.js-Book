@@ -9,8 +9,8 @@ This app is marked as a module, meaning \(among other things\) that it defines n
 The following endpoints are described here:
 
 * [DELETE: /api/db](#delete-apidb)
-* [DELETE: /api/db/{{collection}}](#delete-apidbcollection)
-* POST: /api/db/{{collection}}/find
+* [DELETE: /api/db/\{\{collection\}\}](#delete-apidbcollection)
+* POST: /api/db/\{\{collection\}\}/find
 
 ## DELETE: /api/db
 
@@ -24,8 +24,8 @@ A standard [Bolt request](bolt-request.md).
 
 ```
 {
-    "app": String, //(optional) name of the app whose database is to be dropped
-    "db": String //(optional) same as the app field above
+"app": String, //(optional) name of the app whose database is to be dropped
+"db": String //(optional) same as the app field above
 }
 ```
 
@@ -39,7 +39,7 @@ To drop a database, an app must be the owner of the database.
 
 ---
 
-# DELETE: /api/db/{{collection}}
+# DELETE: /api/db/\{\{collection\}\}
 
 Drops a collection in the app's database.
 
@@ -51,8 +51,8 @@ A standard [Bolt request](bolt-request.md).
 
 ```
 {
-    "app": String, //(optional) name of the app whose database is to be affected
-    "db": String //(optional) same as the app field above
+"app": String, //(optional) name of the app whose database is to be affected
+"db": String //(optional) same as the app field above
 }
 ```
 
@@ -66,7 +66,7 @@ To drop a collection in a database, an app must either be the owner of the datab
 
 ---
 
-## POST: /api/db/{{collection}}/find
+## POST: /api/db/\{\{collection\}\}/find
 
 Finds all the objects in the specified collection matching the given query.
 
@@ -78,11 +78,11 @@ A standard [Bolt request](bolt-request.md).
 
 ```
 {
-    "app": String, //(optional) name of the app whose database is to be affected
-    "db": String, //(optional) same as the app field above
-    "query": Object, //(optional) specifies selection filter using MongoDB query operators.
-    "map": Object, //(optional) specifies the fields to return using MongoDB projection operators.
-    "projection": Object //(optional) same as "map" above
+"app": String, //(optional) name of the app whose database is to be affected
+"db": String, //(optional) same as the app field above
+"query": Object, //(optional) specifies selection filter using MongoDB query operators.
+"map": Object, //(optional) specifies the fields to return using MongoDB projection operators.
+"projection": Object //(optional) same as "map" above
 }
 ```
 
@@ -93,4 +93,3 @@ If there is no error during the processing of the request, the `body` field of t
 ### security
 
 To read from a collection in a database, an app must either be the owner of the database or must be listed as one of the`guests`of the collection.
-
