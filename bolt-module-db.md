@@ -9,13 +9,13 @@ This app is marked as a module, meaning \(among other things\) that it defines n
 The following endpoints are described here:
 
 * [DELETE: /api/db](#delete-apidb)
-* [DELETE: /api/db/{{collection}}](#delete-apidbcollection)
-* [POST: /api/db/{{collection}}/find](#post-apidbcollectionfind)
-* [POST: /api/db/{{collection}}/findone](#post-apidbcollectionfindone)
-* [POST: /api/db/{{collection}}/insert](#post-apidbcollectioninsert)
-* [POST: /api/db/{{collection}}/remove](#post-apidbcollectionremove)
-* [POST: /api/db/{{collection}}/replace](#post-apidbcollectionreplace)
-* [POST: /api/db/{{collection}}/update](#post-apidbcollectionupdate)
+* [DELETE: /api/db/\{\{collection\}\}](#delete-apidbcollection)
+* [POST: /api/db/\{\{collection\}\}/find](#post-apidbcollectionfind)
+* [POST: /api/db/\{\{collection\}\}/findone](#post-apidbcollectionfindone)
+* [POST: /api/db/\{\{collection\}\}/insert](#post-apidbcollectioninsert)
+* [POST: /api/db/\{\{collection\}\}/remove](#post-apidbcollectionremove)
+* [POST: /api/db/\{\{collection\}\}/replace](#post-apidbcollectionreplace)
+* [POST: /api/db/\{\{collection\}\}/update](#post-apidbcollectionupdate)
 
 ## DELETE: /api/db
 
@@ -29,8 +29,8 @@ A standard [Bolt request](bolt-request.md).
 
 ```
 {
-    "app": String, //(optional) name of the app whose database is to be dropped
-    "db": String //(optional) same as the app field above
+"app": String, //(optional) name of the app whose database is to be dropped
+"db": String //(optional) same as the app field above
 }
 ```
 
@@ -46,7 +46,7 @@ To drop a database, an app must be the owner of the database.
 
 ---
 
-# DELETE: /api/db/{{collection}}
+# DELETE: /api/db/\{\{collection\}\}
 
 Drops a collection in the app's database.
 
@@ -58,8 +58,8 @@ A standard [Bolt request](bolt-request.md).
 
 ```
 {
-    "app": String, //(optional) name of the app whose database is to be affected
-    "db": String //(optional) same as the "app" field above
+"app": String, //(optional) name of the app whose database is to be affected
+"db": String //(optional) same as the "app" field above
 }
 ```
 
@@ -75,7 +75,7 @@ To drop a collection in a database, an app must either be the owner of the datab
 
 ---
 
-## POST: /api/db/{{collection}}/find
+## POST: /api/db/\{\{collection\}\}/find
 
 Finds all the objects in the specified collection matching the given query.
 
@@ -87,11 +87,11 @@ A standard [Bolt request](bolt-request.md).
 
 ```
 {
-    "app": String, //(optional) name of the app whose database is to be affected
-    "db": String, //(optional) same as the "app" field above
-    "query": Object, //specifies selection filter using MongoDB query operators
-    "map": Object, //(optional) specifies the fields to return using MongoDB projection operators
-    "projection": Object //(optional) same as "map" above
+"app": String, //(optional) name of the app whose database is to be affected
+"db": String, //(optional) same as the "app" field above
+"query": Object, //specifies selection filter using MongoDB query operators
+"map": Object, //(optional) specifies the fields to return using MongoDB projection operators
+"projection": Object //(optional) same as "map" above
 }
 ```
 
@@ -107,7 +107,7 @@ To read from a collection in a database, an app must either be the owner of the 
 
 ---
 
-## POST: /api/db/{{collection}}/findone
+## POST: /api/db/\{\{collection\}\}/findone
 
 Finds the first object in the specified collection matching the given query.
 
@@ -119,11 +119,11 @@ A standard [Bolt request](bolt-request.md).
 
 ```
 {
-    "app": String, //(optional) name of the app whose database is to be affected
-    "db": String, //(optional) same as the "app" field above
-    "query": Object, //specifies selection filter using MongoDB query operators
-    "map": Object, //(optional) specifies the fields to return using MongoDB projection operators
-    "projection": Object //(optional) same as "map" above
+"app": String, //(optional) name of the app whose database is to be affected
+"db": String, //(optional) same as the "app" field above
+"query": Object, //specifies selection filter using MongoDB query operators
+"map": Object, //(optional) specifies the fields to return using MongoDB projection operators
+"projection": Object //(optional) same as "map" above
 }
 ```
 
@@ -139,7 +139,7 @@ To read from a collection in a database, an app must either be the owner of the 
 
 ---
 
-## POST: /api/db/{{collection}}/insert
+## POST: /api/db/\{\{collection\}\}/insert
 
 Inserts an object or an array of objects into the specified collection.
 
@@ -151,9 +151,9 @@ A standard [Bolt request](bolt-request.md).
 
 ```
 {
-    "app": String, //(optional) name of the app whose database is to be affected
-    "db": String, //(optional) same as the "app" field above
-    "object": Object | [Object], //an object or array of objects to insert
+"app": String, //(optional) name of the app whose database is to be affected
+"db": String, //(optional) same as the "app" field above
+"object": Object | [Object], //an object or array of objects to insert
 }
 ```
 
@@ -169,7 +169,7 @@ To write to a collection in a database, an app must either be the owner of the d
 
 ---
 
-## POST: /api/db/{{collection}}/remove
+## POST: /api/db/\{\{collection\}\}/remove
 
 Removes an array of objects from the specified collection.
 
@@ -181,9 +181,9 @@ A standard [Bolt request](bolt-request.md).
 
 ```
 {
-    "app": String, //(optional) name of the app whose database is to be affected
-    "db": String, //(optional) same as the "app" field above
-    "query": Object, //specifies deletion criteria using MongoDB query operators
+"app": String, //(optional) name of the app whose database is to be affected
+"db": String, //(optional) same as the "app" field above
+"query": Object, //specifies deletion criteria using MongoDB query operators
 }
 ```
 
@@ -199,7 +199,7 @@ To write to a collection in a database, an app must either be the owner of the d
 
 ---
 
-## POST: /api/db/{{collection}}/replace
+## POST: /api/db/\{\{collection\}\}/replace
 
 Updates an array of objects from the specified collection by deleting all their existing fields and replacing them with the fields in the `values` object.
 
@@ -211,12 +211,12 @@ A standard [Bolt request](bolt-request.md).
 
 ```
 {
-    "app": String, //(optional) name of the app whose database is to be affected
-    "db": String, //(optional) same as the "app" field above
-    "query": Object, //specifies selection criteria using MongoDB query operators
-    "values": Object, //the modifications to apply
-    "upsert": Boolean, //(optional) if true, creates a new document when no document matches the query criteria
-    "multi": Boolean //(optional) if true, updates multiple documents (not just one) that meet the query criteria
+"app": String, //(optional) name of the app whose database is to be affected
+"db": String, //(optional) same as the "app" field above
+"query": Object, //specifies selection criteria using MongoDB query operators
+"values": Object, //the modifications to apply
+"upsert": Boolean, //(optional) if true, creates a new document when no document matches the query criteria
+"multi": Boolean //(optional) if true, updates multiple documents (not just one) that meet the query criteria
 }
 ```
 
@@ -232,9 +232,9 @@ To write to a collection in a database, an app must either be the owner of the d
 
 ---
 
-## POST: /api/db/{{collection}}/update
+## POST: /api/db/\{\{collection\}\}/update
 
-Updates an array of objects from the specified collection by updating the values of their existing fields with the values of the corresponding fields in the `values` object. Unlike [/api/db/{{collection}}/replace](#post-apidbcollectionreplace) which wipes out all the existing fields of the matching objects, this method only touches fields in the matching objects which have counterparts in the `values` field of the request object.
+Updates an array of objects from the specified collection by updating the values of their existing fields with the values of the corresponding fields in the `values` object. Unlike [/api/db/\{\{collection\}\}/replace](#post-apidbcollectionreplace) which wipes out all the existing fields of the matching objects, this method only touches fields in the matching objects which have counterparts in the `values` field of the request object.
 
 If dealing with another app's database, specify the app's name in the `app` or `db` field of the request body. In the absence of these fields Bolt will assume you are dealing with your own database.
 
@@ -244,12 +244,12 @@ A standard [Bolt request](bolt-request.md).
 
 ```
 {
-    "app": String, //(optional) name of the app whose database is to be affected
-    "db": String, //(optional) same as the "app" field above
-    "query": Object, //specifies selection criteria using MongoDB query operators
-    "values": Object, //the modifications to apply
-    "upsert": Boolean, //(optional) if true, creates a new document when no document matches the query criteria
-    "multi": Boolean //(optional) if true, updates multiple documents (not just one) that meet the query criteria
+"app": String, //(optional) name of the app whose database is to be affected
+"db": String, //(optional) same as the "app" field above
+"query": Object, //specifies selection criteria using MongoDB query operators
+"values": Object, //the modifications to apply
+"upsert": Boolean, //(optional) if true, creates a new document when no document matches the query criteria
+"multi": Boolean //(optional) if true, updates multiple documents (not just one) that meet the query criteria
 }
 ```
 
@@ -262,4 +262,3 @@ If there is no error during the processing of the request, the `body` field of t
 Always include the `X-Bolt-App-Token` custom header in the request.
 
 To write to a collection in a database, an app must either be the owner of the database or must be listed as one of the`tenants`of the collection.
-
