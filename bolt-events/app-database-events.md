@@ -1,5 +1,7 @@
 # App Database Events
 
+These endpoints are still experimental, and may be removed in future versions. The biggest reason for this is that these events expose the collection document/object involved in the operations. For instance, app-db-inserted
+
 These are the event raised by [bolt-module-db](/bolt-module-db.md).
 
 * [bolt/app-db-dropped](#boltapp-db-dropped)
