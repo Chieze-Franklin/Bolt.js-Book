@@ -87,7 +87,8 @@ App Error.
 | 402 | Could not save app to the database |
 | 403 | Could not retrieve app from the database |
 | 404 | Could not start app due to security concerns |
-| 405 | Invalid characters in app name |
+| 405 | Invalid character in app name |
+| 406 | Invalid character in collection name |
 |  |  |
 | 410 | App path missing |
 | 414 | Could not install app due to unsupported target version |
