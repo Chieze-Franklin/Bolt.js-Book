@@ -1,6 +1,6 @@
 # collections
 
-While SQL databases use tables, MongoDB uses collections. When an app needs to store a collection of objects \(like a list of contacts or a collection of phone numbers\) it defines a `collections` object. Bolt will automatically create the necessary collections for the app, prefixing the name of each collection with the name of the app. So, a collection called `students` owned by an app call `ctl-sms-students` with have the full name `ctl-sms-students-students`.
+While SQL databases use tables, MongoDB uses collections. When an app needs to store a collection of objects \(like a list of contacts or a collection of phone numbers\) it defines a `collections` object. Bolt will automatically create the necessary collections for the app, prefixing the name of each collection with the name of the app. So, a collection called `students` owned by an app call `ctl-sms-students` with have the full name `ctl-sms-students/students`.
 
 Say you are working on a _Students Managment System_, and you need to store a collection of students, your `collections` could look like this:
 
@@ -17,7 +17,7 @@ The value on the left \(in this case `students`\) is the name of the collection 
 `"collections": {`
 
 ```
-"students": ["bolt-settings", ""ctl-sms-home"]
+"students": ["bolt-settings", "ctl-sms-home"]
 ```
 
 `}`
@@ -30,7 +30,7 @@ The above snippet can also be rewritten as shown below:
 
 ```
 "students": {
-    "guests": ["bolt-settings", ""ctl-sms-home"]
+    "guests": ["bolt-settings", "ctl-sms-home"]
 }
 ```
 
@@ -61,7 +61,7 @@ By default only the app that created a collection has the right to write to that
 }
 ```
 
-From the snippet above, the collection` student-guardian-associations` can be written to by every app, while the collection `student-scores-associations` can be written to by the apps named `scores-app` and `classes-app` \(in addition to the app that owns the collection\). Tenants of a collection, just like the app that owns the collection, have both read and write access to the collection.
+From the snippet above, the collection`student-guardian-associations` can be written to by every app, while the collection `student-scores-associations` can be written to by the apps named `scores-app` and `classes-app` \(in addition to the app that owns the collection\). Tenants of a collection, just like the app that owns the collection, have both read and write access to the collection.
 
 For how to store data to \(write\) and retrieve data from \(read\) collections, see [bolt-module-db](/bolt-module-db.md).
 
