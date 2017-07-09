@@ -123,6 +123,7 @@ File System Error.
 | 601 | A file with the same name already exists |
 | 602 | Could not save file |
 | 603 | Could not retrieve file |
+| 604 | The requesting app or user has no right to access this file |
 
 ## Codes 700-799
 
