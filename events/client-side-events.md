@@ -2,7 +2,7 @@
 
 Thus far we have handled events by creating hooks, which are mostly endpoints on app servers. But sometimes you want the app client to also get an event. So, there is a need to propagate events from server to client without needing the client to make a request first. To achieve this Bolt uses the popular library [socket.io](https://socket.io/).
 
-To receive events on the client, first include the JavaScript file _/socket.io/socket.io.js_. Then include the JavaScript file _{{bolt\_address}}/public/bolt/native/js/bolt.events.js_. This file introduces the object `Bolt.Events` which allows you to publish and subscribe to events on the client side. The `{{bolt_address}}` is a variable which holds the value of the environment variable `BOLT_ADDRESS` \(which the client can get from its server, or which can easily be passed from server to client using a templating engine like _express-handlebars_\). 
+To receive events on the client, first include the JavaScript file _/socket.io/socket.io.js_. Then include the JavaScript file _\{\{bolt\_address\}\}/public/bolt/native/js/bolt.events.js_. This file introduces the object `Bolt.Events` which allows you to publish and subscribe to events on the client side. The `{{bolt_address}}` is a variable which holds the value of the environment variable `BOLT_ADDRESS` \(which the client can get from its server, or which can easily be passed from server to client using a templating engine like _express-handlebars_\). 
 
 To subscribe to events, use the `on` method of the `Bolt.Events` object. The `on` method accepts two compulsory arguments: the name of the event to subscribe to and a callback function \(which takes an `event` object as parameter\) to be executed whenever that event occurs.
 
@@ -26,9 +26,9 @@ Note that you **cannot** use `sockets.getSockets()` to get the sockets for anoth
 
 ### Client-Side Event Publishing
 
-Raising events from the client-side is really nothing special; you simply make a `POST` to _/api/events/{{event}}_. Bolt.Events, however, provides a convenient way of raising events: the `emit` method.
+Raising events from the client-side is really nothing special; you simply make a `POST` to _/api/events/\{\{event\}\}_. Bolt.Events, however, provides a convenient way of raising events: the `emit` method.
 
-The `Bolt.Events.emit` method accepts four arguments: the event name, the event data, the app token of the app emitting the event, and a callback function. Behind the scene the `Bolt.Events.emit` method uses `Bolt.Env` and `Bolt.Request`, and these objects are introduced by including the files _{{bolt\_addess}}/public/bolt/native/js/bolt.env.js _and_ {{bolt\_address}}/public/bolt/native/js/bolt.request.js._
+The `Bolt.Events.emit` method accepts four arguments: the event name, the event data, the app token of the app emitting the event, and a callback function. Behind the scene the `Bolt.Events.emit` method uses `Bolt.Env` and `Bolt.Request`, and these objects are introduced by including the files _\{\{bolt\_addess\}\}/public/bolt/native/js/bolt.env.js _and_ \{\{\bolt\_address\}\}/public/bolt/native/js/bolt.request.js._
 
 ![](/assets/bolt.env.png)
 
