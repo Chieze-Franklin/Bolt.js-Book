@@ -124,6 +124,9 @@ File System Error.
 | 602 | Could not save file |
 | 603 | Could not retrieve file |
 | 604 | The requesting app or user has no right to access this file |
+|  |  |
+| 612 | Could not write to file |
+| 613 | Could not read from file |
 
 ## Codes 700-799
 
