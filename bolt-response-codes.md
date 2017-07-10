@@ -112,6 +112,8 @@ App Permission Error.
 | 504 | This app is not a system app |
 |  |  |
 | 510 | Object to tokenize missing |
+|  |  |
+| 524 | This app is suspended from raising notifications |
 
 ## Codes 600-699
 
