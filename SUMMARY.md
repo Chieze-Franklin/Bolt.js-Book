@@ -52,6 +52,7 @@
       * [Apps \(UI\)](apps-ui.md)
       * [Files \(UI\)](files-ui.md)
       * [Views \(UI\)](views-ui.md)
+      * [Public \(UI\)](public-ui.md)
   * [Bolt Modules](bolt-modules.md)
     * [bolt-module-db](bolt-module-db.md)
     * [bolt-module-system](bolt-module-system.md)
