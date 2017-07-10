@@ -113,6 +113,7 @@ App Permission Error.
 |  |  |
 | 510 | Object to tokenize missing |
 |  |  |
+| 520 | Notification message missing |
 | 524 | This app is suspended from raising notifications |
 
 ## Codes 600-699
