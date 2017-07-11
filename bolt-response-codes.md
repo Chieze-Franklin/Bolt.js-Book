@@ -75,6 +75,8 @@ Access-Control Error.
 | 341 | An app-user with the same app and user already exists |
 | 342 | Could not save app-user to the database |
 | 343 | Could not retrieve app-user from the database |
+|  |  |
+| 350 | Permission name missing |
 
 ## Codes 400-499
 
