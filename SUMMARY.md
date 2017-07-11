@@ -30,6 +30,7 @@
   * [The Home App](the-home-app.md)
   * [The Admin App](the-settings-app.md)
   * [Persistence/Data Storage](persistencedata-storage.md)
+    * [Revisiting Your First Bolt App](persistencedata-storage/revisiting-your-first-bolt-app.md)
     * The Logger App
   * [Events](events.md)
     * [Client-Side Events](events/client-side-events.md)
