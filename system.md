@@ -8,9 +8,8 @@ Non-system apps run on new processes \(actually sub- or child-processes\) and on
 
 Another difference between system apps and non-system apps is that system apps have access to all environment variables while sensitive environment variables \(like _MONGODB\_URI_ or _BOLT\_SESSION\_SECRET_ which may contain passwords\) are hidden from non-system apps.
 
-A big advantage of system apps is that the request object that gets to a system app is the same request object that was modified by Bolt. Such a request has the following fields \(amongst others\):
+A big advantage of system apps is that the request object that gets to a system app is the same request object that was modified by Bolt. Such a request object has a `bolt` field which contains the following fields \(amongst others\):
 
-* _appToken_: This is the value for the `X-Bolt-App-Token` custom header for requests sent by native views or Bolt itself. System apps are, nevertheless, encouraged to use their own app tokens not this one.
 * _user_: When defined, this is an object representing the currently logged-in user.
 * _session_: When defined this represents the current session between a client \(like a browser\) and the Bolt server. The session object also contains a `user` field which is also the currently logged-in user. So, as a system app, to get the currently logged-in user from the request object to your endpoint, you can do either `request.user` or `request.session.user`.
 
