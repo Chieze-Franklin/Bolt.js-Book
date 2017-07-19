@@ -15,6 +15,7 @@ This object represents information about a user. It is returned primarily by the
     "isBlocked": Boolean, //determines if the user has been blocked/suspended from accessing the system
     "lastVisit": Date, //the date of the user's last log into the system
     "phone": String, //the phone number of the user
+    "roles": [String], //a collection of the names of roles currently assigned to the user
     "visits": Number //the number of times the user has logged into the system
 }
 ```
