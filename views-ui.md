@@ -22,7 +22,7 @@ The following endpoints are described here:
 
 * [GET: /update](#get-update)
 
-* [GET: /{{view}}](#get-view)
+* [GET: /\{\{view\}\}](#get-view)
 
 ## GET: /
 
@@ -128,9 +128,8 @@ You can supply the `success` query string to specify the URL \(url-encoded\) to 
 
 ---
 
-## GET: /{{view}}
+## GET: /\{\{view\}\}
 
 This displays the view with the specified name.
 
 Bolt looks for an installed app that serves this view. See [extensions](/extensions.md). Obviously more than one app can register to serve this view; in that case Bolt looks for the app that has been set as the default app for the view. If no app is found for the specified view Bolt loads an appropriate native view. If no native view is found Bolt redirects to the 404 view \(`/404`\) which is also a view that can be served by an app.
-
