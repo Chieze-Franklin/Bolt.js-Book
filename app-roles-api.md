@@ -14,7 +14,7 @@ The following endpoints are described here:
 
 ## GET: /api/app-roles
 
-Gets an array of app-role association [objects](/objects.md) for all registered app-roles matching the specified criteria.
+Gets an array of [app-role association objects](/app-role-object.md) for all registered app-roles matching the specified criteria.
 
 You specify search criteria in the URL query portion. For instance, to get all app-roles for role _admin_:
 
@@ -22,7 +22,7 @@ You specify search criteria in the URL query portion. For instance, to get all a
 
 ### response
 
-If there is no error during the processing of the request, the `body` field of the response should hold an array of app-role [objects](objects.md).
+If there is no error during the processing of the request, the `body` field of the response should hold an array of [app-role objects](/app-role-object.md).
 
 ---
 
