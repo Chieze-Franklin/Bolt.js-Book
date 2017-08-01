@@ -76,8 +76,9 @@
     * [Bolt Response](bolt-response.md)
     * [Context Object](context-object.md)
     * [Error Object](error-object.md)
+    * [File Object](file-object.md)
     * [Notification Object](notification-object.md)
     * [Role Object](role-object.md)
     * [User Object](user-object.md)
-    * [User-Role Object](user-role-object.md)
+    * File Object
 
