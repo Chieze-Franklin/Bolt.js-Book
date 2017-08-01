@@ -37,6 +37,7 @@
     * [The Console App](events/the-console-app.md)
     * The Chat App
 * [Simplifying Complex Apps](simplifying-complex-apps.md)
+* [Diagnostics](diagnostics.md)
 * [Reference](appendix.md)
   * [Bolt Server Endpoints](bolt-server-endpoints.md)
     * [API Endpoints](api-endpoints.md)
