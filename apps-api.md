@@ -8,7 +8,7 @@ The following endpoints are described here:
 
 * [GET: /api/apps/@live](#get-apiappslive)
 
-* [GET: /api/apps/\{\{name/}/}](#getapiappsname)
+* [GET: /api/apps/{{name/}/}](#getapiappsname)
 
 * [POST: /api/apps](#post-apiapps)
 
@@ -28,7 +28,7 @@ The following endpoints are described here:
 
 * [DELETE: /api/apps](#delete-apiapps)
 
-* [DELETE: /api/apps/\{\{name/}/}](#delete-apiappsname)
+* [DELETE: /api/apps/{{name/}/}](#delete-apiappsname)
 
 ## GET: /api/apps
 
@@ -58,7 +58,7 @@ If there is no error during the processing of the request, the `body` field of t
 
 ---
 
-## GET:/api/apps/\{\{name/}/}
+## GET:/api/apps/{{name/}/}
 
 Gets the app object of the app with the specified name.
 
@@ -310,7 +310,7 @@ Only system apps \(and native views\) can send requests to this endpoint. The lo
 
 ---
 
-## DELETE: /api/apps/\{\{name/}/}
+## DELETE: /api/apps/{{name/}/}
 
 Deletes the app with the specified name.
 
@@ -339,3 +339,4 @@ Only system apps \(and native views\) can send requests to this endpoint. The lo
 ### note
 
 Although this may change, currently, trying to stop an app that is not running may return a [Bolt response](bolt-response.md) with [response code](bolt-response-codes.md) `420`. Code `420` means the port on which an app should be running cannot be found. The rationale is that you can only stop apps running on ports, so trying to stop an app that is not running \(for which no port can be found\) will result in an error with code `420`.
+
