@@ -48,7 +48,6 @@
       * [App-Users \(API\)](app-users-api.md)
       * [Events \(API\)](events-api.md)
       * [Files \(API\)](files-api.md)
-      * [Others \(API\)](others-api.md)
     * [UI Endpoints](ui-endpoints.md)
       * [Apps \(UI\)](apps-ui.md)
       * [Files \(UI\)](files-ui.md)
