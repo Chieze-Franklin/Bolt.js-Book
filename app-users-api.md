@@ -14,7 +14,7 @@ The following endpoints are described here:
 
 ## GET: /api/app-users
 
-Gets an array of app-user association [objects](/objects.md) for all registered app-users matching the specified criteria.
+Gets an array of [app-user association objects](/app-user-object.md) for all registered app-users matching the specified criteria.
 
 You specify search criteria in the URL query portion. For instance, to get all app-users for user _adam_:
 
@@ -22,7 +22,7 @@ You specify search criteria in the URL query portion. For instance, to get all a
 
 ### response
 
-If there is no error during the processing of the request, the `body` field of the response should hold an array of app-user [objects](objects.md).
+If there is no error during the processing of the request, the `body` field of the response should hold an array of [app-user objects](/app-user-object.md).
 
 ---
 
@@ -67,6 +67,4 @@ If there is no error during the processing of the request, the `body` field of t
 ### security
 
 Only system apps \(and native views\) can send requests to this endpoint.
-
-
 
