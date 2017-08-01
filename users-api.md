@@ -10,7 +10,7 @@ The following endpoints are described here:
 
 * [GET: /api/users/@live](#get-apiuserslive)
 
-* [GET: /api/users/\{\{name\}\}](#get-apiusersname)
+* [GET: /api/users/{{name}}](#get-apiusersname)
 
 * [POST: /api/users](#post-apiusers)
 
@@ -20,15 +20,15 @@ The following endpoints are described here:
 
 * [DELETE: /api/users](#delete-apiusers)
 
-* [DELETE: /api/users/\{\{name\}\}](#delete-apiusersname)
+* [DELETE: /api/users/{{name}}](#delete-apiusersname)
 
 * [PUT: /api/users](#put-apiusers)
 
-* [PUT: /api/users/\{\{name\}\}](#put-apiusersname)
+* [PUT: /api/users/{{name}}](#put-apiusersname)
 
 ## GET: /api/users
 
-Gets an array of user [objects](/objects.md) for all registered users matching the specified criteria.
+Gets an array of [user objects](/user-object.md) for all registered users matching the specified criteria.
 
 You specify search criteria in the URL query portion. For instance, to get all users who have visited \(logged into\) the service 7 times:
 
@@ -36,7 +36,7 @@ You specify search criteria in the URL query portion. For instance, to get all u
 
 ### response
 
-If there is no error during the processing of the request, the `body` field of the response should hold an array of user [objects](objects.md).
+If there is no error during the processing of the request, the `body` field of the response should hold an array of [user objects](/user-object.md).
 
 ---
 
@@ -64,7 +64,7 @@ This may not work well in scenarios where Bolt is **not** expected to be _always
 
 ---
 
-## GET: /api/users/\{\{name\}\}
+## GET: /api/users/{{name}}
 
 Gets the user with the specified name.
 
@@ -90,9 +90,9 @@ The body of the request is typically a `form` object \(which can be created in J
 
 `"password" : String, //the password with which the user logs in`
 
-`"displayName": String,`
-`"displayPic": String //the file path of the display pic`
-`"email": String,`
+`"displayName": String,`  
+`"displayPic": String //the file path of the display pic`  
+`"email": String,`  
 `"phone": String,`
 
 `}`
@@ -165,7 +165,7 @@ Only system apps \(and native views\) can send requests to this endpoint.
 
 ---
 
-## DELETE: /api/users/\{\{name\}\}
+## DELETE: /api/users/{{name}}
 
 Deletes the user with the specified name.
 
@@ -213,7 +213,7 @@ Only system apps \(and native views\) can send requests to this endpoint.
 
 ---
 
-## PUT: /api/users/\{\{name\}\}
+## PUT: /api/users/{{name}}
 
 Updates the user with the specified name.
 
@@ -240,3 +240,4 @@ If the user is successfully updated, the `body` field of the response should hol
 ### security
 
 Only system apps \(and native views\) can send requests to this endpoint.
+
