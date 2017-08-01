@@ -8,7 +8,7 @@ The following endpoints are described here:
 
 * [GET: /api/apps/@live](#get-apiappslive)
 
-* [GET: /api/apps/\{\{name\}\}](#getapiappsname)
+* [GET: /api/apps/{{name}}](#getapiappsname)
 
 * [POST: /api/apps](#post-apiapps)
 
@@ -28,11 +28,11 @@ The following endpoints are described here:
 
 * [DELETE: /api/apps](#delete-apiapps)
 
-* [DELETE: /api/apps/\{\{name\}\}](#delete-apiappsname)
+* [DELETE: /api/apps/{{name}}](#delete-apiappsname)
 
 ## GET: /api/apps
 
-Gets an array of app objects for all installed apps matching the specified criteria.
+Gets an array of [app objects](/app-object.md) for all installed apps matching the specified criteria.
 
 You specify search criteria in the URL query portion. For instance, to get all apps that have a version of `1.1`:
 
@@ -50,15 +50,15 @@ If there is no error during the processing of the request, the `body` field of t
 
 ## GET: /api/apps/@live
 
-Gets an array of context objects for all running contexts.
+Gets an array of [context objects](/context-object.md) for all running contexts.
 
 ### response
 
-If there is no error during the processing of the request, the `body` field of the response should hold an array of context objects.
+If there is no error during the processing of the request, the `body` field of the response should hold an array of [context objects](/context-object.md).
 
 ---
 
-## GET:/api/apps/\{\{name\}\}
+## GET:/api/apps/{{name}}
 
 Gets the app object of the app with the specified name.
 
@@ -310,7 +310,7 @@ Only system apps \(and native views\) can send requests to this endpoint. The lo
 
 ---
 
-## DELETE: /api/apps/\{\{name\}\}
+## DELETE: /api/apps/{{name}}
 
 Deletes the app with the specified name.
 
@@ -339,3 +339,4 @@ Only system apps \(and native views\) can send requests to this endpoint. The lo
 ### note
 
 Although this may change, currently, trying to stop an app that is not running may return a [Bolt response](bolt-response.md) with [response code](bolt-response-codes.md) `420`. Code `420` means the port on which an app should be running cannot be found. The rationale is that you can only stop apps running on ports, so trying to stop an app that is not running \(for which no port can be found\) will result in an error with code `420`.
+
