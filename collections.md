@@ -97,5 +97,20 @@ To get a list of data types to use in your validator, see [here](https://docs.mo
 
 To read more on validation see [this article](https://www.mongodb.com/blog/post/document-validation-part-1-adding-just-the-right-amount-of-control-over-your-documents) and [its sequel](https://www.mongodb.com/blog/post/document-validation-part-2-putting-it-all-together-a-tutorial).
 
+You can also create a [capped collection](https://docs.mongodb.com/manual/core/capped-collections/).
+
+```
+"collections": {
+    "student-scores-associations": {
+        "tenants": ["scores-app", "classes-app"],
+        "options": {
+            "capped": true,
+            "size": 5242880,
+            "max": 5000
+        }
+    }
+}
+```
+
 For how to store data to \(write\) and retrieve data from \(read\) collections, see [bolt-module-db](/bolt-module-db.md).
 
