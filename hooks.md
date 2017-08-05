@@ -54,6 +54,19 @@ If the route value does not start with _http://_ or _https://_, Bolt will assume
 
 More details later.
 
+### When the endpoint is created by an external router.
+
+Sometimes you want Bolt to dispatch the event data to an endpoint defined by an external router. To do this, the value \(on the right\) of an event field in the `hooks` object should be defined as an object \(not string\), and should have 2 fields, `route` which is the URL to which the event will be _POSTed_, and `type` which must be set to `"router"`. For example,
+
+```
+"hooks": {
+    "photo-saved": {
+        "route": "my-router/hooks/photo-saved",
+        "type": "router"
+    }
+}
+```
+
 ### When you want to handle the event in a function without having to start the app.
 
 This is in line with the _serverless_ architecture. Just create functions, and Bolt will execute those functions at the appropriate time, as relevant events occur.
