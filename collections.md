@@ -63,5 +63,39 @@ By default only the app that created a collection has the right to write to that
 
 From the snippet above, the collection`student-guardian-associations` can be written to by every app, while the collection `student-scores-associations` can be written to by the apps named `scores-app` and `classes-app` \(in addition to the app that owns the collection\). Tenants of a collection, just like the app that owns the collection, have both read and write access to the collection.
 
+You can specify an `options` field for your collections. This is the same `options` MongoDB uses when [creating a collection](https://docs.mongodb.com/manual/reference/method/db.createCollection/). In the options object you can cap a collection or [specify validation rules](https://docs.mongodb.com/manual/core/document-validation/).
+
+For instance, to specify that every document in the `students` collection must have the following fields:
+
+* a `name`, 
+* an `id`, 
+* a `dateOfBirth`,
+* and either a `phone` or an `email`
+
+```
+"collections": {
+    "students": {
+        "guests": ["bolt-settings", "ctl-sms-home"],
+        "options": {
+            "validator": {
+                "$and": [
+                    { "name": { "$type": "string" } },
+                    { "id": { "$type": "number" } },
+                    { "dateOfBirth": { "$type": "date" } },
+                    "$or": [
+                        { "phone": { "$type": "string" } },
+                        { "email": { "$regex": /@gmail\.com$/ } }
+                    ]
+                ]
+            }
+        }
+    }
+}
+```
+
+To get a list of data types to use in your validator, see [here](https://docs.mongodb.com/manual/reference/operator/query/type/).
+
+To read more on validation see [this article](https://www.mongodb.com/blog/post/document-validation-part-1-adding-just-the-right-amount-of-control-over-your-documents) and [its sequel](https://www.mongodb.com/blog/post/document-validation-part-2-putting-it-all-together-a-tutorial).
+
 For how to store data to \(write\) and retrieve data from \(read\) collections, see [bolt-module-db](/bolt-module-db.md).
 
