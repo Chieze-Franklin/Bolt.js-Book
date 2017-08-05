@@ -11,7 +11,7 @@ Also note that an app needs system privilege to install routers. This is because
 The following are core Bolt modules:
 
 * bolt-module-dashboard
-* bolt-module-db
+* [bolt-module-db](/bolt-module-db.md)
 * bolt-module-notifications
 * bolt-module-system
 
