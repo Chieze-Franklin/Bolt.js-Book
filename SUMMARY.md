@@ -36,7 +36,7 @@
   * [Events](events.md)
     * [Client-Side Events](events/client-side-events.md)
     * [The Console App](events/the-console-app.md)
-    * The Chat App
+    * [The Chat App](events/the-chat-app.md)
 * [Simplifying Complex Apps](simplifying-complex-apps.md)
 * [Diagnostics](diagnostics.md)
 * [Reference](appendix.md)
