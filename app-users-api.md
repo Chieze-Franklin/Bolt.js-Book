@@ -34,13 +34,12 @@ Adds an app-user association to the database.
 
 A standard [Bolt request](bolt-request.md).
 
-`{`
-
-`"app" : String, //name of the app being referenced`
-
-`"user" : String //name of the user being referenced`
-
-`}`
+```
+{
+    "app" : String, //name of the app being referenced
+    "user" : String //name of the user being referenced
+}
+```
 
 ### response
 
