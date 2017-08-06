@@ -81,5 +81,4 @@
     * [Notification Object](notification-object.md)
     * [Role Object](role-object.md)
     * [User Object](user-object.md)
-    * File Object
 
