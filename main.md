@@ -8,11 +8,11 @@ Notice that the package.json also has a field called main. The value of that fie
 
 Create a file called `bolt-server.js` \(you can call it anything else\). Copy all the content of `server.js` into `bolt-server.js`. In `bolt-server.js` we are going to remove the following lines:
 
-`app.listen(3000, function () {`
-
-`console.log('Server started. Open http://localhost:3000 in your browser.');`
-
-`});`
+```
+app.listen(3000, function () {
+    console.log('Server started. Open http://localhost:3000 in your browser.');
+});
+```
 
 And replace them with:
 
@@ -22,19 +22,15 @@ Now, set the `main` field of the `bolt` object to `"bolt-server.js"`.
 
 Your package.json should look something like this:
 
-`{`
-
-`"name": "Notes",`
-
-`....`
-
-`"bolt": {`
-
-`"main": "bolt-server.js"`
-
-`}`
-
-`}`
+```
+{
+    "name": "Notes",
+    ...
+    "bolt": {
+        "main": "bolt-server.js"
+    }
+}
+```
 
 Note that the file extension can be omitted: `"main": "bolt-server"`.
 
@@ -46,13 +42,12 @@ Instead of repeating codes in _server.js_ and _bolt-server.js_, you can instead 
 
 So, your entire _server.js_ becomes:
 
-`var app = require('./bolt-server');`
-
-`app.listen(3000, function () {`
-
-`console.log('Server started. Open http://localhost:3000 in your browser.');`
-
-`});`
+```
+var app = require('./bolt-server');
+app.listen(3000, function () {
+    console.log('Server started. Open http://localhost:3000 in your browser.');
+});
+```
 
 This way, your can run the app on Bolt via bolt-server.js and still run it directly with Node via server.js.
 
