@@ -39,7 +39,6 @@
     * The Chat App
 * [Simplifying Complex Apps](simplifying-complex-apps.md)
 * [Diagnostics](diagnostics.md)
-* [Running Bolt in Different Environments](running-bolt-in-different-environments.md)
 * [Reference](appendix.md)
   * [Bolt Server Endpoints](bolt-server-endpoints.md)
     * [API Endpoints](api-endpoints.md)
