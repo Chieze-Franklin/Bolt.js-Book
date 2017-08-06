@@ -1,4 +1,4 @@
-#Users \(API\)
+# Users \(API\)
 
 This is a description of the API endpoints exposed by the Bolt server for interacting with users.
 
@@ -10,7 +10,7 @@ The following endpoints are described here:
 
 * [GET: /api/users/@live](#get-apiuserslive)
 
-* [GET: /api/users/\{\{name}}](#get-apiusersname)
+* [GET: /api/users/&lt;name&gt;](#get-apiusersname)
 
 * [POST: /api/users](#post-apiusers)
 
@@ -20,11 +20,11 @@ The following endpoints are described here:
 
 * [DELETE: /api/users](#delete-apiusers)
 
-* [DELETE: /api/users/\{\{name}}](#delete-apiusersname)
+* [DELETE: /api/users/&lt;name&gt;](#delete-apiusersname)
 
 * [PUT: /api/users](#put-apiusers)
 
-* [PUT: /api/users/\{\{name}}](#put-apiusersname)
+* [PUT: /api/users/&lt;name&gt;](#put-apiusersname)
 
 ## GET: /api/users
 
@@ -64,7 +64,7 @@ This may not work well in scenarios where Bolt is **not** expected to be _always
 
 ---
 
-## GET: /api/users/\{\{name}}
+## GET: /api/users/&lt;name&gt;
 
 Gets the user with the specified name.
 
@@ -84,18 +84,16 @@ A standard [Bolt request](bolt-request.md).
 
 The body of the request is typically a `form` object \(which can be created in JavaScript by typing `var form = new FormData();`\) which defines the following fields:
 
-`{`
-
-`"name" : String, //the username with which the user logs in`
-
-`"password" : String, //the password with which the user logs in`
-
-`"displayName": String,`
-`"displayPic": String //the file path of the display pic`
-`"email": String,`
-`"phone": String,`
-
-`}`
+```
+{
+    "name" : String, //the username with which the user logs in
+    "password" : String, //the password with which the user logs in
+    "displayName": String,
+    "displayPic": String //the file path of the display pic
+    "email": String,
+    "phone": String
+}
+```
 
 ### response
 
@@ -115,13 +113,12 @@ Logs a user into the system for the current session.
 
 A standard [Bolt request](bolt-request.md).
 
-`{`
-
-`"name" : String,`
-
-`"password" : String`
-
-`}`
+```
+{
+    "name" : String,
+    "password" : String
+}
+```
 
 ### response
 
@@ -165,7 +162,7 @@ Only system apps \(and native views\) can send requests to this endpoint.
 
 ---
 
-## DELETE: /api/users/\{\{name}}
+## DELETE: /api/users/&lt;name&gt;
 
 Deletes the user with the specified name.
 
@@ -191,17 +188,14 @@ You specify search criteria in the URL query portion. For instance, to update al
 
 A standard [Bolt request](bolt-request.md).
 
-`{`
-
-`"displayName": String,`
-
-`"email": String,`
-
-`"isBlocked": Boolean,`
-
-`"phone": String`
-
-`}`
+```
+{
+    "displayName": String,
+    "email": String,
+    "isBlocked": Boolean,
+    "phone": String
+}
+```
 
 ### response
 
@@ -213,7 +207,7 @@ Only system apps \(and native views\) can send requests to this endpoint.
 
 ---
 
-## PUT: /api/users/\{\{name}}
+## PUT: /api/users/&lt;name&gt;
 
 Updates the user with the specified name.
 
@@ -221,17 +215,14 @@ Updates the user with the specified name.
 
 A standard [Bolt request](bolt-request.md).
 
-`{`
-
-`"displayName": String,`
-
-`"email": String,`
-
-`"isBlocked": Boolean,`
-
-`"phone": String`
-
-`}`
+```
+{
+    "displayName": String,
+    "email": String,
+    "isBlocked": Boolean,
+    "phone": String
+}
+```
 
 ### response
 
@@ -240,3 +231,4 @@ If the user is successfully updated, the `body` field of the response should hol
 ### security
 
 Only system apps \(and native views\) can send requests to this endpoint.
+
