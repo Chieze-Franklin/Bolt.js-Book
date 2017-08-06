@@ -8,17 +8,17 @@ The following endpoints are described here:
 
 * [GET: /api/roles](#get-apiroles)
 
-* [GET: /api/roles/\{\{name}}](#get-apirolesname)
+* [GET: /api/roles/&lt;name&gt;](#get-apirolesname)
 
 * [POST: /api/roles](#post-apiroles)
 
 * [DELETE: /api/roles](#delete-apiroles)
 
-* [DELETE: /api/roles/\{\{name}}](#delete-apirolesname)
+* [DELETE: /api/roles/&lt;name&gt;](#delete-apirolesname)
 
 * [PUT: /api/roles](#put-apiroles)
 
-* [PUT: /api/roles/\{\{name}}](#put-apirolesname)
+* [PUT: /api/roles/&lt;name&gt;](#put-apirolesname)
 
 ## GET: /api/roles
 
@@ -34,7 +34,7 @@ If there is no error during the processing of the request, the `body` field of t
 
 ---
 
-## GET: /api/roles/\{\{name}}
+## GET: /api/roles/&lt;name&gt;
 
 Gets the role with the specified name.
 
@@ -50,17 +50,14 @@ Adds a role to the database.
 
 A standard [Bolt request](bolt-request.md).
 
-`{`
-
-`"name" : String, //the name with which the role can be gotten internally`
-
-`"displayName" : String, //user-friendly text for the role`
-
-`"description" : String, //user-friendly description for the role`
-
-`"isAdmin" : Boolean //determines if this role should be granted administrative privileges`
-
-`}`
+```
+{
+    "name" : String, //the name with which the role can be gotten internally
+    "displayName" : String, //user-friendly text for the role
+    "description" : String, //user-friendly description for the role
+    "isAdmin" : Boolean //determines if this role should be granted administrative privileges
+}
+```
 
 ### response
 
@@ -90,7 +87,7 @@ Only system apps \(and native views\) can send requests to this endpoint.
 
 ---
 
-## DELETE: /api/roles/\{\{name}}
+## DELETE: /api/roles/&lt;name&gt;
 
 Deletes the role with the specified name.
 
@@ -116,15 +113,13 @@ You specify search criteria in the URL query portion. For instance, to update al
 
 A standard [Bolt request](bolt-request.md).
 
-`{`
-
-`"description": String`
-
-`"displayName": String`
-
-`"isAdmin": Boolean`
-
-`}`
+```
+{
+    "displayName" : String,
+    "description" : String,
+    "isAdmin" : Boolean
+}
+```
 
 ### response
 
@@ -136,7 +131,7 @@ Only system apps \(and native views\) can send requests to this endpoint.
 
 ---
 
-## PUT: /api/roles/\{\{name}}
+## PUT: /api/roles/&lt;name&gt;
 
 Updates the role with the specified name.
 
@@ -144,15 +139,13 @@ Updates the role with the specified name.
 
 A standard [Bolt request](bolt-request.md).
 
-`{`
-
-`"description": String`
-
-`"displayName": String`
-
-`"isAdmin": Boolean`
-
-`}`
+```
+{
+    "displayName" : String,
+    "description" : String,
+    "isAdmin" : Boolean
+}
+```
 
 ### response
 
@@ -161,3 +154,4 @@ If the role is successfully updated, the `body` field of the response should hol
 ### security
 
 Only system apps \(and native views\) can send requests to this endpoint.
+
