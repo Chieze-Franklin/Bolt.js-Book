@@ -34,13 +34,12 @@ Adds a user-role association to the database.
 
 A standard [Bolt request](bolt-request.md).
 
-`{`
-
-`"user" : String, //username of the user being referenced`
-
-`"role" : String //name of the role being referenced`
-
-`}`
+```
+{
+    "user" : String, //username of the user being referenced
+    "role" : String //name of the role being referenced
+}
+```
 
 ### response
 
