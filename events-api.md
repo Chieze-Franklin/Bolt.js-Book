@@ -1,17 +1,16 @@
-
 # Events \(API\)
 
 This is a description of the API endpoints exposed by the Bolt server for interacting with publishing and subscribing to events.
 
 The following endpoints are described here:
 
-* [POST: /api/events/\{\{name\}\}](#post-apieventsname)
+* [POST: /api/events/&lt;name&gt;](#post-apieventsname)
 
 * [POST: /api/events/\*](#post-apievents)
 
 * [DELETE: /api/events/\*](#delete-apievents)
 
-## POST: /api/events/\{\{name\}\}
+## POST: /api/events/&lt;name&gt;
 
 Publishes an event with the specified name.
 
@@ -21,9 +20,9 @@ A standard [Bolt request](bolt-request.md).
 
 ```
 {
-"body": Object, //the actual payload of the event
-"headers": Object, //(optional) custom headers to be included in every POST dispatched to the event subscribers
-"subscribers": [String] //(optional) if specified, only apps whose names are in the array will receive this event
+    "body": Object, //the actual payload of the event
+    "headers": Object, //(optional) custom headers to be included in every POST dispatched to the event subscribers
+    "subscribers": [String] //(optional) if specified, only apps whose names are in the array will receive this event
 }
 ```
 
@@ -31,14 +30,14 @@ A sample request object to this endpoint is:
 
 ```
 {
-"body": {
-"appName": "app1",
-"appToken": "A456DFE562EEF10"
-},
-"headers": {
-"X-Bolt-User-Name": "frank"
-},
-"subscribers": ["app1"]
+    "body": {
+        "appName": "app1",
+        "appToken": "A456DFE562EEF10"
+    },
+    "headers": {
+        "X-Bolt-User-Name": "frank"
+    },
+    "subscribers": ["app1"]
 }
 ```
 
@@ -63,8 +62,8 @@ A standard [Bolt request](bolt-request.md).
 
 ```
 {
-"route": String, //the endpoint to which the event will be POSTed
-"type": String //(optional) the type of the hook
+    "route": String, //the endpoint to which the event will be POSTed
+    "type": String //(optional) the type of the hook
 }
 ```
 
@@ -95,3 +94,4 @@ DELETE: /api/events/bolt/app-deleted
 ### note
 
 Every request to this endpoint must include the `X-Bolt-App-Token` custom header.
+
