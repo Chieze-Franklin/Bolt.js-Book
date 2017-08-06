@@ -13,7 +13,7 @@ The following are core Bolt modules:
 * bolt-module-dashboard
 * [bolt-module-db](/bolt-module-db.md)
 * bolt-module-notifications
-* bolt-module-system
+* [bolt-module-system](/bolt-module-system.md)
 
 
 
