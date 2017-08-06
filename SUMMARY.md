@@ -78,7 +78,6 @@
     * [Context Object](context-object.md)
     * [Error Object](error-object.md)
     * [File Object](file-object.md)
-    * [Notification Object](notification-object.md)
     * [Role Object](role-object.md)
     * [User Object](user-object.md)
 
