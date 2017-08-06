@@ -4,9 +4,9 @@ This is a description of the UI endpoints exposed by the Bolt server for interac
 
 The following endpoints are described here:
 
-* [GET: /apps/\{\{name\}\}](#get-appsname)
+* [GET: /apps/&lt;name&gt;](#get-appsname)
 
-## GET: /apps/\{\{name\}\}
+## GET: /apps/&lt;name&gt;
 
 This endpoint runs the app with the specified name.
 
@@ -20,12 +20,12 @@ So, if the package.json file looked something like this:
 
 ```
 {
-"name": "Notes",
-...
-"bolt": {
-"main": "bolt-server.js",
-"index": "/my/index/endpoint"
-}
+    "name": "Notes",
+    ...
+    "bolt": {
+        "main": "bolt-server.js",
+        "index": "/my/index/endpoint"
+    }
 }
 ```
 
@@ -34,3 +34,4 @@ Then the complete redirect address would be `localhost:500/my/index/endpoint` \(
 If an error occurred during the processing of the request, the browser will be redirected to the Bolt endpoint `/error` with extra info \(like response code, error message\) supplied in the query portion of the URL.
 
 If an app with the specified name could not be found in the database, or the app was found but does not have a server \(it didn't specify a `bolt.main` field in its package.json\), the browser will be redirected to `/files/{app-name}/index` with the assumption that the app has a [file](/files.md) called index, which is also [public](/public.md).
+
