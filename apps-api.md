@@ -78,8 +78,8 @@ A standard [Bolt request](bolt-request.md).
 
 ```
 {
-"name" : String, //the name of the app
-"system" : Boolean //(optional) determines if the app should be a system app (with root privilege)
+    "name" : String, //the name of the app
+    "system" : Boolean //(optional) determines if the app should be a system app (with root privilege)
 }
 ```
 
@@ -109,7 +109,7 @@ A standard [Bolt request](bolt-request.md).
 
 ```
 {
-"name": String //the name of the app
+    "name": String //the name of the app
 }
 ```
 
@@ -135,7 +135,7 @@ A standard [Bolt request](bolt-request.md).
 
 ```
 {
-"name" : String //the name of the app
+    "name" : String //the name of the app
 }
 ```
 
@@ -159,8 +159,8 @@ A standard [Bolt request](bolt-request.md).
 
 ```
 {
-"path" : String, //the path of the folder contain the package.json, relative to the node_modules folder
-"system" : Boolean //(optional) determines if the app should be a system app (with root privilege)
+    "path" : String, //the path of the folder contain the package.json, relative to the node_modules folder
+    "system" : Boolean //(optional) determines if the app should be a system app (with root privilege)
 }
 ```
 
@@ -190,7 +190,7 @@ A standard [Bolt request](bolt-request.md).
 
 ```
 {
-"path": String //the path of the folder contain the package.json, relative to the node_modules folder
+    "path": String //the path of the folder contain the package.json, relative to the node_modules folder
 }
 ```
 
@@ -216,7 +216,7 @@ A standard [Bolt request](bolt-request.md).
 
 ```
 {
-"path" : String //the path of the folder contain the package.json, relative to the node_modules folder
+    "path" : String //the path of the folder contain the package.json, relative to the node_modules folder
 }
 ```
 
@@ -238,11 +238,11 @@ Starts the server of the app with the specified name.
 
 A standard [Bolt request](bolt-request.md).
 
-`{`
-
-`"name" : String //the name of the app to start`
-
-`}`
+```
+{
+    "name" : String //the name of the app to start
+}
+```
 
 ### response
 
@@ -266,11 +266,11 @@ Starts the server of the app with the specified name.
 
 A standard [Bolt request](bolt-request.md).
 
-`{`
-
-`"name" : String //the name of the app to stop`
-
-`}`
+```
+{
+    "name" : String //the name of the app to stop
+}
+```
 
 ### response
 
@@ -294,9 +294,9 @@ A standard [Bolt request](bolt-request.md).
 
 ```
 {
-"deleteDatabase" : Boolean, //(optional) if true the app's database will be deleted
-"deletePublicFolder" : Boolean, //(optional) if true the folder holding the app's public files will be deleted
-"deleteSourceFolder" : Boolean //(optional) if true the folder holding the app's source files will be deleted
+    "deleteDatabase" : Boolean, //(optional) if true the app's database will be deleted
+    "deletePublicFolder" : Boolean, //(optional) if true the folder holding the app's public files will be deleted
+    "deleteSourceFolder" : Boolean //(optional) if true the folder holding the app's source files will be deleted
 }
 ```
 
@@ -320,9 +320,9 @@ A standard [Bolt request](bolt-request.md).
 
 ```
 {
-"deleteDatabase" : Boolean, //(optional) if true the app's database will be deleted
-"deletePublicFolder" : Boolean, //(optional) if true the folder holding the app's public files will be deleted
-"deleteSourceFolder" : Boolean //(optional) if true the folder holding the app's source files will be deleted
+    "deleteDatabase" : Boolean, //(optional) if true the app's database will be deleted
+    "deletePublicFolder" : Boolean, //(optional) if true the folder holding the app's public files will be deleted
+    "deleteSourceFolder" : Boolean //(optional) if true the folder holding the app's source files will be deleted
 }
 ```
 
