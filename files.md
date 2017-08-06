@@ -6,21 +6,16 @@ An example to make this clearer.
 
 Apps are expected to define a file called _icon_. \(Another expected file is _index_.\)
 
-`{`
-
-`"bolt": {`
-
-`"files": {`
-
-`"icon": "assets/img/icon.png",`
-
-`"index": "views/home.html"`
-
-`}`
-
-`}`
-
-`}`
+```
+{
+    "bolt": {
+        "files": {
+            "icon": "assets/img/icon.png",
+            "index": "views/home.html"
+        }
+    }
+}
+```
 
 To get the icon for the app now becomes as simple as \(assuming Bolt is running on port 400\) `localhost:400/files/your-app-name/icon`. This will fetch the appropriate [public](/public.md) file, in this case `localhost:400/public/your-app-name/assets/img/icon.png`.
 
