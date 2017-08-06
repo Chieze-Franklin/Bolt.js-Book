@@ -34,13 +34,12 @@ Adds an app-role association to the database.
 
 A standard [Bolt request](bolt-request.md).
 
-`{`
-
-`"app" : String, //name of the app being referenced`
-
-`"role" : String //name of the role being referenced`
-
-`}`
+```
+{
+    "app" : String, //name of the app being referenced
+    "role" : String //name of the role being referenced
+}
+```
 
 ### response
 
