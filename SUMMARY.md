@@ -32,7 +32,7 @@
   * [The Admin App](the-settings-app.md)
   * [Persistence/Data Storage](persistencedata-storage.md)
     * [Revisiting Your First Bolt App](persistencedata-storage/revisiting-your-first-bolt-app.md)
-    * The Logger App
+    * [The Logger App](persistencedata-storage/the-logger-app.md)
   * [Events](events.md)
     * [Client-Side Events](events/client-side-events.md)
     * [The Console App](events/the-console-app.md)
