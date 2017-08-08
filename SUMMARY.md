@@ -64,6 +64,7 @@
     * [App-Role Events](bolt-events/app-role-events.md)
     * [App-User Events](bolt-events/app-user-events.md)
     * [System Events](bolt-events/system-events.md)
+    * [Client Events](bolt-events/client-events.md)
   * [Bolt Modules](bolt-modules.md)
     * [bolt-module-db](bolt-module-db.md)
     * [bolt-module-system](bolt-module-system.md)
