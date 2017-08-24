@@ -7,6 +7,7 @@
     * [setup.json](setting-up-bolt/setup.json.md)
   * [Deploying to Heroku](deploying-to-heroku.md)
   * [Bolt + Electron](bolt-+-electron.md)
+  * [Uploading to AWS S3](uploading-to-aws-s3.md)
 * [Your First Bolt App](your-first-bolt-app.md)
   * [The package.json File](packagejson.md)
     * [main](main.md)
