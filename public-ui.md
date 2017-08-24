@@ -37,7 +37,7 @@ Objects in the returned array may also contain the error field if an error occur
 
 ![](/assets/local-upload-error.png)
 
-If you are going to be running Bolt on a service like Heroku, you will want to [upload your files to AWS S3](/uploading-to-aws-s3.md).
+If you are going to be running Bolt on a service like Heroku, you will want to [upload your files to AWS S3](/uploading-to-aws-s3.md). This is because a service like Heroku has an [ephemeral file system](/deploying-to-heroku/ephemeral-file-system.md).
 
 \[insert pictures of post man and picture\]
 
