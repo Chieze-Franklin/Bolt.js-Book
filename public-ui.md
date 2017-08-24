@@ -25,11 +25,15 @@ The body is typically a `form` object containing the files to upload.
 
 ## response
 
-If the files were uploaded successfully, the body of the response object should contain an array of objects containing the original names of the files and the paths/URLs to which the files were uploaded, as shown below.
+If the files were uploaded successfully, the body of the response object should contain an array of objects, each object containing the `original` name of the file and the `url` to which the file was uploaded, as shown below.
 
 ![](/assets/public-upload.png)
 
 Append each of the paths to the Bolt URL to get the files, as shown below.
 
 ![](/assets/public-upload-2.png)
+
+If you are going to be running Bolt on a service like Heroku, you will want to [upload your files to AWS S3](/uploading-to-aws-s3.md).
+
+\[insert pictures of post man and picture\]
 
