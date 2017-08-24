@@ -25,7 +25,7 @@ The body is typically a `form` object containing the files to upload.
 
 ## response
 
-If the files were uploaded successfully, the body of the response object should contain an array of the paths to which the files were uploaded, as shown below.
+If the files were uploaded successfully, the body of the response object should contain an array of objects containing the original names of the files and the paths/URLs to which the files were uploaded, as shown below.
 
 ![](/assets/public-upload.png)
 
