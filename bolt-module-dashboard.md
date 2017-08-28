@@ -9,11 +9,7 @@ This app is marked as a module, meaning \(among other things\) that it defines n
 The following endpoints are described here:
 
 * [POST: /api/dashboard/card](#post-apidashboardcard)
-* GET: /api/system/help
-* POST: /api/system/exit
-* [POST: /api/system/exit/&lt;code&gt;](#post-apisystemexitcode)
-* [POST: /api/system/reset](#post-apisystemreset)
-* [POST: /api/system/reset/&lt;collection&gt;](#post-apisystemresetcollection)
+* [POST: /api/dashboard/tile](#post-apidashboardtile)
 
 ### POST: /api/dashboard/card
 
