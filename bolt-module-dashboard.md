@@ -10,7 +10,7 @@ The following endpoints are described here:
 
 * [POST: /api/dashboard/card](#post-apidashboardcard)
 * GET: /api/system/help
-* [POST: /api/system/exit](#post-apisystemexit)
+* POST: /api/system/exit
 * [POST: /api/system/exit/&lt;code&gt;](#post-apisystemexitcode)
 * [POST: /api/system/reset](#post-apisystemreset)
 * [POST: /api/system/reset/&lt;collection&gt;](#post-apisystemresetcollection)
@@ -58,27 +58,46 @@ Always include the `X-Bolt-App-Token` custom header in the request.
 
 ---
 
-### POST: /api/system/exit/&lt;code&gt;
+### POST: /api/dashboard/tile
 
-Exits the process in which the server is running \(with the specified exit code\), thereby shutting down the entire system.
+Send a request to this endpoint in order to notify dashboards to show a tile for the app.
 
-#### events
+#### request
 
-The event `bolt/system-exiting` will be fired with the following event `body`:
+A standard [Bolt request](bolt-request.md). All the fields are optional \(this may change in the future\).
 
 ```
 {
-    "code": String | Number //the exit code
+    "background" : String, //the background colour (for type='text') or image (for type='image') of the tile
+    "message": String, //the main content of the tile (for type='text')
+    "query": String, //the query to be appended to the URL of the app that made this request
+    "route": String, //the route to be appended to the URL of the app that made this request
+    "subject": String, //the caption of the tile
+    "type" : String//the type of tile, possible values are: 'text' (default), 'image'
 }
 ```
 
-Apps will be given a few seconds to react to this event before the system actually shuts down.
+Typically a tile \(or a button on the tile\) can be clicked. When clicked, the user should be redirected to the root URL of the app that created the tile. If you want to add an endpoint to that URL, specify it with the `route` field. If you want to add a query to that URL, specify it with the `query` field.
+
+#### events
+
+The event `bolt/dashboard-tile-posted` will be fired with the following event `body`:
+
+```
+{
+    "app": String, //the name of the app that owns this tile
+    "background" : String, //same as above
+    "message": String, //same as above
+    "query": String, //same as above
+    "route": String, //same as above
+    "subject": String, //same as above
+    "type" : String//same as above
+}
+```
 
 #### security
 
-Always include the `X-Bolt-App-Token` custom header in the request. The header isn't currently checked but that may change in the future.
-
-To exit the system, the user that initiates the action must have administrative privilege.
+Always include the `X-Bolt-App-Token` custom header in the request.
 
 ---
 
