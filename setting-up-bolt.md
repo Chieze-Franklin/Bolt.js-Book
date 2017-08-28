@@ -36,6 +36,25 @@ And that's all there is to it.
 
 The rest of this book assumes you are running Bolt locally `localhost:400` or `127.0.0.1:400`.
 
+## .env
+
+You can specify your environment variables in a _.env_ file in the root folder \(the same folder that contains the _bolt.js_ file\). Each line of the _.env_ file can be in this format:
+
+```
+<environment variable> = <value>
+```
+
+For instance:
+
+```
+PORT=400
+MONGODB_URI=mongodb://127.0.0.1:27017/bolt
+BOLT_ADDRESS=http://127.0.0.1:400
+BOLT_SESSION_SECRET=my random secret text
+```
+
+Be sure not to `push` the _.env_ file to public Git repositories.
+
 ## config.json
 
 This file is located at _/sys/server/config.json_. This file contains configuration data that should be known before Bolt starts up. See [config.json](/setting-up-bolt/config.json.md).
