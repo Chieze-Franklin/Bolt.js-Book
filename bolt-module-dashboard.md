@@ -8,7 +8,7 @@ This app is marked as a module, meaning \(among other things\) that it defines n
 
 The following endpoints are described here:
 
-* POST: /api/dashboard/card
+* [POST: /api/dashboard/card](#post-apidashboardcard)
 * GET: /api/system/help
 * [POST: /api/system/exit](#post-apisystemexit)
 * [POST: /api/system/exit/&lt;code&gt;](#post-apisystemexitcode)
@@ -21,11 +21,36 @@ Send a request to this endpoint in order to notify dashboards to show a card for
 
 #### request
 
+A standard [Bolt request](bolt-request.md). All the fields are optional \(this may change in the future\).
+
+```
+{
+    "background" : String, //the background colour (for type='text') or image (for type='image') of the card
+    "message": String, //the main content of the card (for type='text')
+    "query": String, //the query to be appended to the URL of the app that made this request
+    "route": String, //the route to be appended to the URL of the app that made this request
+    "subject": String, //the caption of the card
+    "type" : String//the type of card, possible values are: 'text' (default), 'image'
+}
+```
+
+Typically a card \(or a button on the card\) can be clicked. When clicked, the user should be redirected to the root URL of the app that created the card. If you want to add an endpoint to that URL, specify it with the `route` field. If you want to add a query to that URL, specify it with the `query` field.
+
 #### events
 
-The event `bolt/system-exiting` will be fired with an empty event `body`.
+The event `bolt/dashboard-card-posted` will be fired with the following event `body`:
 
-Apps will be given a few seconds to react to this event before the system actually shuts down.
+```
+{
+    "app": String, //the name of the app that owns this card
+    "background" : String, //same as above
+    "message": String, //same as above
+    "query": String, //same as above
+    "route": String, //same as above
+    "subject": String, //same as above
+    "type" : String//same as above
+}
+```
 
 #### security
 
