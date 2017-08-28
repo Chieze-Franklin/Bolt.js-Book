@@ -8,6 +8,7 @@ The following endpoints are described here:
 
 * [GET: /public/\*](#get-public)
 * [POST: /public/upload](#post-publicupload)
+* [DELETE: /public/upload/&lt;file&gt;](#delete-publicuploadfile)
 
 ## GET: /public/\*
 
@@ -40,4 +41,10 @@ Objects in the returned array may also contain the error field if an error occur
 If you are going to be running Bolt on a service like Heroku, you will want to [upload your files to AWS S3](/uploading-to-aws-s3.md). This is because a service like Heroku has an [ephemeral file system](/deploying-to-heroku/ephemeral-file-system.md).
 
 ![](/assets/s3-upload.png)
+
+## DELETE: /public/upload/&lt;file&gt;
+
+The the uploaded file with the specified file name. Bolt will attempt to delete the file from both the local and AWS S3 repositories.
+
+
 
