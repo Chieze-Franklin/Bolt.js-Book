@@ -10,10 +10,14 @@ The following endpoints are described here:
 
 * [POST: /api/dashboard/card](#post-apidashboardcard)
 * [POST: /api/dashboard/tile](#post-apidashboardtile)
+* [POST: /api/dashboard/view](#post-apidashboardview)
+* [DELETE: /api/dashboard/card](#delete-apidashboardcard)
+* [DELETE: /api/dashboard/tile](#delete-apidashboardtile)
+* [DELETE: /api/dashboard/view](#delete-apidashboardview)
 
 ### POST: /api/dashboard/card
 
-Send a request to this endpoint in order to notify dashboards to show a card for the app.
+Send a request to this endpoint in order to notify dashboards to show the card for the app. Dashboards are expected to show only one card per app.
 
 #### request
 
@@ -56,7 +60,7 @@ Always include the `X-Bolt-App-Token` custom header in the request.
 
 ### POST: /api/dashboard/tile
 
-Send a request to this endpoint in order to notify dashboards to show a tile for the app.
+Send a request to this endpoint in order to notify dashboards to show the tile for the app. Dashboards are expected to show only one tile per app.
 
 #### request
 
@@ -97,45 +101,102 @@ Always include the `X-Bolt-App-Token` custom header in the request.
 
 ---
 
-### POST: /api/system/reset
+### POST: /api/dashboard/view
 
-Resets \(drops\) the entire system database.
+Send a request to this endpoint in order to notify dashboards to show the web page \(view\) for the app. Dashboards are expected to show only one view per app.
 
-#### events
+#### request
 
-The event `bolt/system-db-resetting` will be fired with an empty event `body`.
-
-Apps will be given a few seconds to react to this event before the database is actually dropped.
-
-Currently Bolt does not shut down after this operation \(although that may change in the future\). It is, however, strongly advised to shut down the system at this point as it will be in a very unstable and unpredictable state.
-
-#### security
-
-Always include the `X-Bolt-App-Token` custom header in the request. The header isn't currently checked but that may change in the future.
-
-To exit the system, the user that initiates the action must have administrative privilege.
-
----
-
-### POST: /api/system/reset/&lt;collection&gt;
-
-Resets \(drops\) the specified collection in the system database.
-
-#### events
-
-The event `bolt/system-collection-resetting` will be fired with the following event `body`:
+A standard [Bolt request](bolt-request.md). All the fields are optional \(this may change in the future\).
 
 ```
 {
-    "collection": String //the collection being dropped
+    "height" : String | Number, //the preferred height of the view
+    "query": String, //the query to be appended to the URL of the app that made this request
+    "route": String, //the route to be appended to the URL of the app that made this request
+    "subject": String, //the caption of the view
+    "width" : String | Number//the preferred width of the view
 }
 ```
 
-Apps will be given a few seconds to react to this event before the collection is actually dropped.
+Typically a view \(or a button on the view\) can be clicked. When clicked, the user should be redirected to the root URL of the app that created the view. If you want to add an endpoint to that URL, specify it with the `route` field. If you want to add a query to that URL, specify it with the `query` field.
+
+#### events
+
+The event `bolt/dashboard-view-posted` will be fired with the following event `body`:
+
+```
+{
+    "app": String, //the name of the app that owns this view
+    "height" : String, //same as above
+    "query": String, //same as above
+    "route": String, //same as above
+    "subject": String, //same as above
+    "width" : String//same as above
+}
+```
 
 #### security
 
-Always include the `X-Bolt-App-Token` custom header in the request. The header isn't currently checked but that may change in the future.
+Always include the `X-Bolt-App-Token` custom header in the request.
 
-To exit the system, the user that initiates the action must have administrative privilege.
+---
+
+### DELETE: /api/dashboard/card
+
+Send a request to this endpoint in order to notify dashboards to remove the card for the app.
+
+#### events
+
+The event `bolt/dashboard-card-deleted` will be fired with the following event `body`:
+
+```
+{
+    "app": String //the name of the app that owns this card
+}
+```
+
+#### security
+
+Always include the `X-Bolt-App-Token` custom header in the request.
+
+---
+
+### DELETE: /api/dashboard/tile
+
+Send a request to this endpoint in order to notify dashboards to remove the tile for the app.
+
+#### events
+
+The event `bolt/dashboard-tile-deleted` will be fired with the following event `body`:
+
+```
+{
+    "app": String //the name of the app that owns this tile
+}
+```
+
+#### security
+
+Always include the `X-Bolt-App-Token` custom header in the request.
+
+---
+
+### DELETE: /api/dashboard/view
+
+Send a request to this endpoint in order to notify dashboards to remove the view for the app.
+
+#### events
+
+The event `bolt/dashboard-view-deleted` will be fired with the following event `body`:
+
+```
+{
+    "app": String //the name of the app that owns this view
+}
+```
+
+#### security
+
+Always include the `X-Bolt-App-Token` custom header in the request.
 
