@@ -72,6 +72,7 @@
     * [bolt-module-db](bolt-module-db.md)
     * [bolt-module-system](bolt-module-system.md)
     * [bolt-module-dashboard](bolt-module-dashboard.md)
+    * [bolt-module-notifications](bolt-module-notifications.md)
   * [Views](views.md)
   * [Objects](objects.md)
     * [App Object](app-object.md)
