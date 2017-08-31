@@ -26,6 +26,13 @@ A standard [Bolt request](bolt-request.md). All the fields are optional \(this m
     },
     "query": String, //the query to be appended to the URL of the app that made this request
     "route": String, //the route to be appended to the URL of the app that made this request
+    "sound": {
+        "location": String, //the path to a sound file (probably on the file system or a URL)
+        "loop": Boolean, //(default false) if true, plays the sound in a loop
+        "duration": Number | String, //duration (in milliseconds) for which the loop is to last
+    },
+    "subject": String, //the subject of the notification
+    "to": Object, //the users (or groups) to which the notification is to be sent
 }
 ```
 
@@ -78,6 +85,32 @@ When message comes as a `String`, like `"message": "hello world"`, it is convert
 
 Note that notifications without `message` fields are not persisted in the database.
 
+##### query and route
+
+Typically a notification item \(or a button on the item\) can be clicked. When clicked, the user should be redirected to the root URL of the app that created the notification. If you want to add an endpoint to that URL, specify it with the `route` field. If you want to add a query to that URL, specify it with the `query` field.
+
+##### to
+
+You can specify who gets a notification. There are two ways of doing this \(and they may not be used together\): by specifying a list of users that are to get the notification, and by specifying a list of roles whose members are to get the notification.
+
+To specify a list of users to get the notification, put their usernames in a `users` array, as shown below:
+
+```
+"to": {
+    "users": ["frank", "jenny001", "sam007"]
+}
+```
+
+To specify a list of roles whose members are to get the notification, put the names of the roles in a `roles` array, as shown below:
+
+```
+"to": {
+    "roles": ["parent", "teacher", "student"]
+}
+```
+
+Any user who has any of the specified roles will get the notification.
+
 #### events
 
 The event `bolt/notification-posted` will be fired with the following event `body`:
@@ -98,6 +131,9 @@ The event `bolt/notification-posted` will be fired with the following event `bod
     "options": Object, //same as above
     "query": String, //same as above
     "route": String, //same as above
+    "subject": String, //same as above
+    "time": Date, //the date-time when the notification was created
+    "to": Object, //same as above
 }
 ```
 
