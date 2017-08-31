@@ -20,6 +20,12 @@ A standard [Bolt request](bolt-request.md). All the fields are optional \(this m
 {
     "buttons": [Object], //an array of buttons on the notification item
     "message": String | Object, //the message of the notification
+    "options": {
+        "sticky": Boolean, //if true, the notification does not disappear even when the close button is clicked
+        "transient": Boolean //if true, the notification is not persisted in the database
+    },
+    "query": String,
+    "route": String,
 }
 ```
 
@@ -88,7 +94,10 @@ The event `bolt/notification-posted` will be fired with the following event `bod
     "message": {
         "type": String, //the message type, possible values are 'text', 'audio', 'file', 'image', 'video', 'page'
         "data": String //the text (for type='text') or URL (fo other message types) of the message
-    }
+    },
+    "options": Object, //same as above
+    "query": String, //same as above
+    "route": String, //same as above
 }
 ```
 
