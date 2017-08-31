@@ -24,8 +24,8 @@ A standard [Bolt request](bolt-request.md). All the fields are optional \(this m
         "sticky": Boolean, //if true, the notification does not disappear even when the close button is clicked
         "transient": Boolean //if true, the notification is not persisted in the database
     },
-    "query": String,
-    "route": String,
+    "query": String, //the query to be appended to the URL of the app that made this request
+    "route": String, //the route to be appended to the URL of the app that made this request
 }
 ```
 
