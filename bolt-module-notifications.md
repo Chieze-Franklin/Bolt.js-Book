@@ -33,6 +33,11 @@ A standard [Bolt request](bolt-request.md). All the fields are optional \(this m
     },
     "subject": String, //the subject of the notification
     "to": Object, //the users (or groups) to which the notification is to be sent
+    "toast": {
+        "message": String, //the message to be shown on the toast
+        "duration": Number | String, //duration (in milliseconds) for which the toast is to last
+    },
+    "type": String //the type of notification, possible values are: 'success', 'info', 'warning', 'error'
 }
 ```
 
@@ -134,6 +139,8 @@ The event `bolt/notification-posted` will be fired with the following event `bod
     "subject": String, //same as above
     "time": Date, //the date-time when the notification was created
     "to": Object, //same as above
+    "toast": Object, //same as above
+    "type": String //same as above
 }
 ```
 
