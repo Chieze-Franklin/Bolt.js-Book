@@ -50,6 +50,7 @@
       * [Roles \(API\)](roles-api.md)
       * [User-Roles \(API\)](user-roles-api.md)
       * [App-Roles \(API\)](app-roles-api.md)
+      * [Checks \(API\)](checks-api.md)
       * [Events \(API\)](events-api.md)
       * [App-Users \(API\)](app-users-api.md)
       * [Files \(API\)](files-api.md)
