@@ -14,6 +14,8 @@ These are the core endpoints that govern the inner workings of Bolt. The respons
 
 * [Checks](/checks-api.md)
 
+* [Permissions](/permissions-api.md)
+
 * [Events](/events-api.md)
 
 * [App-Users](/app-users-api.md)
