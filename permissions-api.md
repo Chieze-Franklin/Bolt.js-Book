@@ -8,13 +8,13 @@ The following endpoints are described here:
 
 ## GET: /api/permissions
 
-Gets an array of [permission objects](/permission-object.md) for all apps that are visible to the user with the specified username. It is possible to _hide_ some apps from some users. The icons of such apps should not be visible to those users on standard home pages.
+Gets an array of [permission objects](/permission-object.md) matching the specified criteria.
 
-For instance, to get all apps visible to user _adam_:
+You specify search criteria in the URL query portion. For instance, to get all permissions for the app _bolt-admin_:
 
-`localhost:400/api/checks/visible-apps/adam`
+`localhost:400/api/permissions?app=bolt-admin`
 
 ### response
 
-If there is no error during the processing of the request, the `body` field of the response should hold an array of [app objects](/app-object.md).
+If there is no error during the processing of the request, the `body` field of the response should hold an array of [permission objects](/permission-object.md).
 
