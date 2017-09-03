@@ -54,7 +54,6 @@
       * [Permissions \(API\)](permissions-api.md)
       * [Events \(API\)](events-api.md)
       * [App-Users \(API\)](app-users-api.md)
-      * Permissions \(API\)
     * [UI Endpoints](ui-endpoints.md)
       * [Apps \(UI\)](apps-ui.md)
       * [Files \(UI\)](files-ui.md)
