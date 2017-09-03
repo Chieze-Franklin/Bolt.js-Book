@@ -86,6 +86,7 @@
     * [Context Object](context-object.md)
     * [Error Object](error-object.md)
     * [File Object](file-object.md)
+    * [Permission Object](permission-object.md)
     * [Role Object](role-object.md)
     * [User Object](user-object.md)
 
