@@ -11,6 +11,7 @@ This document describes the _schemata_ of objects that occur regularly in the Bo
 * [Context](/context-object.md)
 * [Error](/error-object.md)
 * [File](/file-object.md)
+* [Permission](/permission-object.md)
 * [Role](/role-object.md)
 * [User](/user-object.md)
 
