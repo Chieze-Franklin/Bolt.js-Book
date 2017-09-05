@@ -70,6 +70,7 @@ Access-Control Error.
 | 334 | User has no right to start this app |
 | 335 | User has no right to access this app feature |
 | 336 | User has no right to access this app file |
+| 337 | User has no admin right |
 |  |  |
 | 340 | App name and/or user name missing |
 | 341 | An app-user with the same app and user already exists |
