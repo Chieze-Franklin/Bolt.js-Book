@@ -74,10 +74,10 @@ For instance, to specify that every document in the `students` collection must h
                     { "name": { "$type": "string" } },
                     { "id": { "$type": "number" } },
                     { "dateOfBirth": { "$type": "date" } },
-                    "$or": [
+                    {"$or": [
                         { "phone": { "$type": "string" } },
                         { "email": { "$regex": /@gmail\.com$/ } }
-                    ]
+                    ]}
                 ]
             }
         }
