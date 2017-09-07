@@ -26,7 +26,7 @@ You can see that I have created the necessary environment variables. Notice the 
 
 On the terminal/console, execute the following commands to deploy on Heroku:
 
-* `heroku config:set NODE_MODULES_CACHE=false` :  This command is optional. Execute it if you want Heroku to recreate the _node\_modules_ folder instead of using a cached version.
+* `heroku config:set NODE_MODULES_CACHE=false` :  This command is optional. Execute it if you want Heroku to recreate the _node\_modules_ folder instead of using a cached version. Note that this may not be what you want, especially when syncing local deployment with Heroku deployment.
 * `heroku features:enable http-session-affinity` : This command is necessary because Bolt makes use of the _socket.io_ module.
 * `git commit -am '{{message}}'` : Commit your changes. You can add the `--allow-empty` option to this command to make an empty commit.
 * `git push heroku master` : Push to Heroku.
