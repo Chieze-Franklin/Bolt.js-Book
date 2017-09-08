@@ -44,5 +44,19 @@ A standard [Bolt event](/bolt-event.md).
 
 ## bolt/app-role-updated
 
+This event is raised when an [app-role association](/app-role-object.md) is updated.
+
+### event object
+
+A standard [Bolt event](/bolt-event.md).
+
+```
+{
+    "name": String, //the name of the event, in this case 'app-role-updated'
+    "publisher": String, //the name of the app that published, in this case 'bolt'
+    "body": Object //an object representing the app-role that has just been updated
+}
+```
+
 
 
