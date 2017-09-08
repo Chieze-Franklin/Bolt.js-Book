@@ -4,6 +4,7 @@ These are the event raised by the [/api/app-roles](/app-roles-api.md) endpoint.
 
 * [bolt/app-role-created](#boltapp-role-created)
 * [bolt/app-role-deleted](#boltapp-role-deleted)
+* [bolt/app-role-updated](#boltapp-role-updated)
 
 ## bolt/app-role-created
 
@@ -38,6 +39,10 @@ A standard [Bolt event](/bolt-event.md).
     "body": Object //an object representing the app-role that has just been deleted
 }
 ```
+
+---
+
+## bolt/app-role-updated
 
 
 
