@@ -8,6 +8,7 @@ The following endpoints are described here:
 * [Files](/files-ui.md)
 * [Views](/views-ui.md)
 * [Public](/public-ui.md)
+* [Profile](/profile-ui.md)
 
 
 
