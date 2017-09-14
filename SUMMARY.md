@@ -59,6 +59,7 @@
       * [Files \(UI\)](files-ui.md)
       * [Views \(UI\)](views-ui.md)
       * [Public \(UI\)](public-ui.md)
+      * [Profile \(UI\)](profile-ui.md)
   * [Bolt Response Codes](bolt-response-codes.md)
   * [Bolt Events](bolt-events.md)
     * [App Events](bolt-events/app-events.md)
