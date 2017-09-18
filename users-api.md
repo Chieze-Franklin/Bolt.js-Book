@@ -14,6 +14,8 @@ The following endpoints are described here:
 
 * [POST: /api/users](#post-apiusers)
 
+* [POST: /api/users/change-password](#post-apiuserschange-password)
+
 * [POST: /api/users/login](#post-apiuserslogin)
 
 * [POST: /api/users/logout](#post-apiuserslogout)
@@ -98,6 +100,31 @@ The body of the request is typically a `form` object \(which can be created in J
 ### response
 
 If the user was added successfully, the `body` field of the response should hold a user object.
+
+### security
+
+Only system apps \(and native views\) can send requests to this endpoint.
+
+---
+
+## POST: /api/users/change-password
+
+Changes the password of the currently logged-in user.
+
+### request
+
+A standard [Bolt request](bolt-request.md).
+
+```
+{
+    "password" : String, //the current password
+    "newPassword" : String //the new password
+}
+```
+
+### response
+
+If the password was changed successfully, the `body` field of the response should hold the user object whose password was changed.
 
 ### security
 
