@@ -20,6 +20,8 @@ The following endpoints are described here:
 
 * [POST: /api/users/logout](#post-apiuserslogout)
 
+* [POST: /api/users/reset-password](#post-apiusersreset-password)
+
 * [DELETE: /api/users](#delete-apiusers)
 
 * [DELETE: /api/users/&lt;name&gt;](#delete-apiusersname)
@@ -164,6 +166,31 @@ Logs a user out of the system for the current session.
 ### response
 
 If the user was logged out successfully, the `body` field of the response should hold a user object.
+
+### security
+
+Only system apps \(and native views\) can send requests to this endpoint.
+
+---
+
+## POST: /api/users/reset-password
+
+Resets the password of the specified user.
+
+### request
+
+A standard [Bolt request](bolt-request.md).
+
+```
+{
+    "name" : String, //the username of the user whose password is to be reset
+    "password" : String //the new password
+}
+```
+
+### response
+
+If the password was reset successfully, the `body` field of the response should hold the user object whose password was changed.
 
 ### security
 
