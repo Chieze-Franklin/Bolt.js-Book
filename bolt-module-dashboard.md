@@ -2,6 +2,8 @@
 
 This module installs the `/api/dashboard` endpoints. These endpoints are responsible for raising dashboard events that apps can listen to in order to create real-time dashboards.
 
+![](/assets/homepage.png)
+
 To install this module, navigate to the Bolt endpoint `/install`, and type in _bolt-module-dashboard_ as the app name. Go ahead and click **Download** \(or **Sideload**, as the case may be\). Take care to install this module as a system app.
 
 This app is marked as a module, meaning \(among other things\) that it defines no user interface. Its installation registers the routers that respond to the requests sent to the `/api/dashboard` endpoints.
